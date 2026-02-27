@@ -1,0 +1,338 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* === Proper Hotel-inspired palette === */
+  --color-proper-black: #000000;
+  --color-proper-white: #ffffff;
+  --color-proper-offwhite: #f7f7f5;
+  --color-proper-gray: #777777;
+  --color-proper-lightgray: #e5e5e5;
+  --color-proper-red: #da3743;
+
+  /* Casa Schuck warm accent (used sparingly) */
+  --color-gold: #BF754B;
+  --color-gold-light: #D4936B;
+
+  /* Legacy colors kept for compatibility */
+  --color-charcoal: #2C2C2C;
+  --color-cream: #F5EBE0;
+  --color-warm-white: #FAF4ED;
+  --color-whatsapp: #25D366;
+  --color-terracotta: #3F7373;
+  --color-stone: #BABDBF;
+  --color-stone-light: #D4D6D8;
+  --color-turquoise: #A64826;
+
+  /* Fonts — Montserrat (sans, headers) + Source Serif 4 (serif, body) */
+  --font-serif: var(--font-source-serif), Georgia, serif;
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+}
+
+/* === Base Styles — Proper Hotel inspired === */
+body {
+  background: var(--color-proper-white);
+  color: var(--color-proper-black);
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Typography — Sans for headers (Proper pattern) === */
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: var(--color-proper-black);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+  }
+}
+
+/* === Selection === */
+::selection {
+  background: var(--color-proper-black);
+  color: var(--color-proper-white);
+}
+
+/* === Smooth Scroll === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Reduced Motion — respect user preference === */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* === Thin divider line === */
+.section-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--color-proper-black);
+}
+
+/* === Uppercase tracking utility === */
+.proper-label {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* === Parallax Container === */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
+
+/* === Glassmorphism === */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* === Vignette Overlay === */
+.vignette {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* === Text Shadow === */
+.text-shadow-editorial {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5),
+               0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* === Chatbot Panel === */
+.chatbot-panel {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+              0 12px 24px -8px rgba(0, 0, 0, 0.15);
+}
+
+/* === WhatsApp Pulse === */
+@keyframes wa-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+.wa-pulse {
+  animation: wa-pulse 2s ease-in-out 3;
+}
+
+/* === Carousel === */
+.carousel-image {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* === Fade-in utility (legacy, kept for non-Framer contexts) === */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === iOS Safe Area === */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* === Scrollbar Hide === */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* === Focus Styles === */
+:focus-visible {
+  outline: 2px solid var(--color-proper-black);
+  outline-offset: 2px;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-proper-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-proper-lightgray);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-proper-gray);
+}
+
+/* === Luxury transition timing === */
+.duration-400 {
+  transition-duration: 400ms;
+}
+
+/* === Ken Burns — slow ambient zoom on hero image === */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.ken-burns {
+  animation: kenBurns 20s ease-in-out infinite;
+}
+
+/* === Hero entrance animations — play once on page load === */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-up {
+  animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
+/* === Decorative line scale-in === */
+@keyframes lineScaleIn {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.line-scale-in {
+  animation: lineScaleIn 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
+/* === Scroll indicator bounce === */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.scroll-bounce {
+  animation: scrollBounce 2.5s ease-in-out infinite;
+}
+
+/* === Star fill animation === */
+@keyframes starFill {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* === Nav link underline === */
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: var(--color-gold);
+  transition: left 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+              right 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.nav-link-underline:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/* === Room tab hover border grow === */
+.room-tab-border {
+  position: relative;
+}
+
+.room-tab-border::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--color-gold);
+  transition: height 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.room-tab-border:hover::before {
+  height: 60%;
+}
+
+.room-tab-border[data-active="true"]::before {
+  height: 100%;
+}
+
+/* === CTA underline expand from center === */
+.cta-underline {
+  position: relative;
+}
+
+.cta-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: currentColor;
+  transition: left 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+              right 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.cta-underline:hover::after {
+  left: 0;
+  right: 0;
+}
