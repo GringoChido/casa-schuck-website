@@ -44,8 +44,10 @@ export function Weddings({ locale, dict }: WeddingsProps) {
             </h2>
             <Link
               href={`/${locale}/weddings`}
-              className="inline-block bg-turquoise hover:bg-turquoise-dark text-white font-medium
-                         px-10 py-4 rounded text-lg transition-colors tracking-wide"
+              className="inline-block bg-white/10 backdrop-blur-sm text-white font-sans font-bold
+                         text-[11px] tracking-[0.15em] uppercase px-10 py-4
+                         border border-white/30 hover:bg-white hover:text-black
+                         transition-all duration-500 min-h-[48px]"
             >
               {w.cta}
             </Link>

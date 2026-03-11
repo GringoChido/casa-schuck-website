@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { Montserrat, Source_Serif_4 } from 'next/font/google';
+import { Lato, Cormorant_Garamond } from 'next/font/google';
 import { locales, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/dictionaries';
 import { Header } from '@/components/layout/Header';
@@ -9,19 +9,20 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { MobileBookingBar } from '@/components/ui/MobileBookingBar';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { WeddingCTA } from '@/components/ui/WeddingCTA';
+import { HotelJsonLd, LocalBusinessJsonLd } from '@/components/seo/JsonLd';
 
-const montserrat = Montserrat({
+const lato = Lato({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '700'],
   display: 'swap',
-  variable: '--font-montserrat',
+  variable: '--font-lato',
 });
 
-const sourceSerif = Source_Serif_4({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['300', '400'],
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
-  variable: '--font-source-serif',
+  variable: '--font-cormorant',
 });
 
 export async function generateStaticParams() {
@@ -44,12 +45,17 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale as Locale);
 
   return (
-    <html lang={locale} className={`${montserrat.variable} ${sourceSerif.variable}`}>
+    <html lang={locale} className={`${cormorant.variable} ${lato.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <link rel="alternate" hrefLang="en" href="/en" />
+        <link rel="alternate" hrefLang="es" href="/es" />
+        <link rel="alternate" hrefLang="x-default" href="/en" />
       </head>
       <body className="bg-white text-black font-serif antialiased pb-20 lg:pb-0">
         <ScrollProgress />
+        <HotelJsonLd locale={locale as Locale} />
+        <LocalBusinessJsonLd locale={locale as Locale} />
         <Header locale={locale as Locale} dict={dict} />
         <main>{children}</main>
         <Footer locale={locale as Locale} dict={dict} />

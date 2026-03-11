@@ -20,7 +20,7 @@ export function ChatMessage({ role, text }: ChatMessageProps) {
       <div
         className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
           isUser
-            ? 'bg-turquoise text-white rounded-br-sm'
+            ? 'bg-black text-white rounded-br-sm'
             : 'bg-cream text-charcoal border border-stone/20 rounded-bl-sm'
         }`}
       >

@@ -22,7 +22,7 @@ export const ScrollReveal = ({
   className,
   id,
   delay = 0,
-  duration = 0.7,
+  duration = 0.8,
   y = 20,
   as: Tag = 'div',
 }: ScrollRevealProps) => {

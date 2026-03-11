@@ -3,7 +3,6 @@
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { StaggerItem } from '@/components/ui/ScrollReveal';
-import { HeadingReveal } from '@/components/ui/HeadingReveal';
 
 interface BookDirectCalloutProps {
   locale: Locale;
@@ -20,12 +19,9 @@ export function BookDirectCallout({ locale, dict }: BookDirectCalloutProps) {
           <div className="w-10 h-px bg-black mx-auto mb-8" />
         </StaggerItem>
         <StaggerItem index={1}>
-          <HeadingReveal
-            text={h.bookDirect}
-            as="h2"
-            className="font-sans text-2xl sm:text-3xl font-bold tracking-[0.12em] uppercase text-black mb-4"
-            delay={0.15}
-          />
+          <h2 className="font-serif text-2xl sm:text-3xl font-medium tracking-[0.04em] text-black mb-4">
+            {h.bookDirect}
+          </h2>
         </StaggerItem>
         <StaggerItem index={2}>
           <p className="font-serif text-lg text-proper-gray font-light mb-8">

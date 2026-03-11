@@ -40,7 +40,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <div className="w-12 h-px bg-gold mx-auto mb-8" />
             </StaggerItem>
             <StaggerItem index={1}>
-              <h3 className="font-sans text-2xl font-bold tracking-[0.2em] uppercase text-white mb-3">
+              <h3 className="font-serif text-2xl font-medium tracking-[0.04em] text-white mb-3">
                 Casa Schuck
               </h3>
             </StaggerItem>

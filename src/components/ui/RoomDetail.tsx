@@ -74,7 +74,7 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
 
       {/* Accessible Badge */}
       {room.accessible && (
-        <div className="mb-4 inline-flex items-center gap-2 bg-turquoise/10 text-turquoise-dark text-sm font-medium px-3 py-1.5 rounded-full">
+        <div className="mb-4 inline-flex items-center gap-2 bg-sage/10 text-sage-dark text-sm font-medium px-3 py-1.5 rounded-full">
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -84,7 +84,7 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
 
       {/* Special Note */}
       {specialNote && (
-        <p className="text-sm text-turquoise italic mb-4">{specialNote}</p>
+        <p className="text-sm text-sage italic mb-4">{specialNote}</p>
       )}
 
       {/* Amenities Grid */}
@@ -111,8 +111,9 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
           href={buildDeepLink({ roomTypeId: room.id })}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto bg-turquoise hover:bg-turquoise-dark text-white font-medium px-8 py-3 rounded
-                     transition-colors tracking-wide text-sm text-center min-h-[44px]"
+          className="w-full sm:w-auto bg-black hover:bg-gold text-white font-sans font-bold text-[11px]
+                     tracking-[0.15em] uppercase px-8 py-3 transition-colors duration-300
+                     text-center min-h-[44px]"
         >
           {dict.bookRoom}
         </a>

@@ -121,7 +121,8 @@ export function RetreatHub({ locale, dict }: RetreatHubProps) {
         <div className="text-center">
           <a
             href={`/${locale}#contact`}
-            className="inline-block bg-turquoise hover:bg-turquoise-dark text-white font-medium px-8 py-3 rounded transition-colors tracking-wide text-sm"
+            className="inline-block bg-black hover:bg-gold text-white font-sans font-bold text-[11px]
+                       tracking-[0.15em] uppercase px-8 py-4 transition-colors duration-300 min-h-[44px]"
           >
             {rt.inquireCta}
           </a>

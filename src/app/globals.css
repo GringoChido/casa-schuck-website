@@ -9,42 +9,47 @@
   --color-proper-lightgray: #e5e5e5;
   --color-proper-red: #da3743;
 
-  /* Casa Schuck warm accent (used sparingly) */
+  /* === Casa Schuck — San Miguel de Allende palette === */
+  --color-sage: #5B7B6A;
+  --color-sage-light: #7A9B8A;
+  --color-sage-dark: #4A6757;
+  --color-terracotta: #C17A56;
+  --color-terracotta-light: #D4936B;
+  --color-terracotta-dark: #A66842;
+  --color-linen: #F7F2EC;
+  --color-linen-dark: #EDE5DA;
+  --color-espresso: #1C1917;
+  --color-dusty-rose: #C4A289;
+  --color-cream: #FAF4ED;
+  --color-warm-white: #FEFCFA;
   --color-gold: #BF754B;
   --color-gold-light: #D4936B;
-
-  /* Legacy colors kept for compatibility */
   --color-charcoal: #2C2C2C;
-  --color-cream: #F5EBE0;
-  --color-warm-white: #FAF4ED;
   --color-whatsapp: #25D366;
-  --color-terracotta: #3F7373;
   --color-stone: #BABDBF;
   --color-stone-light: #D4D6D8;
-  --color-turquoise: #A64826;
 
-  /* Fonts — Montserrat (sans, headers) + Source Serif 4 (serif, body) */
-  --font-serif: var(--font-source-serif), Georgia, serif;
-  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+  /* Fonts — Cormorant Garamond (serif, headings) + Lato (sans, body/UI) */
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-lato), system-ui, sans-serif;
 }
 
-/* === Base Styles — Proper Hotel inspired === */
+/* === Base Styles === */
 body {
-  background: var(--color-proper-white);
+  background: var(--color-warm-white);
   color: var(--color-proper-black);
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 
-/* === Typography — Sans for headers (Proper pattern) === */
+/* === Typography — Serif (Cormorant) for headings, Sans (Lato) for body === */
 @layer base {
   h1, h2, h3, h4 {
-    font-family: var(--font-sans), system-ui, sans-serif;
+    font-family: var(--font-serif), Georgia, serif;
     color: var(--color-proper-black);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -215,22 +220,21 @@ html {
   transition-duration: 400ms;
 }
 
-/* === Ken Burns — slow ambient zoom on hero image === */
-@keyframes kenBurns {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-  100% { transform: scale(1); }
+/* === Hero image — slow reveal from dark === */
+@keyframes heroImageReveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.ken-burns {
-  animation: kenBurns 20s ease-in-out infinite;
+.hero-image-reveal {
+  animation: heroImageReveal 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s both;
 }
 
-/* === Hero entrance animations — play once on page load === */
+/* === Hero entrance animations — staggered fade-up === */
 @keyframes heroFadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -239,7 +243,7 @@ html {
 }
 
 .hero-fade-up {
-  animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  animation: heroFadeUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
 }
 
 /* === Decorative line scale-in === */
@@ -280,7 +284,7 @@ html {
   left: 50%;
   right: 50%;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-terracotta);
   transition: left 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
               right 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }

@@ -6,7 +6,6 @@ import mockData from '@/data/mockCloudbeds.json';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
-import { HeadingReveal } from '@/components/ui/HeadingReveal';
 
 interface SeasonalPackagesProps {
   locale: Locale;
@@ -30,12 +29,9 @@ export function SeasonalPackages({ locale, dict }: SeasonalPackagesProps) {
             </p>
           </StaggerItem>
           <StaggerItem index={1}>
-            <HeadingReveal
-              text={p.headline}
-              as="h2"
-              className="font-sans text-2xl sm:text-3xl font-bold tracking-[0.12em] uppercase text-black mb-4"
-              delay={0.15}
-            />
+            <h2 className="font-serif text-2xl sm:text-3xl font-medium tracking-[0.04em] text-black mb-4">
+              {p.headline}
+            </h2>
           </StaggerItem>
           <StaggerItem index={2}>
             <div className="w-10 h-px bg-black mx-auto mb-6" />

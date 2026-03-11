@@ -83,9 +83,9 @@ export function Chatbot({ locale, dict }: ChatbotProps) {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-24 lg:bottom-6 right-6 z-50 w-14 h-14 bg-turquoise hover:bg-turquoise-dark
+            className="fixed bottom-24 lg:bottom-6 right-6 z-50 w-14 h-14 bg-black hover:bg-gold
                        text-white rounded-full shadow-lg flex items-center justify-center
-                       transition-colors"
+                       transition-colors duration-300"
             aria-label="Open chat"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -162,9 +162,9 @@ export function Chatbot({ locale, dict }: ChatbotProps) {
               <button
                 onClick={handleSend}
                 disabled={!input.trim()}
-                className="w-10 h-10 bg-turquoise hover:bg-turquoise-dark disabled:bg-stone
+                className="w-10 h-10 bg-black hover:bg-gold disabled:bg-stone
                            text-white rounded-full flex items-center justify-center
-                           transition-colors flex-shrink-0"
+                           transition-colors duration-300 flex-shrink-0"
                 aria-label={c.send}
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
