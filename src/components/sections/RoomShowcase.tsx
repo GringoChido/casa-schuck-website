@@ -39,7 +39,7 @@ export function RoomShowcase({ locale, dict }: RoomShowcaseProps) {
             <div className="w-10 h-px bg-black mx-auto mb-6" />
           </StaggerItem>
           <StaggerItem index={3}>
-            <p className="font-serif text-lg text-proper-gray max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="font-serif text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed font-light">
               {r.description}
             </p>
           </StaggerItem>
@@ -56,12 +56,12 @@ export function RoomShowcase({ locale, dict }: RoomShowcaseProps) {
                 data-active={i === activeIndex}
                 className={`room-tab-border w-full text-left px-4 py-3 border-l-2 transition-all duration-300 ${
                   i === activeIndex
-                    ? 'border-gold text-black'
-                    : 'border-transparent text-proper-gray hover:text-black hover:border-proper-lightgray'
+                    ? 'border-secondary text-black'
+                    : 'border-transparent text-on-surface-variant hover:text-black hover:border-outline-variant'
                 }`}
               >
                 <span className="font-sans text-[12px] font-bold tracking-[0.1em] uppercase">{room.name[locale]}</span>
-                <span className="block font-serif text-sm text-proper-gray mt-0.5 font-light">
+                <span className="block font-serif text-sm text-on-surface-variant mt-0.5 font-light">
                   ${room.baseRate} / {locale === 'es' ? 'noche' : 'night'}
                 </span>
               </button>
@@ -93,7 +93,7 @@ export function RoomShowcase({ locale, dict }: RoomShowcaseProps) {
                 className={`flex-shrink-0 snap-start px-4 py-2.5 text-[11px] font-sans font-bold tracking-[0.1em] uppercase transition-all duration-300 min-h-[44px] ${
                   i === activeIndex
                     ? 'bg-black text-white'
-                    : 'bg-proper-offwhite text-proper-gray hover:bg-proper-lightgray'
+                    : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high'
                 }`}
               >
                 {room.name[locale]}

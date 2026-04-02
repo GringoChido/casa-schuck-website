@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { Lato, Cormorant_Garamond } from 'next/font/google';
+import { Cormorant_Garamond, Lato, Montserrat } from 'next/font/google';
 import { locales, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/dictionaries';
 import { Header } from '@/components/layout/Header';
@@ -11,18 +11,25 @@ import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { WeddingCTA } from '@/components/ui/WeddingCTA';
 import { HotelJsonLd, LocalBusinessJsonLd } from '@/components/seo/JsonLd';
 
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+  variable: '--font-cormorant',
+});
+
 const lato = Lato({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   weight: ['300', '400', '700'],
   display: 'swap',
   variable: '--font-lato',
 });
 
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+const montserrat = Montserrat({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600'],
   display: 'swap',
-  variable: '--font-cormorant',
+  variable: '--font-montserrat',
 });
 
 export async function generateStaticParams() {
@@ -45,14 +52,15 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale as Locale);
 
   return (
-    <html lang={locale} className={`${cormorant.variable} ${lato.variable}`}>
+    <html lang={locale} className={`${cormorantGaramond.variable} ${lato.variable} ${montserrat.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="alternate" hrefLang="en" href="/en" />
         <link rel="alternate" hrefLang="es" href="/es" />
         <link rel="alternate" hrefLang="x-default" href="/en" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-white text-black font-serif antialiased pb-20 lg:pb-0">
+      <body className="bg-surface text-on-surface font-body antialiased pb-20 lg:pb-0">
         <ScrollProgress />
         <HotelJsonLd locale={locale as Locale} />
         <LocalBusinessJsonLd locale={locale as Locale} />

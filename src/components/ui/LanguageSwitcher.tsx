@@ -19,7 +19,7 @@ export function LanguageSwitcher({ locale, label }: LanguageSwitcherProps) {
   return (
     <Link
       href={newPath}
-      className="text-sm text-stone-light/70 hover:text-white transition-colors border border-white/20 px-3 py-1.5 rounded"
+      className="text-sm text-outline-variant/70 hover:text-white transition-colors border border-white/20 px-3 py-1.5 rounded"
     >
       {label}
     </Link>

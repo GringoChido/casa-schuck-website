@@ -15,7 +15,7 @@ export function Weddings({ locale, dict }: WeddingsProps) {
   const w = dict.weddings;
 
   return (
-    <section id="weddings" className="py-24 bg-warm-white">
+    <section id="weddings" className="py-24 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

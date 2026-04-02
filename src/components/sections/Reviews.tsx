@@ -56,7 +56,7 @@ export function Reviews({ locale, dict }: ReviewsProps) {
   const rv = dict.reviews;
 
   return (
-    <section className="py-24 bg-proper-offwhite">
+    <section className="py-24 bg-surface-container-low">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -108,7 +108,7 @@ export function Reviews({ locale, dict }: ReviewsProps) {
               key={i}
               index={i}
               staggerDelay={0.12}
-              className="bg-white p-8 border border-proper-lightgray hover:shadow-[0_8px_30px_rgba(191,117,75,0.06)] transition-shadow duration-500"
+              className="bg-white p-8 border border-outline-variant hover:shadow-[0_8px_30px_rgba(191,117,75,0.06)] transition-shadow duration-500"
             >
               {/* Stars with sequential fill animation */}
               <div className="flex mb-4 gap-0.5">

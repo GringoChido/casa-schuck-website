@@ -85,7 +85,7 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
   const logisticsIcons = [RooftopIcon, PersonIcon, LeafIcon, CarIcon, CompassIcon, HomeIcon];
 
   return (
-    <section className="bg-warm-white">
+    <section className="bg-surface">
 
       {/* ═══ Section 1: Hero Banner ═══ */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
@@ -121,8 +121,8 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
       {/* ═══ Section 2: Intro — The Anchor Hook ═══ */}
       <div className="py-20 sm:py-24">
         <ScrollReveal className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <div className="w-16 h-px bg-gold mx-auto mb-8" />
-          <p className="text-charcoal/70 text-lg sm:text-xl leading-relaxed">
+          <div className="w-16 h-px bg-secondary mx-auto mb-8" />
+          <p className="text-on-surface/70 text-lg sm:text-xl leading-relaxed">
             {r.introBody}
           </p>
         </ScrollReveal>
@@ -141,11 +141,101 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
         </div>
       </div>
 
-      {/* ═══ Section 4: Logistics Grid ═══ */}
-      <div className="bg-cream py-24">
+      {/* ═══ Section 4: Retreat Types with Pricing ═══ */}
+      {r.retreatTypes && (
+        <div className="bg-surface-container-low py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <ScrollReveal className="text-center mb-16">
+              <p className="editorial-label text-secondary mb-4">Programs</p>
+              <h2 className="font-serif text-3xl sm:text-4xl text-primary">
+                Choose Your Journey
+              </h2>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {(r.retreatTypes as Array<{ name: string; pricing: Array<{ duration: string; price: string }>; description: string; includes: string[]; capacity: { min: number; max: number } }>).map((rt, i) => (
+                <StaggerItem
+                  key={rt.name}
+                  index={i}
+                  staggerDelay={0.15}
+                  className="bg-surface p-8 border border-outline-variant/20 flex flex-col"
+                >
+                  <h3 className="font-serif text-2xl text-primary mb-2">{rt.name}</h3>
+                  <div className="mb-4">
+                    {rt.pricing.map((p) => (
+                      <p key={p.duration} className="text-sm text-on-surface/70">
+                        <span className="font-serif text-lg text-secondary">{p.price}</span>{' '}
+                        <span className="text-on-surface/50">/ {p.duration}</span>
+                      </p>
+                    ))}
+                  </div>
+                  <p className="text-xs text-on-surface/50 mb-4">{rt.capacity.min}–{rt.capacity.max} guests</p>
+                  <p className="text-on-surface/70 text-sm leading-relaxed mb-6">{rt.description}</p>
+                  <ul className="space-y-2 mb-8 flex-1">
+                    {rt.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-on-surface/70">
+                        <span className="w-1 h-1 rounded-full bg-secondary mt-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center bg-primary text-on-primary px-6 py-3 font-label text-xs tracking-widest uppercase transition-all hover:bg-secondary"
+                  >
+                    {r.specialistCta}
+                  </a>
+                </StaggerItem>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 5: Sample Itinerary ═══ */}
+      {r.sampleItineraries && (
+        <div className="py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <ScrollReveal className="text-center mb-16">
+              <h2 className="font-serif text-3xl sm:text-4xl text-primary">
+                Sample Itinerary
+              </h2>
+              <p className="text-on-surface/60 mt-4 max-w-2xl mx-auto">
+                Every retreat is customized. Here is a glimpse of what your journey could look like.
+              </p>
+            </ScrollReveal>
+
+            {(r.sampleItineraries as Array<{ name: string; days: Array<{ day: string; title: string; activities: string[] }> }>).map((itinerary, idx) => (
+              <ScrollReveal key={itinerary.name} delay={idx * 0.1} className="mb-12 last:mb-0">
+                <h3 className="font-serif text-2xl text-secondary mb-6">{itinerary.name}</h3>
+                <div className="space-y-4">
+                  {itinerary.days.map((d, i) => (
+                    <StaggerItem key={d.day} index={i} staggerDelay={0.08} className="border-l-2 border-secondary/20 pl-6 py-3">
+                      <div className="flex gap-4 items-baseline mb-1">
+                        <span className="font-label text-xs tracking-widest uppercase text-secondary whitespace-nowrap min-w-[60px]">{d.day}</span>
+                        <span className="font-serif text-primary">{d.title}</span>
+                      </div>
+                      <ul className="pl-[76px] space-y-1">
+                        {d.activities.map((a) => (
+                          <li key={a} className="text-sm text-on-surface/60">{a}</li>
+                        ))}
+                      </ul>
+                    </StaggerItem>
+                  ))}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 6: Logistics Grid ═══ */}
+      <div className="bg-surface-container-low py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <ScrollReveal className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl text-gold">
+            <h2 className="font-serif text-3xl sm:text-4xl text-secondary">
               {r.logisticsHeadline}
             </h2>
           </ScrollReveal>
@@ -158,13 +248,13 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
                   key={item.title}
                   index={i}
                   staggerDelay={0.1}
-                  className="border-l-2 border-gold/30 pl-6 py-2"
+                  className="border-l-2 border-secondary/30 pl-6 py-2"
                 >
-                  {Icon && <Icon className="w-8 h-8 text-gold mb-4" />}
-                  <h3 className="font-serif text-lg text-gold mb-2">
+                  {Icon && <Icon className="w-8 h-8 text-secondary mb-4" />}
+                  <h3 className="font-serif text-lg text-secondary mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-charcoal/60 leading-relaxed">
+                  <p className="text-sm text-on-surface/60 leading-relaxed">
                     {item.description}
                   </p>
                 </StaggerItem>
@@ -178,7 +268,7 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
       <div id="specialist" className="bg-sunset text-white py-20 sm:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <p className="text-xs tracking-[0.35em] uppercase text-stone-light/60 font-medium mb-4">
+            <p className="text-xs tracking-[0.35em] uppercase text-outline-variant/60 font-medium mb-4">
               {r.specialistEyebrow}
             </p>
           </ScrollReveal>
@@ -188,7 +278,7 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="text-stone-light/70 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-outline-variant/70 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
               {r.specialistBody}
             </p>
           </ScrollReveal>

@@ -45,7 +45,7 @@ export function BespokeServices({ dict }: BespokeServicesProps) {
   ];
 
   return (
-    <section id="services" className="py-24 bg-cream">
+    <section id="services" className="py-24 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -54,13 +54,13 @@ export function BespokeServices({ dict }: BespokeServicesProps) {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-sm tracking-[0.3em] uppercase text-terracotta font-medium mb-4">
+          <p className="text-sm tracking-[0.3em] uppercase text-secondary font-medium mb-4">
             {s.eyebrow}
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-gold mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl text-secondary mb-4">
             {s.headline}
           </h2>
-          <p className="text-charcoal/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
             {s.description}
           </p>
         </motion.div>
@@ -91,20 +91,20 @@ export function BespokeServices({ dict }: BespokeServicesProps) {
 
                 {/* Text */}
                 <div className={`flex flex-col justify-center ${isEven ? '' : 'md:order-1'}`}>
-                  <div className="w-12 h-px bg-terracotta mb-6" />
-                  <h3 className="font-serif text-2xl lg:text-3xl text-gold mb-4">
+                  <div className="w-12 h-px bg-secondary mb-6" />
+                  <h3 className="font-serif text-2xl lg:text-3xl text-secondary mb-4">
                     {svc.title}
                   </h3>
-                  <p className="text-charcoal/70 leading-relaxed mb-4">
+                  <p className="text-on-surface/70 leading-relaxed mb-4">
                     {svc.desc}
                   </p>
                   {svc.detail && (
-                    <p className="text-sm text-terracotta font-medium mb-2">
+                    <p className="text-sm text-secondary font-medium mb-2">
                       {svc.detail}
                     </p>
                   )}
                   {svc.note && (
-                    <p className="text-sm text-charcoal/50 italic">
+                    <p className="text-sm text-on-surface/50 italic">
                       {svc.note}
                     </p>
                   )}
@@ -120,11 +120,11 @@ export function BespokeServices({ dict }: BespokeServicesProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-warm-white rounded-lg p-8 border border-stone/20"
+            className="bg-surface rounded-lg p-8 border border-outline-variant/20"
           >
-            <div className="w-10 h-px bg-gold mb-4" />
-            <h3 className="font-serif text-xl text-gold mb-3">{s.wineRackTitle}</h3>
-            <p className="text-sm text-charcoal/60 leading-relaxed">{s.wineRackDescription}</p>
+            <div className="w-10 h-px bg-secondary mb-4" />
+            <h3 className="font-serif text-xl text-secondary mb-3">{s.wineRackTitle}</h3>
+            <p className="text-sm text-on-surface/60 leading-relaxed">{s.wineRackDescription}</p>
           </motion.div>
 
           <motion.div
@@ -132,11 +132,11 @@ export function BespokeServices({ dict }: BespokeServicesProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-warm-white rounded-lg p-8 border border-stone/20"
+            className="bg-surface rounded-lg p-8 border border-outline-variant/20"
           >
-            <div className="w-10 h-px bg-gold mb-4" />
-            <h3 className="font-serif text-xl text-gold mb-3">{s.diningTitle}</h3>
-            <p className="text-sm text-charcoal/60 leading-relaxed">{s.diningDescription}</p>
+            <div className="w-10 h-px bg-secondary mb-4" />
+            <h3 className="font-serif text-xl text-secondary mb-3">{s.diningTitle}</h3>
+            <p className="text-sm text-on-surface/60 leading-relaxed">{s.diningDescription}</p>
           </motion.div>
         </div>
       </div>

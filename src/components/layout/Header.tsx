@@ -56,18 +56,19 @@ export function Header({ locale, dict }: HeaderProps) {
   }, []);
 
   const navLinks: NavItem[] = [
-    { href: `/${locale}#rooms`, label: nav.rooms },
+    { href: `/${locale}/suites`, label: nav.rooms },
     { href: `/${locale}/weddings`, label: nav.weddings },
-    { href: `/${locale}/retreats`, label: nav.retreats },
     {
       href: '#',
       label: nav.experience,
       children: [
         { href: `/${locale}/experiences#breakfast`, label: nav.dining },
         { href: `/${locale}/experiences`, label: nav.spaConcierge },
+        { href: `/${locale}/retreats`, label: nav.retreats },
         { href: `/${locale}/groups`, label: nav.corporateGroups },
       ],
     },
+    { href: `/${locale}/packages`, label: 'Packages' },
   ];
 
   let ctaHref = `/${locale}#availability`;
@@ -90,7 +91,7 @@ export function Header({ locale, dict }: HeaderProps) {
 
   const ctaClass = ctaStyled
     ? 'border border-white text-white bg-transparent hover:bg-white/10 text-[11px] font-bold px-5 py-3 tracking-[0.15em] uppercase transition-colors'
-    : 'bg-black text-white hover:bg-proper-red text-[11px] font-bold px-5 py-3 tracking-[0.15em] uppercase transition-colors';
+    : 'bg-black text-white hover:bg-secondary text-[11px] font-bold px-5 py-3 tracking-[0.15em] uppercase transition-colors';
 
   return (
     <header
@@ -151,13 +152,13 @@ export function Header({ locale, dict }: HeaderProps) {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -4 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-2 min-w-[200px] bg-white shadow-lg border border-proper-lightgray py-2"
+                        className="absolute top-full left-0 mt-2 min-w-[200px] bg-white shadow-lg border border-outline-variant py-2"
                       >
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-5 py-2.5 text-[11px] font-bold tracking-[0.12em] uppercase text-black/70 hover:text-proper-red transition-colors"
+                            className="block px-5 py-2.5 text-[11px] font-bold tracking-[0.12em] uppercase text-black/70 hover:text-secondary transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -221,7 +222,7 @@ export function Header({ locale, dict }: HeaderProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-proper-lightgray"
+            className="lg:hidden bg-white border-t border-outline-variant"
           >
             <nav className="px-4 py-4 space-y-0">
               {navLinks.map((item) =>
@@ -229,7 +230,7 @@ export function Header({ locale, dict }: HeaderProps) {
                   <div key={item.label}>
                     <button
                       onClick={() => setMobileExpOpen(!mobileExpOpen)}
-                      className="w-full flex items-center justify-between text-black/70 hover:text-proper-red
+                      className="w-full flex items-center justify-between text-black/70 hover:text-secondary
                                  transition-colors tracking-[0.15em] uppercase text-[11px] font-bold py-3"
                     >
                       {item.label}
@@ -256,7 +257,7 @@ export function Header({ locale, dict }: HeaderProps) {
                               key={child.href}
                               href={child.href}
                               onClick={() => setMobileOpen(false)}
-                              className="block pl-6 text-black/50 hover:text-proper-red transition-colors
+                              className="block pl-6 text-black/50 hover:text-secondary transition-colors
                                          tracking-[0.12em] uppercase text-[11px] font-bold py-2.5"
                             >
                               {child.label}
@@ -271,18 +272,18 @@ export function Header({ locale, dict }: HeaderProps) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block text-black/70 hover:text-proper-red transition-colors tracking-[0.15em] uppercase text-[11px] font-bold py-3"
+                    className="block text-black/70 hover:text-secondary transition-colors tracking-[0.15em] uppercase text-[11px] font-bold py-3"
                   >
                     {item.label}
                   </Link>
                 )
               )}
-              <div className="pt-4 border-t border-proper-lightgray flex items-center justify-between">
+              <div className="pt-4 border-t border-outline-variant flex items-center justify-between">
                 <LanguageSwitcher locale={locale} label={dict.common.language} />
                 <Link
                   href={ctaHref}
                   onClick={() => setMobileOpen(false)}
-                  className="bg-black text-white hover:bg-proper-red text-[11px] font-bold px-5 py-3 tracking-[0.15em] uppercase transition-colors"
+                  className="bg-black text-white hover:bg-secondary text-[11px] font-bold px-5 py-3 tracking-[0.15em] uppercase transition-colors"
                 >
                   {ctaLabel}
                 </Link>

@@ -33,16 +33,16 @@ export function PillarBlock({
 
       {/* Text */}
       <div className={`flex flex-col justify-center ${isEven ? '' : 'md:order-1'}`}>
-        <div className="w-12 h-px bg-gold mb-6" />
-        <h3 className="font-serif text-2xl lg:text-3xl text-gold mb-2">
+        <div className="w-12 h-px bg-secondary mb-6" />
+        <h3 className="font-serif text-2xl lg:text-3xl text-secondary mb-2">
           {pillar.title}
         </h3>
         {pillar.subHeadline && (
-          <p className="text-charcoal/50 italic text-base mb-3">
+          <p className="text-on-surface/50 italic text-base mb-3">
             {pillar.subHeadline}
           </p>
         )}
-        <p className="text-charcoal/70 leading-relaxed text-lg">
+        <p className="text-on-surface/70 leading-relaxed text-lg">
           {pillar.body}
         </p>
       </div>

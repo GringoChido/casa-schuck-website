@@ -18,7 +18,7 @@ export function Footer({ locale, dict }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="relative bg-charcoal text-white overflow-hidden">
+    <footer id="contact" className="relative bg-primary text-white overflow-hidden">
       {/* Background atmospheric image */}
       <div className="absolute inset-0">
         <Image
@@ -29,7 +29,7 @@ export function Footer({ locale, dict }: FooterProps) {
           sizes="100vw"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/95 to-charcoal/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/95 to-primary/80" />
       </div>
 
       <ScrollReveal className="relative z-10">
@@ -37,7 +37,7 @@ export function Footer({ locale, dict }: FooterProps) {
           {/* Brand top */}
           <div className="text-center mb-14">
             <StaggerItem index={0}>
-              <div className="w-12 h-px bg-gold mx-auto mb-8" />
+              <div className="w-12 h-px bg-secondary mx-auto mb-8" />
             </StaggerItem>
             <StaggerItem index={1}>
               <h3 className="font-serif text-2xl font-medium tracking-[0.04em] text-white mb-3">
@@ -56,7 +56,7 @@ export function Footer({ locale, dict }: FooterProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Contact Info */}
             <StaggerItem index={3} staggerDelay={0.08}>
-              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-gold mb-4">
+              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-secondary mb-4">
                 {nav.contact}
               </h4>
               <div className="space-y-2 font-serif text-sm text-white/60 font-light">
@@ -87,7 +87,7 @@ export function Footer({ locale, dict }: FooterProps) {
 
             {/* Explore */}
             <StaggerItem index={4} staggerDelay={0.08}>
-              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-gold mb-4">
+              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-secondary mb-4">
                 {f.exploreHeading}
               </h4>
               <nav className="space-y-2">
@@ -95,7 +95,7 @@ export function Footer({ locale, dict }: FooterProps) {
                   { href: '#rooms', label: nav.rooms },
                   { href: '/story', label: nav.story },
                   { href: '/experiences#breakfast', label: nav.dining },
-                  { href: '/experiences', label: nav.services },
+                  { href: '/services', label: nav.services },
                 ].map((link) => (
                   <Link
                     key={link.href}
@@ -110,7 +110,7 @@ export function Footer({ locale, dict }: FooterProps) {
 
             {/* Plan Your Stay */}
             <StaggerItem index={5} staggerDelay={0.08}>
-              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-gold mb-4">
+              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-secondary mb-4">
                 {f.planHeading}
               </h4>
               <nav className="space-y-2">
@@ -133,7 +133,7 @@ export function Footer({ locale, dict }: FooterProps) {
 
             {/* Connect */}
             <StaggerItem index={6} staggerDelay={0.08}>
-              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-gold mb-4">{f.followUs}</h4>
+              <h4 className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-secondary mb-4">{f.followUs}</h4>
               <SocialLinks />
               <div className="mt-6">
                 <p className="font-serif text-xs text-white/30 font-light mb-2">{f.address}</p>
@@ -141,18 +141,26 @@ export function Footer({ locale, dict }: FooterProps) {
                   href="https://maps.google.com/?q=Casa+Schuck,+Garita+3,+Centro,+37700+San+Miguel+de+Allende,+Gto.,+Mexico"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans text-[10px] font-bold tracking-[0.12em] uppercase text-gold hover:text-gold-light transition-colors duration-300"
+                  className="font-sans text-[10px] font-bold tracking-[0.12em] uppercase text-secondary hover:text-secondary-fixed-dim transition-colors duration-300"
                 >
                   {f.openMaps} &rarr;
                 </a>
               </div>
               <div className="mt-4 space-y-1">
-                <Link href="#" className="block font-serif text-xs text-white/30 hover:text-white/60 transition-colors duration-300 font-light">
+                <Link href={`/${locale}/privacy`} className="block font-serif text-xs text-white/30 hover:text-white/60 transition-colors duration-300 font-light">
                   {f.privacy}
                 </Link>
-                <Link href="#" className="block font-serif text-xs text-white/30 hover:text-white/60 transition-colors duration-300 font-light">
+                <Link href={`/${locale}/terms`} className="block font-serif text-xs text-white/30 hover:text-white/60 transition-colors duration-300 font-light">
                   {f.terms}
                 </Link>
+                <a
+                  href={process.env.NEXT_PUBLIC_DASHBOARD_URL || 'http://localhost:5173'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block font-serif text-xs text-white/30 hover:text-white/60 transition-colors duration-300 font-light"
+                >
+                  {locale === 'en' ? 'Staff Login' : 'Acceso Staff'}
+                </a>
               </div>
             </StaggerItem>
           </div>

@@ -33,7 +33,7 @@ export function StoryHero({ dict }: StoryHeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-sm tracking-[0.3em] uppercase text-gold-light font-medium mb-4"
+          className="text-sm tracking-[0.3em] uppercase text-secondary-fixed-dim font-medium mb-4"
         >
           {s.eyebrow}
         </motion.p>

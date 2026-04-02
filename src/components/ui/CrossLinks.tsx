@@ -22,13 +22,13 @@ export function CrossLinks({ locale, heading, links }: CrossLinksProps) {
   if (!links.length) return null;
 
   return (
-    <section className="bg-cream border-t border-stone/20 py-16">
+    <section className="bg-surface-container-low border-t border-outline-variant/20 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.h3
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-serif text-2xl text-gold mb-10 text-center"
+          className="font-serif text-2xl text-secondary mb-10 text-center"
         >
           {heading}
         </motion.h3>
@@ -45,7 +45,7 @@ export function CrossLinks({ locale, heading, links }: CrossLinksProps) {
               <Link
                 href={`/${locale}${link.href}`}
                 className="group block bg-white rounded-lg overflow-hidden shadow-sm
-                           border border-stone/10 hover:shadow-md transition-shadow"
+                           border border-outline-variant/10 hover:shadow-md transition-shadow"
               >
                 <div className="relative aspect-[16/9]">
                   <Image
@@ -57,10 +57,10 @@ export function CrossLinks({ locale, heading, links }: CrossLinksProps) {
                   />
                 </div>
                 <div className="p-5">
-                  <h4 className="font-serif text-lg text-gold mb-1 group-hover:text-gold-light transition-colors">
+                  <h4 className="font-serif text-lg text-secondary mb-1 group-hover:text-secondary-fixed-dim transition-colors">
                     {link.title}
                   </h4>
-                  <p className="text-sm text-charcoal/60 leading-relaxed">
+                  <p className="text-sm text-on-surface/60 leading-relaxed">
                     {link.description}
                   </p>
                 </div>

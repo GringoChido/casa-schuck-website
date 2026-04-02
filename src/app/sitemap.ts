@@ -11,7 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/groups', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/experiences', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/services', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/suites', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/packages', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/story', priority: 0.6, changeFrequency: 'yearly' as const },
+    { path: '/privacy', priority: 0.2, changeFrequency: 'yearly' as const },
+    { path: '/terms', priority: 0.2, changeFrequency: 'yearly' as const },
   ];
 
   const entries: MetadataRoute.Sitemap = [];

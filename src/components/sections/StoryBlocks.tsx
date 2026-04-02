@@ -63,13 +63,13 @@ export function StoryBlocks({ locale, dict }: StoryBlocksProps) {
                 </div>
 
                 {/* Text */}
-                <h3 className="font-sans text-[13px] font-bold tracking-[0.12em] uppercase text-black mb-2 group-hover:text-gold transition-colors duration-300">
+                <h3 className="font-sans text-[13px] font-bold tracking-[0.12em] uppercase text-black mb-2 group-hover:text-secondary transition-colors duration-300">
                   {block.title}
                 </h3>
-                <p className="font-serif text-sm text-proper-gray leading-relaxed mb-3 font-light">
+                <p className="font-serif text-sm text-on-surface-variant leading-relaxed mb-3 font-light">
                   {block.description}
                 </p>
-                <span className="inline-flex items-center gap-1 font-sans text-[11px] font-bold tracking-[0.1em] uppercase text-black group-hover:text-gold transition-colors duration-300">
+                <span className="inline-flex items-center gap-1 font-sans text-[11px] font-bold tracking-[0.1em] uppercase text-black group-hover:text-secondary transition-colors duration-300">
                   {block.linkText}
                   <svg
                     className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"

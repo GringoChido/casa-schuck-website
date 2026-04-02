@@ -21,7 +21,7 @@ export function ChatMessage({ role, text }: ChatMessageProps) {
         className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
           isUser
             ? 'bg-black text-white rounded-br-sm'
-            : 'bg-cream text-charcoal border border-stone/20 rounded-bl-sm'
+            : 'bg-surface-container-low text-on-surface border border-outline-variant/20 rounded-bl-sm'
         }`}
       >
         {text}

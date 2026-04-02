@@ -46,7 +46,7 @@ export function SocialLinks() {
           href={s.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-stone/50 hover:text-white transition-colors"
+          className="text-outline-variant/50 hover:text-white transition-colors"
           aria-label={s.name}
         >
           {s.icon}

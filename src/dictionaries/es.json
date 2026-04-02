@@ -139,6 +139,102 @@
       "Preparacion de la novia en El Royal Suite",
       "Nueve habitaciones para su cortejo nupcial"
     ],
+    "packages": [
+      {
+        "name": "Ceremonia Íntima",
+        "price": "$8,500 USD",
+        "guests": "Hasta 30 invitados",
+        "description": "Una celebración entrañable en nuestro patio colonial, diseñada para parejas que buscan elegancia sin excesos.",
+        "includes": [
+          "Montaje de ceremonia en el patio",
+          "Cóctel de bienvenida para invitados",
+          "Preparación de la suite nupcial",
+          "Coordinador del día del evento",
+          "Arreglos florales básicos",
+          "2 noches de estancia para la pareja"
+        ]
+      },
+      {
+        "name": "Celebración Colonial",
+        "price": "$18,500 USD",
+        "guests": "Hasta 60 invitados",
+        "description": "La experiencia completa de Casa Schuck — tu propiedad privada para un fin de semana de alegría, desde la ceremonia en el patio hasta la recepción en la azotea.",
+        "includes": [
+          "Renta completa de la propiedad",
+          "Ceremonia en el patio + recepción en la azotea",
+          "Callejoneada por las calles empedradas",
+          "Catering completo para todos los eventos",
+          "Fotografía profesional",
+          "Instalaciones florales en toda la propiedad",
+          "Suite nupcial + 5 habitaciones por 3 noches"
+        ]
+      },
+      {
+        "name": "Gran Propiedad",
+        "price": "$28,000+ USD",
+        "guests": "Personalizado",
+        "description": "Una boda destino de varios días con cada detalle diseñado alrededor de tu visión. Toma completa de Casa Schuck para la celebración definitiva.",
+        "includes": [
+          "Toma completa de la propiedad",
+          "Programación y diseño de eventos de varios días",
+          "Las 9 habitaciones por 4 noches",
+          "Coordinación de cena de ensayo",
+          "Catering completo para todas las comidas y eventos",
+          "Diseño floral premium e instalaciones",
+          "Fotografía y videografía profesional",
+          "Traslados al aeropuerto para todos los invitados",
+          "Wedding planner dedicado de principio a fin"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "names": "Sarah & Miguel",
+        "location": "Austin, TX",
+        "quote": "Desde el momento en que entramos al patio, supimos que ahí diríamos 'sí, acepto'. El equipo se encargó de todo — la callejoneada por las calles empedradas fue pura magia. Nuestros 45 invitados siguen hablando de la recepción en la azotea bajo las estrellas."
+      },
+      {
+        "names": "Jessica & David",
+        "location": "Ciudad de México",
+        "quote": "Queríamos algo íntimo, no una producción. Casa Schuck nos dio exactamente eso — una boda que se sintió como una celebración en familia, en un hogar que ya se sentía nuestro. La coordinación fue impecable."
+      },
+      {
+        "names": "Amanda & Carlos",
+        "location": "San Francisco",
+        "quote": "Nuestra wedding planner dijo que Casa Schuck fue el venue más fácil con el que había trabajado. La propiedad es impresionante, pero lo que realmente la distingue es el equipo — se anticiparon a cada necesidad antes de que siquiera preguntáramos."
+      }
+    ],
+    "vendors": [
+      {
+        "category": "Fotografía",
+        "description": "3 fotógrafos locales verificados que conocen cada ángulo de la propiedad y los escenarios más icónicos de San Miguel."
+      },
+      {
+        "category": "Diseño Floral",
+        "description": "Alianzas con los 2 mejores ateliers florales de San Miguel para todo, desde ramos hasta instalaciones completas en el patio."
+      },
+      {
+        "category": "Música",
+        "description": "Mariachi, trío de jazz, DJ y músicos tradicionales de callejoneada — curados para cada momento de tu celebración."
+      },
+      {
+        "category": "Catering",
+        "description": "Cocina en casa más una red de 4 chefs privados especializados en cocina mexicana, internacional y de fusión."
+      },
+      {
+        "category": "Transporte",
+        "description": "Flota de autos vintage para la pareja, shuttles para invitados y traslados al aeropuerto coordinados puerta a puerta."
+      }
+    ],
+    "capacity": {
+      "headline": "Capacidad del Venue",
+      "courtyard": { "name": "Patio", "seated": 60, "cocktail": 80 },
+      "rooftop": { "name": "Terraza en Azotea", "seated": 40, "cocktail": 60 },
+      "garden": { "name": "Jardín", "seated": 30, "cocktail": 50 },
+      "fullProperty": { "name": "Propiedad Completa", "seated": 60, "cocktailNote": "Múltiples áreas combinadas" },
+      "seatedLabel": "Sentados",
+      "cocktailLabel": "Cóctel"
+    },
     "cta": "Planear Su Boda",
     "consultCta": "Reservar una Consulta",
     "inquiryNote": "Contactenos por WhatsApp o correo para comenzar a planear su celebracion.",
@@ -166,6 +262,143 @@
     "diningTitle": "Reservaciones VIP en Restaurantes",
     "diningDescription": "Mesas aseguradas en los restaurantes mas codiciados de San Miguel. Desde cenas gourmet en azoteas hasta mezcalerias intimas — nosotros nos encargamos de los detalles.",
     "toursExcursionsHeadline": "Tours y Excursiones"
+  },
+  "servicesPage": {
+    "meta": {
+      "title": "Servicios | Casa Schuck",
+      "description": "Servicios en la propiedad de Casa Schuck, hotel boutique en San Miguel de Allende. Gastronomía, bienestar, spa, tours y excursiones curadas — todo a tu ritmo."
+    },
+    "eyebrow": "Servicios en la Propiedad",
+    "headline": "Todo Lo Que Necesitas, Nada Que Sobre",
+    "description": "Nuestro equipo de concierge diseña cada día alrededor de tus preferencias. Desde yoga al amanecer hasta mezcal a medianoche — cada servicio en Casa Schuck está disponible a tu ritmo.",
+    "gastronomy": {
+      "eyebrow": "Gastronomía",
+      "headline": "El Arte de la Mesa",
+      "description": "Cada comida en Casa Schuck es una celebración de la herencia culinaria de México. Desde el desayuno incluido en el patio hasta cenas privadas con chef bajo las estrellas, creemos que la comida es el hilo que convierte una estancia en una historia.",
+      "offerings": [
+        {
+          "name": "Desayuno Incluido",
+          "description": "Comienza cada día en el patio con un festín de Chilaquiles, Huevos Rancheros, pan recién horneado, café orgánico y fruta de temporada. Una celebración diaria de las mañanas mexicanas.",
+          "schedule": "8:30 – 10:00 AM, diario",
+          "price": "Incluido con tu estancia"
+        },
+        {
+          "name": "Cena en la Azotea",
+          "description": "Cenas privadas en la terraza con vistas panorámicas de la Parroquia y la Sierra. Menús de varios tiempos preparados por nuestra cocina o chefs privados invitados.",
+          "schedule": "Con reservación",
+          "price": "$55 – $85 / persona"
+        },
+        {
+          "name": "Comida en el Patio",
+          "description": "Almuerzos al aire libre y cenas íntimas bajo la jacaranda. Menús de temporada que honran los ingredientes más frescos del mercado.",
+          "schedule": "Bajo solicitud",
+          "price": "$35 – $55 / persona"
+        },
+        {
+          "name": "Chef Privado",
+          "description": "Un chef dedicado para tu grupo — ya sea una cena romántica para dos o un banquete de varios tiempos para toda tu fiesta. Menús personalizados a tu gusto.",
+          "schedule": "Con reservación, 48 horas de anticipación",
+          "price": "Desde $150 / persona"
+        },
+        {
+          "name": "Mezcal y Vino",
+          "description": "El Bar de Honor — destilados curados, mezcal artesanal y vinos mexicanos disponibles en sistema de confianza. Sírvete algo hermoso.",
+          "schedule": "Autoservicio, siempre disponible",
+          "price": "Sistema de honor"
+        }
+      ]
+    },
+    "wellness": {
+      "eyebrow": "Bienestar",
+      "headline": "Restauración Sin Cita Previa",
+      "description": "Terapeutas e instructores profesionales vienen a ti — en tu habitación, el patio o la azotea. Sin lobby de spa. Sin presión de horarios. Solo restauración a tu ritmo.",
+      "offerings": [
+        {
+          "name": "Masaje Sueco",
+          "options": [
+            { "duration": "60 min", "price": "$80" },
+            { "duration": "90 min", "price": "$110" },
+            { "duration": "120 min", "price": "$140" }
+          ]
+        },
+        {
+          "name": "Masaje de Tejido Profundo",
+          "options": [
+            { "duration": "60 min", "price": "$90" },
+            { "duration": "90 min", "price": "$120" }
+          ]
+        },
+        {
+          "name": "Masaje en Pareja",
+          "options": [
+            { "duration": "60 min", "price": "$150" },
+            { "duration": "90 min", "price": "$200" }
+          ]
+        },
+        {
+          "name": "Aromaterapia",
+          "options": [
+            { "duration": "60 min", "price": "$90" }
+          ]
+        },
+        {
+          "name": "Yoga en la Azotea",
+          "options": [
+            { "duration": "Sesión privada", "price": "$75" },
+            { "duration": "Sesión grupal", "price": "$25 / persona" }
+          ]
+        },
+        {
+          "name": "Meditación y Respiración",
+          "options": [
+            { "duration": "Sesión privada", "price": "$60" }
+          ]
+        }
+      ]
+    },
+    "tours": {
+      "eyebrow": "Tours y Excursiones",
+      "headline": "Más Allá de Nuestros Muros",
+      "description": "San Miguel de Allende es un museo viviente — y las tierras altas que lo rodean guardan secretos ancestrales. Nuestro equipo de concierge te conecta con los mejores guías y experiencias que ofrece la región.",
+      "offerings": [
+        {
+          "name": "Tour a Pie por la Ciudad",
+          "duration": "3 horas",
+          "price": "$45 / persona",
+          "description": "Centro histórico, Parroquia, talleres artesanales y patios escondidos con un guía experto local."
+        },
+        {
+          "name": "Tour de Arte y Galerías",
+          "duration": "4 horas",
+          "price": "$65 / persona",
+          "description": "Visitas privadas a galerías, encuentros en estudios de artistas y una mirada íntima a la vibrante escena artística de San Miguel."
+        },
+        {
+          "name": "Tour Culinario",
+          "duration": "4 horas",
+          "price": "$85 / persona",
+          "description": "Visita al mercado, clase de cocina práctica y degustación de mezcal — un delicioso recorrido por la gastronomía mexicana."
+        },
+        {
+          "name": "Aguas Termales (La Gruta)",
+          "duration": "Medio día",
+          "price": "$55 / persona",
+          "description": "Transporte redondo y entrada a las piscinas termales naturales de La Gruta, enclavadas en las tierras altas fuera de la ciudad."
+        },
+        {
+          "name": "Ruinas de Cañada de la Virgen",
+          "duration": "Día completo",
+          "price": "$95 / persona",
+          "description": "Tour arqueológico guiado del complejo piramidal prehispánico, más almuerzo en una hacienda local."
+        },
+        {
+          "name": "Ruta del Vino (Dolores Hidalgo)",
+          "duration": "Día completo",
+          "price": "$110 / persona",
+          "description": "Visitas a viñedos, degustaciones de vino y parada en los famosos talleres de cerámica de Dolores Hidalgo."
+        }
+      ]
+    }
   },
   "retreats": {
     "eyebrow": "Centro de Retiros",
@@ -286,6 +519,107 @@
         "alt": "Espacio privado de retiro en Casa Schuck para intensivos grupales"
       }
     ],
+    "retreatTypes": [
+      {
+        "name": "Yoga y Movimiento",
+        "description": "Profundiza tu práctica en el corazón del México colonial. Dos sesiones diarias en la azotea al amanecer y en el patio al atardecer, con excursiones opcionales a las aguas termales de la región.",
+        "pricing": [
+          { "duration": "3 noches", "price": "$995 / persona" },
+          { "duration": "5 noches", "price": "$1,595 / persona" }
+        ],
+        "includes": [
+          "2 prácticas diarias de yoga (amanecer en azotea, atardecer en patio)",
+          "Excursión opcional a las aguas termales de La Gruta",
+          "Alimentación plant-based diseñada para practicantes",
+          "Consulta privada con el instructor principal"
+        ],
+        "capacity": { "min": 6, "max": 18 }
+      },
+      {
+        "name": "Viajes Sagrados",
+        "description": "Una inmersión profunda en las tradiciones ancestrales de sanación de las tierras altas mexicanas. Trabajo de respiración, ceremonia de cacao, temazcal y sanación con sonido — guiados por curanderos locales enraizados en generaciones de sabiduría.",
+        "pricing": [
+          { "duration": "4 noches", "price": "$1,295 / persona" }
+        ],
+        "includes": [
+          "Trabajo de respiración y ceremonia de cacao",
+          "Experiencia tradicional de temazcal",
+          "Sesiones de sanación con sonido",
+          "Tratamientos botánicos indígenas",
+          "Meditación de altitud en las tierras altas",
+          "Sesiones con cristales de cuarzo",
+          "Guiado por curanderos locales"
+        ],
+        "capacity": { "min": 4, "max": 12 }
+      },
+      {
+        "name": "Intensivos Creativos",
+        "description": "Escritura, pintura o técnica mixta — un retiro creativo estructurado diseñado para momentos de revelación. Sesiones matutinas en los espacios más inspiradores de la propiedad, excursiones vespertinas a talleres artesanales y recorridos por galerías, y tertulias nocturnas para compartir obra.",
+        "pricing": [
+          { "duration": "4 noches", "price": "$1,195 / persona" }
+        ],
+        "includes": [
+          "Sesiones creativas matutinas con facilitador profesional",
+          "Excursiones vespertinas (talleres artesanales, tours de galerías)",
+          "Tertulias nocturnas para compartir y retroalimentar",
+          "Todas las comidas incluidas",
+          "Acceso a espacio de trabajo privado"
+        ],
+        "capacity": { "min": 6, "max": 15 }
+      }
+    ],
+    "sampleItineraries": [
+      {
+        "name": "Retiro de 3 Días",
+        "days": [
+          {
+            "day": "Día 1",
+            "title": "Llegada y Apertura",
+            "activities": ["Llegada y registro", "Ceremonia de bienvenida en el patio", "Meditación al atardecer en la azotea"]
+          },
+          {
+            "day": "Día 2",
+            "title": "Inmersión Total",
+            "activities": ["Yoga al amanecer en la azotea", "Excursión a las aguas termales de La Gruta", "Ceremonia de cacao por la noche"]
+          },
+          {
+            "day": "Día 3",
+            "title": "Integración y Partida",
+            "activities": ["Práctica matutina final", "Círculo de integración", "Late checkout y partida"]
+          }
+        ]
+      },
+      {
+        "name": "Retiro de 5 Días",
+        "days": [
+          {
+            "day": "Día 1",
+            "title": "Llegada y Orientación",
+            "activities": ["Llegada y registro", "Orientación por la propiedad y presentaciones", "Cena de bienvenida en la azotea"]
+          },
+          {
+            "day": "Día 2",
+            "title": "Práctica Profunda",
+            "activities": ["Día completo de práctica (sesiones matutinas y vespertinas)", "Ceremonia tradicional de temazcal", "Noche libre para descansar"]
+          },
+          {
+            "day": "Día 3",
+            "title": "Día de Excursión",
+            "activities": ["Aguas termales en La Gruta", "O: Talleres artesanales en San Miguel", "Cena grupal en el patio"]
+          },
+          {
+            "day": "Día 4",
+            "title": "Profundización",
+            "activities": ["Práctica intensiva por la mañana", "Sesión de sanación con sonido", "Noche libre para explorar el pueblo"]
+          },
+          {
+            "day": "Día 5",
+            "title": "Cierre y Partida",
+            "activities": ["Última práctica al amanecer", "Desayuno de integración y círculo de cierre", "Late checkout y partida"]
+          }
+        ]
+      }
+    ],
     "logisticsHeadline": "Todo Lo Que Necesitas",
     "logistics": [
       { "title": "Azotea Privada", "description": "Espacio al aire libre dedicado para yoga, meditación y sesiones grupales con vistas panorámicas." },
@@ -324,6 +658,46 @@
         "alt": "Evento de celebración en Casa Schuck"
       }
     ],
+    "caseStudies": [
+      {
+        "title": "Offsite de Startup Tech — 22 Personas, 4 Días",
+        "body": "Una startup Serie B eligió Casa Schuck para su retiro anual de liderazgo. El patio sirvió como espacio principal de sesiones, mientras los grupos pequeños usaron la azotea y la biblioteca. Las cenas de equipo por la noche incluyeron experiencias con chef privado. Resultado: el equipo se fue con un roadmap de 12 meses y relaciones fortalecidas por la experiencia compartida."
+      },
+      {
+        "title": "Reunión Familiar — 35 Invitados, 5 Días",
+        "body": "Tres generaciones de una familia mexicoamericana regresaron a San Miguel para un cumpleaños especial. Casa Schuck coordinó una cena de bienvenida en la azotea, una clase de cocina, un tour privado de la Parroquia y una fiesta de última noche con mariachi. La familia ya reservó para el próximo año."
+      }
+    ],
+    "techSpecs": {
+      "headline": "Tecnología e Infraestructura",
+      "specs": [
+        { "label": "WiFi", "detail": "Fibra óptica, 100+ Mbps en toda la propiedad" },
+        { "label": "A/V", "detail": "Proyector portátil, pantalla, bocinas Bluetooth, conectividad HDMI" },
+        { "label": "Energía", "detail": "Múltiples contactos en todas las áreas de reunión, extensiones disponibles" },
+        { "label": "Impresión", "detail": "Disponible en recepción" },
+        { "label": "Videoconferencia", "detail": "Conectividad confiable para llamadas de Zoom/Teams en toda la propiedad" }
+      ]
+    },
+    "cateringOptions": {
+      "headline": "Catering y Comidas",
+      "options": [
+        { "meal": "Desayuno", "description": "Incluido diario (8:30 – 10:00 AM)" },
+        { "meal": "Almuerzo de Trabajo", "price": "$35 / persona", "description": "Menú mexicano o internacional, servido en tu espacio de reunión" },
+        { "meal": "Cena", "price": "$55 / persona", "description": "Experiencia de 3 tiempos con chef privado en el patio o la azotea" },
+        { "meal": "Recepción de Cóctel", "price": "$40 / persona", "description": "Cócteles artesanales, vino y botanas" },
+        { "meal": "Café y Snacks", "description": "De cortesía durante todo el día" }
+      ]
+    },
+    "capacityByConfig": {
+      "headline": "Capacidad por Configuración",
+      "configurations": [
+        { "setup": "Mesa Directiva", "location": "Biblioteca", "capacity": 12 },
+        { "setup": "Salón de Clase", "location": "Patio", "capacity": 30 },
+        { "setup": "Banquete", "location": "Azotea", "capacity": 40 },
+        { "setup": "Teatro", "location": "Patio", "capacity": 50 },
+        { "setup": "Cóctel", "location": "Propiedad Completa", "capacity": 80 }
+      ]
+    },
     "logisticsHeadline": "Infraestructura Completa",
     "logistics": [
       { "title": "Coordinador de Eventos", "description": "Un único punto de contacto que maneja proveedores, cronogramas y cada detalle en tu nombre." },
@@ -355,5 +729,289 @@
     "email": "Correo",
     "whatsapp": "WhatsApp",
     "language": "English"
+  },
+  "homePage": {
+    "heroSplit": {
+      "eyebrow": "Establecido en 1965",
+      "headline": "Historia, Curada para el Alma Moderna.",
+      "body": "En el corazón de San Miguel, hemos tejido siglos de herencia colonial en un santuario de quietud contemporánea.",
+      "cta": "Descubre la Historia",
+      "heroAlt": "Patio colonial bañado por el sol con plantas exuberantes y arcos de piedra"
+    },
+    "narrative": {
+      "eyebrow": "La Narrativa",
+      "headline": "Una Casa de Devoción Silenciosa.",
+      "body": "Casa Schuck no es simplemente un hotel; es un poema arquitectónico. Cada piedra habla de siglos pasados, mientras cada amenidad susurra de lujo contemporáneo. Te invitamos a perderte en las texturas de nuestros muros y encontrarte en la quietud de nuestros jardines.",
+      "cta": "Reserva Tu Historia",
+      "imageAlt": "Intrincados azulejos mexicanos pintados a mano en azul y blanco"
+    },
+    "philosophy": {
+      "eyebrow": "Nuestra Filosofía",
+      "headline": "Nueve Habitaciones. Nueve Historias.",
+      "subtitle": "El Arte de la Quietud",
+      "pillars": [
+        {
+          "number": "01",
+          "title": "Autenticidad",
+          "body": "Preservando el alma cruda de la artesanía colonial mientras integramos la facilidad del mundo moderno."
+        },
+        {
+          "number": "02",
+          "title": "Intimidad",
+          "body": "Con solo nueve suites, tu estadía se define por la atención personal y un profundo sentido de privacidad."
+        },
+        {
+          "number": "03",
+          "title": "Santuario",
+          "body": "Jardines exuberantes y patios sombreados diseñados para la reflexión, lejos de los ecos del mundo exterior."
+        }
+      ]
+    },
+    "signatureSuite": {
+      "eyebrow": "La Obra Maestra",
+      "name": "Suite El Royal.",
+      "body": "Techos abovedados de madera y chimeneas de piedra tallada a mano enmarcan vistas de las torres de la catedral. Este es el cénit de la elegancia colonial.",
+      "cta": "Reservar la Suite",
+      "galleryCta": "Ver Galería",
+      "imageAlt": "Suite de hotel de lujo con vigas de madera oscura y ropa de cama de lino blanco"
+    },
+    "moments": {
+      "headline": "Momentos Inolvidables",
+      "subtitle": "Experiencias diseñadas con intención",
+      "items": [
+        {
+          "title": "Bodas",
+          "body": "Intercambia votos entre arcos de piedra y el aroma de jazmín en flor. Una celebración curada para hasta 120 invitados.",
+          "cta": "Consulta Tu Fecha",
+          "imageAlt": "Elegante mesa de boda blanca en un exuberante patio jardín"
+        },
+        {
+          "title": "Rituales de Bienestar",
+          "body": "Rejuvenécete con tratamientos artesanales y meditación matutina en nuestros jardines privados.",
+          "cta": "Reservar Ritual",
+          "imageAlt": "Tranquilo cuarto de spa con velas y toallas blancas"
+        }
+      ]
+    },
+    "journal": {
+      "headline": "Historias Locales",
+      "cta": "Leer Diario",
+      "articles": [
+        {
+          "category": "Artesanía",
+          "title": "Los Secretos de los Artesanos de San Miguel",
+          "excerpt": "Descubre los talleres ocultos donde la tradición se forja en belleza."
+        },
+        {
+          "category": "Patrimonio",
+          "title": "Arquitectura del Alma",
+          "excerpt": "Cómo los espacios coloniales proveen el lienzo perfecto para la tranquilidad moderna."
+        },
+        {
+          "category": "Experiencias",
+          "title": "Atardeceres y Torres",
+          "excerpt": "Nuestra guía curada de las mejores vistas desde azoteas en la ciudad."
+        }
+      ]
+    },
+    "seasonalTeaser": {
+      "eyebrow": "Paquetes de Temporada",
+      "headline": "Curadurías de Temporada",
+      "body": "Experiencias locales, agrupadas para mejor valor. Reserva directo para lo mejor de la temporada.",
+      "cta": "Ver Todos los Paquetes"
+    }
+  },
+  "suitesPage": {
+    "meta": {
+      "title": "Suites | Casa Schuck Hotel Boutique",
+      "description": "Nueve habitaciones únicas, cada una con su propio nombre, carácter e historia. Arquitectura colonial y lujo moderno en San Miguel de Allende."
+    },
+    "hero": {
+      "eyebrow": "El Arte de Vivir",
+      "headline": "Una Colección de Individualidad",
+      "imageAlt": "Interior sereno de habitación de lujo con luz solar"
+    },
+    "collection": {
+      "eyebrow": "Habitaciones y Suites",
+      "headline": "Nueve Habitaciones. Nueve Historias.",
+      "description": "Cada habitación en Casa Schuck tiene su propio nombre, su propio carácter, su propia forma de darte la bienvenida. Arquitectura colonial, arte original y comodidades modernas — tejidas con intención.",
+      "bookRoom": "Reservar Esta Habitación",
+      "maxGuests": "Huéspedes Máx",
+      "floor": "Piso",
+      "bedType": "Tipo de Cama"
+    },
+    "amenities": {
+      "eyebrow": "Amenidades",
+      "headline": "Comodidades en Habitación",
+      "items": [
+        {
+          "icon": "king_bed",
+          "title": "Cama King",
+          "description": "Sábanas hipoalergénicas y cobertores artesanales mexicanos tejidos."
+        },
+        {
+          "icon": "bathtub",
+          "title": "Tina de Inmersión",
+          "description": "Tinas de porcelana independientes con sales de baño orgánicas locales."
+        },
+        {
+          "icon": "wifi",
+          "title": "WiFi de Alta Velocidad",
+          "description": "Conectividad de fibra óptica para el nómada digital moderno."
+        },
+        {
+          "icon": "shower",
+          "title": "Baño Privado",
+          "description": "Pisos de azulejo Talavera y regaderas tipo lluvia premium."
+        }
+      ]
+    },
+    "cta": {
+      "headline": "Encuentra Tu Santuario Perfecto.",
+      "buttonText": "Ver Disponibilidad"
+    }
+  },
+  "packagesPage": {
+    "meta": {
+      "title": "Paquetes de Temporada | Casa Schuck Hotel Boutique",
+      "description": "Viajes inmersivos de temporada en San Miguel de Allende. Paquetes de Día de Muertos, Escapada Navideña y Renovación Primaveral en Casa Schuck."
+    },
+    "header": {
+      "eyebrow": "Disponibilidad Limitada",
+      "headline": "Curadurías de Temporada",
+      "description": "Viajes inmersivos diseñados para sincronizar tu estadía con el corazón rítmico de San Miguel de Allende."
+    },
+    "packages": [
+      {
+        "eyebrow": "",
+        "name": "Experiencia Día de Muertos",
+        "tagline": "Una inmersión conmovedora en la celebración más profunda de México, donde la memoria se encuentra con el vibrante presente.",
+        "price": "$1,850 USD",
+        "priceLabel": "Desde",
+        "inclusions": [
+          "4 noches en una Suite Colonial Signature",
+          "Taller privado de Ofrenda con un artesano local",
+          "Tour guiado al atardecer del Panteón de Guadalupe",
+          "Sesión tradicional de maquillaje de Catrina y fotografía"
+        ],
+        "itinerary": [
+          { "day": "Día 1", "description": "Llegada a San Miguel, registro, degustación de mezcal de bienvenida en la azotea, caminata de orientación por las calles decoradas" },
+          { "day": "Día 2", "description": "Taller privado de ofrenda con artesano local, tarde libre para explorar los altares por la ciudad, noche de maquillaje de Catrina y sesión fotográfica" },
+          { "day": "Día 3", "description": "Tour guiado al atardecer del Panteón de Guadalupe, cena tradicional a la luz de las velas con música en vivo" },
+          { "day": "Día 4", "description": "Meditación matutina en el patio, late checkout, partida" }
+        ],
+        "whatsIncluded": [
+          "4 noches de alojamiento en Suite Colonial Signature",
+          "Desayuno artesanal diario",
+          "Degustación de mezcal de bienvenida",
+          "Taller privado de ofrenda",
+          "Sesión de maquillaje de Catrina con fotógrafo",
+          "Tour guiado al Panteón",
+          "Cena a la luz de las velas con música en vivo",
+          "Traslado del aeropuerto (llegada)"
+        ],
+        "addOns": [
+          "Noches adicionales — desde $180/noche",
+          "Upgrade a cena con chef privado — $85/persona",
+          "Excursión a aguas termales — $55/persona",
+          "Sesión fotográfica extendida — $250",
+          "Traslado al aeropuerto (salida) — $45"
+        ],
+        "cta": "Reservar Este Paquete",
+        "imageAlt": "Altar mexicano tradicional con cempasúchil brillante y velas"
+      },
+      {
+        "eyebrow": "Solsticio de Invierno",
+        "name": "Escapada Navideña",
+        "tagline": "Redescubre la magia de la temporada entre las calles empedradas y las luces festivas de San Miguel. Casa Schuck se transforma en un santuario de calidez y elegancia navideña.",
+        "price": "$1,200",
+        "priceLabel": "Desde",
+        "inclusionsTitle": "Incluye",
+        "inclusions": [
+          "3 Noches de Estancia",
+          "Desayuno Artesanal Diario",
+          "Cena Privada de Posada"
+        ],
+        "itinerary": [
+          { "day": "Día 1", "description": "Llegada, registro, chocolate caliente de bienvenida junto a la fogata del patio, caminata nocturna por las calles iluminadas" },
+          { "day": "Día 2", "description": "Desayuno artesanal, mañana libre, preparación de la cena de Posada por la tarde con el chef, celebración privada de Posada" },
+          { "day": "Día 3", "description": "Desayuno, late checkout, partida" }
+        ],
+        "whatsIncluded": [
+          "3 noches de alojamiento",
+          "Desayuno artesanal diario",
+          "Chocolate caliente de bienvenida y pan dulce",
+          "Cena privada de Posada con menú tradicional",
+          "Guía para caminata nocturna por calles decoradas"
+        ],
+        "addOns": [
+          "Noche adicional — desde $180/noche",
+          "Cena navideña con chef privado — $75/persona",
+          "Excursión a aguas termales — $55/persona",
+          "Taller de arreglo floral navideño — $45/persona",
+          "Traslado al aeropuerto — $45 por trayecto"
+        ],
+        "cta": "Solicitar Disponibilidad",
+        "imageAlt": "Acogedor patio de hotel boutique con luces navideñas y faroles"
+      },
+      {
+        "eyebrow": "Despertar del Equinoccio",
+        "name": "Retiro de Renovación Primaveral",
+        "tagline": "Cuando las jacarandas pintan el pueblo de púrpura, San Miguel despierta. Esta curaduría se enfoca en el bienestar, la renovación y la belleza silenciosa de la primavera del desierto alto.",
+        "price": "$2,400",
+        "priceLabel": "/ paquete",
+        "numberedInclusions": [
+          {
+            "number": "01",
+            "label": "Alojamiento",
+            "detail": "5 Noches en nuestra Suite Terraza Jardín"
+          },
+          {
+            "number": "02",
+            "label": "Bienestar",
+            "detail": "Yoga privado diario y ceremonia de Temazcal"
+          },
+          {
+            "number": "03",
+            "label": "Gourmet",
+            "detail": "Almuerzo orgánico de la granja a la mesa en un huerto"
+          }
+        ],
+        "itinerary": [
+          { "day": "Día 1", "description": "Llegada, orientación por el jardín, cena de bienvenida en la azotea" },
+          { "day": "Día 2", "description": "Yoga al amanecer, ceremonia de temazcal por la mañana, tarde libre, sesión de escritura reflexiva por la noche" },
+          { "day": "Día 3", "description": "Yoga matutino, excursión de día completo a granja orgánica y clase de cocina" },
+          { "day": "Día 4", "description": "Yoga al amanecer, aguas termales en La Gruta, sanación con sonido por la noche" },
+          { "day": "Día 5", "description": "Última práctica al amanecer, desayuno de integración, late checkout" }
+        ],
+        "whatsIncluded": [
+          "5 noches de alojamiento en Suite Terraza Jardín",
+          "Desayuno artesanal diario",
+          "Sesiones diarias de yoga al amanecer",
+          "Ceremonia tradicional de temazcal",
+          "Excursión de día completo a granja orgánica con clase de cocina",
+          "Visita a aguas termales en La Gruta",
+          "Sesión de sanación con sonido",
+          "Cena de bienvenida en la azotea",
+          "Desayuno de integración el último día"
+        ],
+        "addOns": [
+          "Noche adicional — desde $200/noche",
+          "Masaje privado (60 min) — $80",
+          "Masaje en pareja (60 min) — $150",
+          "Tour de arte y galerías — $65/persona",
+          "Cena con chef privado — $85/persona",
+          "Traslado al aeropuerto — $45 por trayecto"
+        ],
+        "cta": "Reservar Este Paquete",
+        "imageAlt": "Exuberante jardín primaveral con jacarandas en flor y arquitectura"
+      }
+    ],
+    "newsletter": {
+      "headline": "Quédate por la Temporada",
+      "body": "Únete a nuestro círculo privado para recibir notificaciones anticipadas de nuestras curadurías de temporada y eventos de edición limitada.",
+      "placeholder": "Correo Electrónico",
+      "buttonText": "Suscribirse"
+    }
   }
 }

@@ -1,62 +1,107 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* === Proper Hotel-inspired palette === */
-  --color-proper-black: #000000;
-  --color-proper-white: #ffffff;
-  --color-proper-offwhite: #f7f7f5;
-  --color-proper-gray: #777777;
-  --color-proper-lightgray: #e5e5e5;
-  --color-proper-red: #da3743;
-
-  /* === Casa Schuck — San Miguel de Allende palette === */
+  /* === Casa Schuck Brand Palette === */
   --color-sage: #5B7B6A;
-  --color-sage-light: #7A9B8A;
-  --color-sage-dark: #4A6757;
   --color-terracotta: #C17A56;
-  --color-terracotta-light: #D4936B;
-  --color-terracotta-dark: #A66842;
   --color-linen: #F7F2EC;
-  --color-linen-dark: #EDE5DA;
   --color-espresso: #1C1917;
   --color-dusty-rose: #C4A289;
-  --color-cream: #FAF4ED;
-  --color-warm-white: #FEFCFA;
   --color-gold: #BF754B;
-  --color-gold-light: #D4936B;
-  --color-charcoal: #2C2C2C;
-  --color-whatsapp: #25D366;
-  --color-stone: #BABDBF;
-  --color-stone-light: #D4D6D8;
 
-  /* Fonts — Cormorant Garamond (serif, headings) + Lato (sans, body/UI) */
-  --font-serif: var(--font-cormorant), Georgia, serif;
-  --font-sans: var(--font-lato), system-ui, sans-serif;
+  /* Dark accent section */
+  --color-sunset: #1C1917;
+
+  /* Jewel tones (sparingly) */
+  --color-emerald: #2D6A4F;
+  --color-amethyst: #7B2D8E;
+  --color-bougainvillea: #C2185B;
+  --color-jacaranda: #5C6BC0;
+
+  /* Semantic mapping */
+  --color-primary: #1C1917;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2C2826;
+  --color-on-primary-container: #C4A289;
+  --color-primary-fixed: #F7F2EC;
+  --color-primary-fixed-dim: #E8E0D8;
+
+  --color-secondary: #C17A56;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #D4936B;
+  --color-on-secondary-container: #7A4A30;
+  --color-secondary-fixed: #F5DDD0;
+  --color-secondary-fixed-dim: #E8C4B0;
+
+  --color-tertiary: #5B7B6A;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #3D5A4C;
+  --color-on-tertiary-container: #B8D4C5;
+  --color-tertiary-fixed: #D4E8DD;
+  --color-tertiary-fixed-dim: #B8D4C5;
+
+  --color-surface: #F7F2EC;
+  --color-on-surface: #1C1917;
+  --color-surface-dim: #E8E0D8;
+  --color-surface-bright: #FAF7F3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #F5F0EA;
+  --color-surface-container: #F0EAE3;
+  --color-surface-container-high: #E8E0D8;
+  --color-surface-container-highest: #E0D7CE;
+  --color-surface-variant: #E8E0D8;
+  --color-on-surface-variant: #4A4541;
+
+  --color-outline: #8A7D72;
+  --color-outline-variant: #C4B9AE;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-inverse-surface: #1C1917;
+  --color-inverse-on-surface: #F7F2EC;
+  --color-inverse-primary: #D4936B;
+
+  --color-surface-tint: #5B7B6A;
+  --color-on-background: #1C1917;
+  --color-background: #F7F2EC;
+
+  --color-whatsapp: #25D366;
+
+  /* Font families — Cormorant Garamond (headings), Lato (body), Montserrat (UI) */
+  --font-headline: var(--font-cormorant), serif;
+  --font-body: var(--font-lato), sans-serif;
+  --font-label: var(--font-montserrat), sans-serif;
+
+  /* Keep serif/sans aliases */
+  --font-serif: var(--font-cormorant), serif;
+  --font-sans: var(--font-lato), sans-serif;
 }
 
 /* === Base Styles === */
 body {
-  background: var(--color-warm-white);
-  color: var(--color-proper-black);
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-weight: 300;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 
-/* === Typography — Serif (Cormorant) for headings, Sans (Lato) for body === */
+/* === Typography — Cormorant Garamond for headings, Lato for body, Montserrat for UI === */
 @layer base {
   h1, h2, h3, h4 {
-    font-family: var(--font-serif), Georgia, serif;
-    color: var(--color-proper-black);
-    font-weight: 500;
-    letter-spacing: 0.04em;
+    font-family: var(--font-headline), serif;
+    color: var(--color-primary);
+    font-weight: 400;
   }
 }
 
 /* === Selection === */
 ::selection {
-  background: var(--color-proper-black);
-  color: var(--color-proper-white);
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
 }
 
 /* === Smooth Scroll === */
@@ -64,7 +109,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* === Reduced Motion — respect user preference === */
+/* === Reduced Motion === */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -80,23 +125,75 @@ html {
   }
 }
 
-/* === Thin divider line === */
+/* === Material Symbols === */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* === Section divider === */
 .section-divider {
   width: 40px;
   height: 1px;
-  background: var(--color-proper-black);
+  background: var(--color-primary);
 }
 
-/* === Uppercase tracking utility === */
-.proper-label {
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
+/* === Editorial label (Work Sans uppercase) === */
+.editorial-label {
+  font-family: var(--font-label), sans-serif;
+  font-size: 10px;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-/* === Parallax Container === */
+/* Keep legacy class name working */
+.proper-label {
+  font-family: var(--font-label), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* === Editorial grid === */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.editorial-grid > :first-child {
+  grid-column: span 7;
+}
+
+.editorial-grid > :last-child {
+  grid-column: span 5;
+}
+
+.editorial-grid-reverse {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.editorial-grid-reverse > :first-child {
+  grid-column: span 5;
+}
+
+.editorial-grid-reverse > :last-child {
+  grid-column: span 7;
+}
+
+@media (max-width: 768px) {
+  .editorial-grid > :first-child,
+  .editorial-grid > :last-child,
+  .editorial-grid-reverse > :first-child,
+  .editorial-grid-reverse > :last-child {
+    grid-column: span 12;
+  }
+}
+
+/* === Parallax === */
 .parallax-bg {
   background-attachment: fixed;
   background-position: center;
@@ -125,7 +222,7 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* === Vignette Overlay === */
+/* === Vignette === */
 .vignette {
   background: radial-gradient(
     ellipse at center,
@@ -165,7 +262,7 @@ html {
   transition: opacity 0.5s ease-in-out;
 }
 
-/* === Fade-in utility (legacy, kept for non-Framer contexts) === */
+/* === Fade-in utility === */
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -191,9 +288,12 @@ html {
   display: none;
 }
 
+/* No scrollbar alias */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
 /* === Focus Styles === */
 :focus-visible {
-  outline: 2px solid var(--color-proper-black);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -203,16 +303,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-proper-white);
+  background: var(--color-surface);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-proper-lightgray);
+  background: var(--color-outline-variant);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-proper-gray);
+  background: var(--color-outline);
 }
 
 /* === Luxury transition timing === */
@@ -230,7 +330,7 @@ html {
   animation: heroImageReveal 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s both;
 }
 
-/* === Hero entrance animations — staggered fade-up === */
+/* === Hero entrance animations === */
 @keyframes heroFadeUp {
   from {
     opacity: 0;
@@ -284,7 +384,7 @@ html {
   left: 50%;
   right: 50%;
   height: 1px;
-  background: var(--color-terracotta);
+  background: var(--color-secondary);
   transition: left 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
               right 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
@@ -307,7 +407,7 @@ html {
   transform: translateY(-50%);
   width: 3px;
   height: 0;
-  background: var(--color-gold);
+  background: var(--color-secondary);
   transition: height 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -339,4 +439,23 @@ html {
 .cta-underline:hover::after {
   left: 0;
   right: 0;
+}
+
+/* === Booking input (Stitch style) === */
+.booking-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: 0.75rem 0;
+  width: 100%;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-on-surface);
+  transition: border-color 0.3s ease;
+}
+
+.booking-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: none;
 }

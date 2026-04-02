@@ -37,7 +37,7 @@ export function OurStory({ locale, dict }: OurStoryProps) {
   const s: StoryDict = dict.story;
 
   return (
-    <section id="story" className="py-24 bg-cream">
+    <section id="story" className="py-24 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Timeline Eras */}
         <div className="space-y-24">
@@ -50,7 +50,7 @@ export function OurStory({ locale, dict }: OurStoryProps) {
                 <div key={era.year}>
                   {/* Full-width pull quote */}
                   <ScrollReveal className="text-center py-16 mb-24">
-                    <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl text-terracotta/80 italic max-w-4xl mx-auto leading-relaxed">
+                    <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl text-secondary/80 italic max-w-4xl mx-auto leading-relaxed">
                       &ldquo;{s.pullQuote}&rdquo;
                     </blockquote>
                   </ScrollReveal>
@@ -70,7 +70,7 @@ export function OurStory({ locale, dict }: OurStoryProps) {
         <ScrollReveal className="text-center mt-20">
           <a
             href={`/${locale}#rooms`}
-            className="inline-block bg-black text-white hover:bg-gold font-sans font-bold
+            className="inline-block bg-black text-white hover:bg-secondary font-sans font-bold
                        px-10 py-4 text-[11px] tracking-[0.15em] uppercase transition-all duration-300
                        hover:-translate-y-0.5 active:translate-y-0"
           >
@@ -106,13 +106,13 @@ function EraBlock({
 
       {/* Text */}
       <div className={`flex flex-col justify-center ${isEven ? '' : 'md:order-1'}`}>
-        <span className="font-serif text-7xl lg:text-8xl text-terracotta/10 leading-none mb-2">
+        <span className="font-serif text-7xl lg:text-8xl text-secondary/10 leading-none mb-2">
           {era.year}
         </span>
-        <h3 className="font-serif text-2xl lg:text-3xl text-gold mb-4">
+        <h3 className="font-serif text-2xl lg:text-3xl text-secondary mb-4">
           {era.title}
         </h3>
-        <p className="text-charcoal/70 leading-relaxed text-lg">
+        <p className="text-on-surface/70 leading-relaxed text-lg">
           {era.body}
         </p>
       </div>

@@ -9,9 +9,10 @@ import type { Dictionary } from '@/lib/dictionaries';
 interface AvailabilityBarProps {
   locale: Locale;
   dict: Dictionary;
+  variant?: 'light' | 'dark';
 }
 
-export function AvailabilityBar({ locale, dict }: AvailabilityBarProps) {
+export function AvailabilityBar({ locale, dict, variant = 'light' }: AvailabilityBarProps) {
   const a = dict.availability;
   const defaults = getDefaultDates();
 
@@ -31,86 +32,147 @@ export function AvailabilityBar({ locale, dict }: AvailabilityBarProps) {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
+  const isDark = variant === 'dark';
+
+  const containerClass = isDark
+    ? 'bg-primary p-8 md:p-12 shadow-2xl'
+    : 'bg-white border border-outline-variant/20 p-6 sm:p-8 shadow-xl';
+
+  const labelClass = isDark
+    ? 'block font-label text-[10px] tracking-[0.2em] uppercase text-on-primary/60 mb-2'
+    : 'block font-label text-[10px] tracking-[0.2em] uppercase text-on-surface-variant mb-2';
+
+  const inputClass = isDark
+    ? 'booking-input !border-on-primary/20 !text-on-primary'
+    : 'w-full bg-surface-container-low border-none py-3 px-4 font-body text-sm text-on-surface focus:ring-1 focus:ring-primary';
+
+  const buttonClass = isDark
+    ? 'w-full lg:w-auto bg-on-primary text-primary px-12 py-5 text-[12px] font-semibold tracking-[0.2em] uppercase font-label hover:bg-surface transition-all whitespace-nowrap'
+    : 'w-full bg-primary text-on-primary h-[44px] px-6 font-label text-[11px] uppercase tracking-[0.2em] hover:bg-secondary transition-colors';
+
   return (
-    <section id="availability" className="relative -mt-14 z-20 px-4 sm:px-6">
+    <section id="availability" className="relative -mt-14 z-20 px-4 sm:px-6 lg:px-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-5xl mx-auto"
+        className={isDark ? 'max-w-6xl mx-auto' : 'max-w-6xl mx-auto'}
       >
-        <div className="bg-white border border-proper-lightgray p-6 sm:p-8 shadow-lg">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
-            {/* Check-in */}
-            <div>
-              <label className="block font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-black/50 mb-2">
-                {a.checkIn}
-              </label>
-              <input
-                type="date"
-                value={checkin}
-                onChange={(e) => setCheckin(e.target.value)}
-                className="w-full bg-proper-offwhite border border-proper-lightgray text-black px-4 py-3 text-sm font-serif focus:outline-none focus:border-black transition-colors"
-              />
-            </div>
-
-            {/* Check-out */}
-            <div>
-              <label className="block font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-black/50 mb-2">
-                {a.checkOut}
-              </label>
-              <input
-                type="date"
-                value={checkout}
-                onChange={(e) => setCheckout(e.target.value)}
-                className="w-full bg-proper-offwhite border border-proper-lightgray text-black px-4 py-3 text-sm font-serif focus:outline-none focus:border-black transition-colors"
-              />
-            </div>
-
-            {/* Adults */}
-            <div>
-              <label className="block font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-black/50 mb-2">
-                {a.adults}
-              </label>
-              <select
-                value={adults}
-                onChange={(e) => setAdults(Number(e.target.value))}
-                className="w-full bg-proper-offwhite border border-proper-lightgray text-black px-4 py-3 text-sm font-serif focus:outline-none focus:border-black transition-colors appearance-none"
-              >
-                {[1, 2, 3, 4].map((n) => (
-                  <option key={n} value={n}>
-                    {n} {n === 1 ? a.adult : a.adults}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Children */}
-            <div>
-              <label className="block font-sans text-[11px] font-bold tracking-[0.15em] uppercase text-black/50 mb-2">
-                {a.children}
-              </label>
-              <select
-                value={children}
-                onChange={(e) => setChildren(Number(e.target.value))}
-                className="w-full bg-proper-offwhite border border-proper-lightgray text-black px-4 py-3 text-sm font-serif focus:outline-none focus:border-black transition-colors appearance-none"
-              >
-                {[0, 1, 2, 3].map((n) => (
-                  <option key={n} value={n}>
-                    {n} {n === 1 ? a.child : a.children}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Search Button — Proper style */}
-            <button
-              onClick={handleSearch}
-              className="w-full bg-black hover:bg-proper-red text-white font-sans font-bold py-3 px-6 text-[11px] tracking-[0.15em] uppercase transition-colors min-h-[48px]"
-            >
-              {a.search}
-            </button>
+        <div className={containerClass}>
+          <div className={isDark
+            ? 'flex flex-col lg:flex-row items-end gap-8'
+            : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end'
+          }>
+            {isDark ? (
+              <>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
+                  <div className="flex flex-col gap-2">
+                    <label className={labelClass}>{a.checkIn}</label>
+                    <input
+                      type="text"
+                      value={checkin}
+                      onChange={(e) => setCheckin(e.target.value)}
+                      placeholder="20/03/2026"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className={labelClass}>{a.checkOut}</label>
+                    <input
+                      type="text"
+                      value={checkout}
+                      onChange={(e) => setCheckout(e.target.value)}
+                      placeholder="21/03/2026"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className={labelClass}>{a.adults}</label>
+                    <select
+                      value={adults}
+                      onChange={(e) => setAdults(Number(e.target.value))}
+                      className={`${inputClass} appearance-none bg-transparent`}
+                    >
+                      {[1, 2, 3, 4].map((n) => (
+                        <option key={n} value={n} className="text-black">
+                          {n} {n === 1 ? a.adult : a.adults}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className={labelClass}>{a.children}</label>
+                    <select
+                      value={children}
+                      onChange={(e) => setChildren(Number(e.target.value))}
+                      className={`${inputClass} appearance-none bg-transparent`}
+                    >
+                      {[0, 1, 2, 3].map((n) => (
+                        <option key={n} value={n} className="text-black">
+                          {n} {n === 1 ? a.child : a.children}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <button onClick={handleSearch} className={buttonClass}>
+                  {a.search}
+                </button>
+              </>
+            ) : (
+              <>
+                <div>
+                  <label className={labelClass}>{a.checkIn}</label>
+                  <input
+                    type="date"
+                    value={checkin}
+                    onChange={(e) => setCheckin(e.target.value)}
+                    className={inputClass}
+                  />
+                </div>
+                <div>
+                  <label className={labelClass}>{a.checkOut}</label>
+                  <input
+                    type="date"
+                    value={checkout}
+                    onChange={(e) => setCheckout(e.target.value)}
+                    className={inputClass}
+                  />
+                </div>
+                <div>
+                  <label className={labelClass}>{a.adults}</label>
+                  <select
+                    value={adults}
+                    onChange={(e) => setAdults(Number(e.target.value))}
+                    className={`${inputClass} appearance-none`}
+                  >
+                    {[1, 2, 3, 4].map((n) => (
+                      <option key={n} value={n}>
+                        {n} {n === 1 ? a.adult : a.adults}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className={labelClass}>{a.children}</label>
+                  <select
+                    value={children}
+                    onChange={(e) => setChildren(Number(e.target.value))}
+                    className={`${inputClass} appearance-none`}
+                  >
+                    {[0, 1, 2, 3].map((n) => (
+                      <option key={n} value={n}>
+                        {n} {n === 1 ? a.child : a.children}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <button onClick={handleSearch} className={buttonClass}>
+                  {a.search}
+                </button>
+              </>
+            )}
           </div>
         </div>
       </motion.div>

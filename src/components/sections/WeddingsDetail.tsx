@@ -91,7 +91,7 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
   const logisticsIcons = [CameraIcon, ShuttleIcon, ParadeIcon, ForkKnifeIcon, FlowerIcon, MapPinIcon];
 
   return (
-    <section className="bg-warm-white">
+    <section className="bg-surface">
 
       {/* ═══ Section 1: Hero Banner ═══ */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
@@ -112,7 +112,7 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white text-shadow-editorial mb-3 hero-fade-up" style={{ animationDelay: '0.2s' }}>
             {w.headline}
           </h1>
-          <p className="text-lg md:text-xl text-stone-light/80 mb-6 max-w-xl hero-fade-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl text-outline-variant/80 mb-6 max-w-xl hero-fade-up" style={{ animationDelay: '0.3s' }}>
             {w.subHeadline}
           </p>
           <a
@@ -140,11 +140,115 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
         </div>
       </div>
 
-      {/* ═══ Section 3: Logistics Dashboard ═══ */}
-      <div className="bg-cream py-24">
+      {/* ═══ Section 3: Wedding Packages ═══ */}
+      {w.packages && (
+        <div className="bg-surface-container-low py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <ScrollReveal className="text-center mb-16">
+              <p className="editorial-label text-secondary mb-4">Wedding Packages</p>
+              <h2 className="font-serif text-3xl sm:text-4xl text-primary">
+                Three Ways to Celebrate
+              </h2>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {w.packages.map((pkg, i) => (
+                <StaggerItem
+                  key={pkg.name}
+                  index={i}
+                  staggerDelay={0.15}
+                  className={`bg-surface p-8 border ${i === 1 ? 'border-secondary ring-1 ring-secondary/20' : 'border-outline-variant/20'} flex flex-col`}
+                >
+                  {i === 1 && (
+                    <span className="editorial-label text-secondary mb-4 block">Most Popular</span>
+                  )}
+                  <h3 className="font-serif text-2xl text-primary mb-2">{pkg.name}</h3>
+                  <p className="text-2xl font-serif text-secondary mb-1">{pkg.price}</p>
+                  <p className="text-sm text-on-surface/50 mb-4">{pkg.guests}</p>
+                  <p className="text-on-surface/70 text-sm leading-relaxed mb-6">{pkg.description}</p>
+                  <ul className="space-y-2 mb-8 flex-1">
+                    {pkg.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-on-surface/70">
+                        <span className="w-1 h-1 rounded-full bg-secondary mt-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center bg-primary text-on-primary px-6 py-3 font-label text-xs tracking-widest uppercase transition-all hover:bg-secondary"
+                  >
+                    {w.consultCta}
+                  </a>
+                </StaggerItem>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 4: Testimonials ═══ */}
+      {w.testimonials && (
+        <div className="py-24">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <ScrollReveal className="text-center mb-16">
+              <h2 className="font-serif text-3xl sm:text-4xl text-primary">
+                Love Stories
+              </h2>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {w.testimonials.map((t, i) => (
+                <StaggerItem key={t.names} index={i} staggerDelay={0.15} className="text-center">
+                  <div className="w-8 h-px bg-secondary mx-auto mb-6" />
+                  <p className="text-on-surface/70 text-sm leading-relaxed italic mb-6">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <p className="font-serif text-primary">{t.names}</p>
+                  <p className="text-xs text-on-surface/50">{t.location}</p>
+                </StaggerItem>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 5: Venue Capacity ═══ */}
+      {w.capacity && (
+        <div className="bg-primary text-on-primary py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <ScrollReveal className="text-center mb-12">
+              <h2 className="font-serif text-3xl text-on-primary">
+                {w.capacity.headline}
+              </h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              {[
+                w.capacity.courtyard,
+                w.capacity.rooftop,
+                w.capacity.garden,
+                w.capacity.fullProperty,
+              ].map((v, i) => (
+                <StaggerItem key={v.name} index={i} staggerDelay={0.1}>
+                  <h3 className="font-serif text-lg text-on-primary/90 mb-2">{v.name}</h3>
+                  <p className="text-sm text-on-primary/60">{v.seated} {w.capacity.seatedLabel}</p>
+                  <p className="text-sm text-on-primary/60">
+                    {'cocktail' in v ? `${v.cocktail} ${w.capacity.cocktailLabel}` : ('cocktailNote' in v ? v.cocktailNote : '')}
+                  </p>
+                </StaggerItem>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 6: Logistics Dashboard ═══ */}
+      <div className="bg-surface-container-low py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <ScrollReveal className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl text-gold">
+            <h2 className="font-serif text-3xl sm:text-4xl text-secondary">
               {w.logisticsHeadline}
             </h2>
           </ScrollReveal>
@@ -157,13 +261,13 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
                   key={item.title}
                   index={i}
                   staggerDelay={0.1}
-                  className="border-l-2 border-gold/30 pl-6 py-2"
+                  className="border-l-2 border-secondary/30 pl-6 py-2"
                 >
-                  {Icon && <Icon className="w-8 h-8 text-gold mb-4" />}
-                  <h3 className="font-serif text-lg text-gold mb-2">
+                  {Icon && <Icon className="w-8 h-8 text-secondary mb-4" />}
+                  <h3 className="font-serif text-lg text-secondary mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-charcoal/60 leading-relaxed">
+                  <p className="text-sm text-on-surface/60 leading-relaxed">
                     {item.description}
                   </p>
                 </StaggerItem>
@@ -177,7 +281,7 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
       <div id="specialist" className="bg-sunset text-white py-20 sm:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <p className="text-xs tracking-[0.35em] uppercase text-stone-light/60 font-medium mb-4">
+            <p className="text-xs tracking-[0.35em] uppercase text-outline-variant/60 font-medium mb-4">
               {w.specialistEyebrow}
             </p>
           </ScrollReveal>
@@ -187,7 +291,7 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="text-stone-light/70 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-outline-variant/70 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
               {w.specialistBody}
             </p>
           </ScrollReveal>

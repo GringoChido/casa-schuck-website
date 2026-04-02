@@ -87,7 +87,7 @@ export function GroupsDetail({ dict }: GroupsDetailProps) {
   const logisticsIcons = [ClipboardIcon, ChefIcon, WifiIcon, ShuttleIcon, LayoutIcon, UsersIcon];
 
   return (
-    <section className="bg-warm-white">
+    <section className="bg-surface">
 
       {/* ═══ Section 1: Hero Banner ═══ */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
@@ -108,7 +108,7 @@ export function GroupsDetail({ dict }: GroupsDetailProps) {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white text-shadow-editorial mb-3 hero-fade-up" style={{ animationDelay: '0.2s' }}>
             {g.headline}
           </h1>
-          <p className="text-lg md:text-xl text-stone-light/80 mb-6 max-w-xl hero-fade-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl text-outline-variant/80 mb-6 max-w-xl hero-fade-up" style={{ animationDelay: '0.3s' }}>
             {g.subHeadline}
           </p>
           <a
@@ -136,11 +136,99 @@ export function GroupsDetail({ dict }: GroupsDetailProps) {
         </div>
       </div>
 
-      {/* ═══ Section 3: Capabilities Grid ═══ */}
-      <div className="bg-cream py-24">
+      {/* ═══ Section 3: Case Studies ═══ */}
+      {g.caseStudies && (
+        <div className="bg-surface-container-low py-24">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <ScrollReveal className="text-center mb-16">
+              <p className="editorial-label text-secondary mb-4">Success Stories</p>
+              <h2 className="font-serif text-3xl sm:text-4xl text-primary">
+                Groups Who Chose Casa Schuck
+              </h2>
+            </ScrollReveal>
+
+            <div className="space-y-12">
+              {(g.caseStudies as Array<{ title: string; body: string }>).map((cs, i) => (
+                <StaggerItem key={cs.title} index={i} staggerDelay={0.15} className="border-l-2 border-secondary/30 pl-8">
+                  <h3 className="font-serif text-xl text-primary mb-3">{cs.title}</h3>
+                  <p className="text-on-surface/70 leading-relaxed">{cs.body}</p>
+                </StaggerItem>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 4: Tech Specs + Catering Side by Side ═══ */}
+      {(g.techSpecs || g.cateringOptions) && (
+        <div className="py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+              {/* Tech Specs */}
+              {g.techSpecs && (
+                <ScrollReveal>
+                  <h2 className="font-serif text-2xl text-primary mb-8">{g.techSpecs.headline}</h2>
+                  <div className="space-y-4">
+                    {g.techSpecs.specs.map((spec) => (
+                      <div key={spec.label} className="flex items-start gap-3 border-b border-outline-variant/20 pb-3">
+                        <span className="font-label text-xs tracking-wider uppercase text-secondary min-w-[80px]">{spec.label}</span>
+                        <span className="text-sm text-on-surface/70">{spec.detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                </ScrollReveal>
+              )}
+
+              {/* Catering */}
+              {g.cateringOptions && (
+                <ScrollReveal delay={0.1}>
+                  <h2 className="font-serif text-2xl text-primary mb-8">{g.cateringOptions.headline}</h2>
+                  <div className="space-y-4">
+                    {g.cateringOptions.options.map((opt) => (
+                      <div key={opt.meal} className="border-b border-outline-variant/20 pb-3">
+                        <div className="flex justify-between items-baseline mb-1">
+                          <span className="font-serif text-primary">{opt.meal}</span>
+                          {'price' in opt && <span className="text-sm text-secondary">{opt.price}</span>}
+                        </div>
+                        <p className="text-xs text-on-surface/50">{opt.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </ScrollReveal>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 5: Capacity by Configuration ═══ */}
+      {g.capacityByConfig && (
+        <div className="bg-primary text-on-primary py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <ScrollReveal className="text-center mb-12">
+              <h2 className="font-serif text-3xl text-on-primary">
+                {g.capacityByConfig.headline}
+              </h2>
+            </ScrollReveal>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+              {g.capacityByConfig.configurations.map((c, i) => (
+                <StaggerItem key={c.setup} index={i} staggerDelay={0.08}>
+                  <p className="text-3xl font-serif text-on-primary/90 mb-1">{c.capacity}</p>
+                  <p className="text-xs text-on-primary/60 uppercase tracking-wider">{c.setup}</p>
+                  <p className="text-xs text-on-primary/40">{c.location}</p>
+                </StaggerItem>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Section 6: Capabilities Grid ═══ */}
+      <div className="bg-surface-container-low py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <ScrollReveal className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl text-gold">
+            <h2 className="font-serif text-3xl sm:text-4xl text-secondary">
               {g.logisticsHeadline}
             </h2>
           </ScrollReveal>
@@ -153,13 +241,13 @@ export function GroupsDetail({ dict }: GroupsDetailProps) {
                   key={item.title}
                   index={i}
                   staggerDelay={0.1}
-                  className="border-l-2 border-gold/30 pl-6 py-2"
+                  className="border-l-2 border-secondary/30 pl-6 py-2"
                 >
-                  {Icon && <Icon className="w-8 h-8 text-gold mb-4" />}
-                  <h3 className="font-serif text-lg text-gold mb-2">
+                  {Icon && <Icon className="w-8 h-8 text-secondary mb-4" />}
+                  <h3 className="font-serif text-lg text-secondary mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-charcoal/60 leading-relaxed">
+                  <p className="text-sm text-on-surface/60 leading-relaxed">
                     {item.description}
                   </p>
                 </StaggerItem>
@@ -173,7 +261,7 @@ export function GroupsDetail({ dict }: GroupsDetailProps) {
       <div id="specialist" className="bg-sunset text-white py-20 sm:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <p className="text-xs tracking-[0.35em] uppercase text-stone-light/60 font-medium mb-4">
+            <p className="text-xs tracking-[0.35em] uppercase text-outline-variant/60 font-medium mb-4">
               {g.specialistEyebrow}
             </p>
           </ScrollReveal>
@@ -183,7 +271,7 @@ export function GroupsDetail({ dict }: GroupsDetailProps) {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="text-stone-light/70 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-outline-variant/70 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
               {g.specialistBody}
             </p>
           </ScrollReveal>

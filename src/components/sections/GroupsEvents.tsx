@@ -32,7 +32,7 @@ export function GroupsEvents({ locale, dict }: GroupsEventsProps) {
   ];
 
   return (
-    <section id="events" className="py-24 bg-warm-white">
+    <section id="events" className="py-24 bg-surface">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -41,13 +41,13 @@ export function GroupsEvents({ locale, dict }: GroupsEventsProps) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-sm tracking-[0.25em] uppercase text-gold font-medium mb-3">
+          <p className="text-sm tracking-[0.25em] uppercase text-secondary font-medium mb-3">
             {e.eyebrow}
           </p>
-          <h2 className="font-serif text-4xl sm:text-5xl text-gold mb-4">
+          <h2 className="font-serif text-4xl sm:text-5xl text-secondary mb-4">
             {e.headline}
           </h2>
-          <p className="text-charcoal/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-on-surface/70 max-w-2xl mx-auto leading-relaxed">
             {e.description}
           </p>
         </motion.div>
@@ -61,7 +61,7 @@ export function GroupsEvents({ locale, dict }: GroupsEventsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="bg-white rounded-lg overflow-hidden shadow-sm border border-stone/15 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/15 hover:shadow-lg transition-shadow"
             >
               <div className="relative aspect-[16/9]">
                 <Image
@@ -73,10 +73,10 @@ export function GroupsEvents({ locale, dict }: GroupsEventsProps) {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-serif text-xl text-gold mb-3">
+                <h3 className="font-serif text-xl text-secondary mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-charcoal/60 leading-relaxed">
+                <p className="text-sm text-on-surface/60 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -88,7 +88,7 @@ export function GroupsEvents({ locale, dict }: GroupsEventsProps) {
         <div className="text-center">
           <a
             href={`/${locale}#contact`}
-            className="inline-block bg-black hover:bg-gold text-white font-sans font-bold text-[11px]
+            className="inline-block bg-black hover:bg-secondary text-white font-sans font-bold text-[11px]
                        tracking-[0.15em] uppercase px-8 py-4 transition-colors duration-300 min-h-[44px]"
           >
             {e.inquireCta}

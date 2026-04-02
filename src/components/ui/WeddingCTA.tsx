@@ -80,11 +80,11 @@ export const WeddingCTA = ({ locale }: WeddingCTAProps) => {
     >
       <Link
         href={`/${locale}/weddings`}
-        className="group relative block bg-[#5B3A29] text-white px-6 py-4 pr-10
+        className="group relative block bg-secondary text-white px-6 py-4 pr-10
                    shadow-lg hover:shadow-xl transition-shadow duration-300
                    max-w-[220px]"
       >
-        <p className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase mb-1 group-hover:text-gold-light transition-colors duration-300">
+        <p className="font-sans text-[11px] font-bold tracking-[0.15em] uppercase mb-1 group-hover:text-secondary-fixed-dim transition-colors duration-300">
           {label}
         </p>
         <p className="font-serif text-sm text-white/70 font-light italic leading-snug">

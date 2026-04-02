@@ -44,14 +44,14 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
       className="pt-6"
     >
       {/* Name + Tagline */}
-      <h3 className="font-serif text-3xl lg:text-4xl text-gold mb-2">{name}</h3>
-      <p className="text-terracotta italic text-lg mb-4">{tagline}</p>
+      <h3 className="font-serif text-3xl lg:text-4xl text-secondary mb-2">{name}</h3>
+      <p className="text-secondary italic text-lg mb-4">{tagline}</p>
 
       {/* Description */}
-      <p className="text-charcoal/75 leading-relaxed mb-6 max-w-2xl">{description}</p>
+      <p className="text-on-surface/75 leading-relaxed mb-6 max-w-2xl">{description}</p>
 
       {/* Meta Row */}
-      <div className="flex flex-wrap gap-4 mb-6 text-sm text-charcoal/60">
+      <div className="flex flex-wrap gap-4 mb-6 text-sm text-on-surface/60">
         <span className="flex items-center gap-1.5">
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -74,7 +74,7 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
 
       {/* Accessible Badge */}
       {room.accessible && (
-        <div className="mb-4 inline-flex items-center gap-2 bg-sage/10 text-sage-dark text-sm font-medium px-3 py-1.5 rounded-full">
+        <div className="mb-4 inline-flex items-center gap-2 bg-secondary/10 text-on-secondary-container text-sm font-medium px-3 py-1.5 rounded-full">
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -84,16 +84,16 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
 
       {/* Special Note */}
       {specialNote && (
-        <p className="text-sm text-sage italic mb-4">{specialNote}</p>
+        <p className="text-sm text-secondary italic mb-4">{specialNote}</p>
       )}
 
       {/* Amenities Grid */}
       <div className="mb-6">
-        <p className="text-sm font-medium text-charcoal/50 uppercase tracking-wider mb-3">{dict.amenities}</p>
+        <p className="text-sm font-medium text-on-surface/50 uppercase tracking-wider mb-3">{dict.amenities}</p>
         <div className="grid grid-cols-2 gap-x-6 gap-y-2">
           {room.amenities.slice(0, 8).map((amenity) => (
-            <span key={amenity} className="text-sm text-charcoal/70 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-terracotta rounded-full flex-shrink-0" />
+            <span key={amenity} className="text-sm text-on-surface/70 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-secondary rounded-full flex-shrink-0" />
               {amenityLabels[amenity] || amenity}
             </span>
           ))}
@@ -103,15 +103,15 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
       {/* Price + CTA */}
       <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
         <div>
-          <span className="text-sm text-charcoal/50">{dict.fromLabel}</span>
-          <span className="text-3xl font-serif text-gold ml-2">${room.baseRate}</span>
-          <span className="text-sm text-charcoal/50 ml-1">{dict.perNight}</span>
+          <span className="text-sm text-on-surface/50">{dict.fromLabel}</span>
+          <span className="text-3xl font-serif text-secondary ml-2">${room.baseRate}</span>
+          <span className="text-sm text-on-surface/50 ml-1">{dict.perNight}</span>
         </div>
         <a
           href={buildDeepLink({ roomTypeId: room.id })}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto bg-black hover:bg-gold text-white font-sans font-bold text-[11px]
+          className="w-full sm:w-auto bg-black hover:bg-secondary text-white font-sans font-bold text-[11px]
                      tracking-[0.15em] uppercase px-8 py-3 transition-colors duration-300
                      text-center min-h-[44px]"
         >

@@ -55,27 +55,27 @@ export function RetreatHub({ locale, dict }: RetreatHubProps) {
       title: rt.yogaTitle,
       desc: rt.yogaDescription,
       Icon: LotusIcon,
-      accent: 'border-sage',
-      iconColor: 'text-sage',
+      accent: 'border-secondary',
+      iconColor: 'text-secondary',
     },
     {
       title: rt.spiritualTitle,
       desc: rt.spiritualDescription,
       Icon: FlameIcon,
-      accent: 'border-gold',
-      iconColor: 'text-gold',
+      accent: 'border-secondary',
+      iconColor: 'text-secondary',
     },
     {
       title: rt.womensTitle,
       desc: rt.womensDescription,
       Icon: StarburstIcon,
-      accent: 'border-terracotta',
-      iconColor: 'text-terracotta',
+      accent: 'border-secondary',
+      iconColor: 'text-secondary',
     },
   ];
 
   return (
-    <section id="retreats" className="py-24 bg-cream">
+    <section id="retreats" className="py-24 bg-surface-container-low">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -84,13 +84,13 @@ export function RetreatHub({ locale, dict }: RetreatHubProps) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-sm tracking-[0.25em] uppercase text-terracotta font-medium mb-3">
+          <p className="text-sm tracking-[0.25em] uppercase text-secondary font-medium mb-3">
             {rt.eyebrow}
           </p>
-          <h2 className="font-serif text-4xl sm:text-5xl text-gold mb-4">
+          <h2 className="font-serif text-4xl sm:text-5xl text-secondary mb-4">
             {rt.headline}
           </h2>
-          <p className="text-charcoal/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-on-surface/60 max-w-2xl mx-auto leading-relaxed">
             {rt.description}
           </p>
         </motion.div>
@@ -107,10 +107,10 @@ export function RetreatHub({ locale, dict }: RetreatHubProps) {
               className={`bg-white border-l-4 ${item.accent} rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow`}
             >
               <item.Icon className={`w-10 h-10 ${item.iconColor} mb-5`} />
-              <h3 className="font-serif text-xl text-gold mb-3">
+              <h3 className="font-serif text-xl text-secondary mb-3">
                 {item.title}
               </h3>
-              <p className="text-sm text-charcoal/60 leading-relaxed">
+              <p className="text-sm text-on-surface/60 leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
@@ -121,7 +121,7 @@ export function RetreatHub({ locale, dict }: RetreatHubProps) {
         <div className="text-center">
           <a
             href={`/${locale}#contact`}
-            className="inline-block bg-black hover:bg-gold text-white font-sans font-bold text-[11px]
+            className="inline-block bg-black hover:bg-secondary text-white font-sans font-bold text-[11px]
                        tracking-[0.15em] uppercase px-8 py-4 transition-colors duration-300 min-h-[44px]"
           >
             {rt.inquireCta}

@@ -1,12 +1,13 @@
 import type { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/dictionaries';
-import { Hero } from '@/components/sections/Hero';
+import { HeroSplit } from '@/components/sections/HeroSplit';
 import { AvailabilityBar } from '@/components/sections/AvailabilityBar';
-import { RoomShowcase } from '@/components/sections/RoomShowcase';
-import { SeasonalPackages } from '@/components/sections/SeasonalPackages';
-import { StoryBlocks } from '@/components/sections/StoryBlocks';
-import { Reviews } from '@/components/sections/Reviews';
-import { BookDirectCallout } from '@/components/sections/BookDirectCallout';
+import { NarrativeIntro } from '@/components/sections/NarrativeIntro';
+import { PhilosophyPillars } from '@/components/sections/PhilosophyPillars';
+import { SignatureSuite } from '@/components/sections/SignatureSuite';
+import { EditorialMoments } from '@/components/sections/EditorialMoments';
+import { LocalStories } from '@/components/sections/LocalStories';
+import { SeasonalTeaser } from '@/components/sections/SeasonalTeaser';
 
 export async function generateMetadata({
   params,
@@ -31,13 +32,14 @@ export default async function HomePage({
 
   return (
     <>
-      <Hero locale={locale as Locale} dict={dict} />
-      <AvailabilityBar locale={locale as Locale} dict={dict} />
-      <RoomShowcase locale={locale as Locale} dict={dict} />
-      <SeasonalPackages locale={locale as Locale} dict={dict} />
-      <BookDirectCallout locale={locale as Locale} dict={dict} />
-      <StoryBlocks locale={locale as Locale} dict={dict} />
-      <Reviews locale={locale as Locale} dict={dict} />
+      <HeroSplit locale={locale as Locale} dict={dict} />
+      <AvailabilityBar locale={locale as Locale} dict={dict} variant="dark" />
+      <NarrativeIntro locale={locale as Locale} dict={dict} />
+      <PhilosophyPillars dict={dict} />
+      <SignatureSuite locale={locale as Locale} dict={dict} />
+      <EditorialMoments locale={locale as Locale} dict={dict} />
+      <LocalStories dict={dict} />
+      <SeasonalTeaser locale={locale as Locale} dict={dict} />
     </>
   );
 }
