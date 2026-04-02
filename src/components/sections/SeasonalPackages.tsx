@@ -64,12 +64,12 @@ export function SeasonalPackages({ locale, dict }: SeasonalPackagesProps) {
                            hover:-translate-y-1 transition-all duration-500"
               >
                 {/* Package Image — hover zoom */}
-                <div className="relative aspect-[16/9] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={pkg.image}
                     alt={name}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>

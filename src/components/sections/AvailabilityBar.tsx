@@ -35,30 +35,53 @@ export function AvailabilityBar({ locale, dict, variant = 'light' }: Availabilit
   const isDark = variant === 'dark';
 
   const containerClass = isDark
-    ? 'bg-primary p-8 md:p-12 shadow-2xl'
+    ? 'bg-white/95 backdrop-blur-sm p-8 md:p-12 shadow-2xl rounded-xl'
     : 'bg-white border border-outline-variant/20 p-6 sm:p-8 shadow-xl';
 
   const labelClass = isDark
-    ? 'block font-label text-[10px] tracking-[0.2em] uppercase text-on-primary/60 mb-2'
+    ? 'block font-label text-[10px] tracking-[0.2em] uppercase text-on-surface-variant mb-2'
     : 'block font-label text-[10px] tracking-[0.2em] uppercase text-on-surface-variant mb-2';
 
   const inputClass = isDark
-    ? 'booking-input !border-on-primary/20 !text-on-primary'
+    ? 'booking-input !border-outline-variant/30 !text-on-surface'
     : 'w-full bg-surface-container-low border-none py-3 px-4 font-body text-sm text-on-surface focus:ring-1 focus:ring-primary';
 
   const buttonClass = isDark
-    ? 'w-full lg:w-auto bg-on-primary text-primary px-12 py-5 text-[12px] font-semibold tracking-[0.2em] uppercase font-label hover:bg-surface transition-all whitespace-nowrap'
+    ? 'w-full lg:w-auto bg-sage text-white px-12 py-5 text-[12px] font-semibold tracking-[0.2em] uppercase font-label hover:bg-terracotta transition-all whitespace-nowrap rounded-lg'
     : 'w-full bg-primary text-on-primary h-[44px] px-6 font-label text-[11px] uppercase tracking-[0.2em] hover:bg-secondary transition-colors';
 
+  const isEn = locale === 'en';
+
   return (
-    <section id="availability" className="relative -mt-14 z-20 px-4 sm:px-6 lg:px-12">
+    <section id="availability" className={`relative z-20 px-4 sm:px-6 lg:px-12 ${isDark ? '-mt-14' : ''}`}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className={isDark ? 'max-w-6xl mx-auto' : 'max-w-6xl mx-auto'}
+        className="max-w-6xl mx-auto"
       >
+        {isDark && (
+          <div className="text-center mb-6">
+            <p className="font-serif text-lg italic text-on-surface-variant mb-3">
+              {isEn ? 'Find your perfect stay' : 'Encuentra tu estancia perfecta'}
+            </p>
+            <div className="flex items-center justify-center gap-6 flex-wrap">
+              <span className="inline-flex items-center gap-2 font-label text-[10px] tracking-[0.15em] uppercase text-sage">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sage">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                {isEn ? 'Book Direct — Best Rate Guaranteed' : 'Reserva Directo — Mejor Tarifa Garantizada'}
+              </span>
+              <span className="inline-flex items-center gap-2 font-label text-[10px] tracking-[0.15em] uppercase text-sage">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sage">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                {isEn ? 'Breakfast Included' : 'Desayuno Incluido'}
+              </span>
+            </div>
+          </div>
+        )}
         <div className={containerClass}>
           <div className={isDark
             ? 'flex flex-col lg:flex-row items-end gap-8'

@@ -4,15 +4,19 @@ interface JsonLdProps {
   locale: Locale;
 }
 
+const BASE_URL = 'https://casaschuck.com';
+
 export function HotelJsonLd({ locale }: JsonLdProps) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Hotel',
+    '@id': `${BASE_URL}/#hotel`,
     name: 'Casa Schuck',
+    alternateName: 'Casa Schuck Boutique Hotel',
     description: locale === 'es'
-      ? 'Hotel boutique en el corazón de San Miguel de Allende. 9 habitaciones únicas con desayuno incluido.'
-      : 'Boutique hotel in the heart of San Miguel de Allende. 9 unique rooms with breakfast included.',
-    url: 'https://casaschuck.com',
+      ? 'Hotel boutique en el corazón de San Miguel de Allende. 9 habitaciones únicas en una finca colonial restaurada con desayuno gourmet incluido, terraza en la azotea y vistas a la Parroquia.'
+      : 'Boutique hotel in the heart of San Miguel de Allende. 9 unique rooms in a restored colonial estate with gourmet breakfast included, rooftop terrace and Parroquia views.',
+    url: BASE_URL,
     telephone: '+524151520657',
     email: 'info@casaschuck.com',
     address: {
@@ -28,23 +32,88 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
       latitude: 20.9144,
       longitude: -100.7453,
     },
-    image: 'https://casaschuck.com/images/hero/courtyard-main.jpg',
+    image: [
+      `${BASE_URL}/images/hero/courtyard-main.jpg`,
+      `${BASE_URL}/images/rooms/el-royal-suite/hero.jpg`,
+      `${BASE_URL}/images/areas/rooftop.jpg`,
+      `${BASE_URL}/images/common/garden.jpg`,
+    ],
     priceRange: '$235 - $345 USD',
+    currenciesAccepted: 'USD, MXN',
+    paymentAccepted: 'Cash, Credit Card',
     numberOfRooms: 9,
     checkinTime: '15:00',
     checkoutTime: '12:00',
+    petsAllowed: false,
     amenityFeature: [
-      { '@type': 'LocationFeatureSpecification', name: 'Breakfast Included', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'WiFi', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Gourmet Breakfast Included', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Free WiFi', value: true },
       { '@type': 'LocationFeatureSpecification', name: 'Rooftop Terrace', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'Spa Services', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'Concierge', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'In-Room Spa Services', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Concierge Service', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Air Conditioning', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Courtyard Garden', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Wedding Venue', value: true },
     ],
     starRating: {
       '@type': 'Rating',
       ratingValue: '4.8',
+      bestRating: '5',
     },
-    availableLanguage: ['English', 'Spanish'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '120',
+      bestRating: '5',
+    },
+    availableLanguage: [
+      { '@type': 'Language', name: 'English', alternateName: 'en' },
+      { '@type': 'Language', name: 'Spanish', alternateName: 'es' },
+    ],
+    sameAs: [
+      'https://www.instagram.com/casaschuck',
+      'https://www.facebook.com/casaschuck',
+    ],
+    hasMap: 'https://maps.google.com/?q=Casa+Schuck,+Garita+3,+Centro,+37700+San+Miguel+de+Allende',
+    containedInPlace: {
+      '@type': 'City',
+      name: 'San Miguel de Allende',
+      containedInPlace: {
+        '@type': 'State',
+        name: 'Guanajuato',
+        containedInPlace: {
+          '@type': 'Country',
+          name: 'Mexico',
+        },
+      },
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function WebSiteJsonLd() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${BASE_URL}/#website`,
+    name: 'Casa Schuck',
+    url: BASE_URL,
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'Casa Schuck Boutique Hotel',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/images/hero/courtyard-main.jpg`,
+      },
+    },
+    inLanguage: ['en', 'es'],
   };
 
   return (
@@ -58,12 +127,16 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
 export function LocalBusinessJsonLd({ locale }: JsonLdProps) {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://casaschuck.com',
+    '@type': 'LodgingBusiness',
+    '@id': `${BASE_URL}/#business`,
     name: 'Casa Schuck Boutique Hotel',
-    image: 'https://casaschuck.com/images/hero/courtyard-main.jpg',
+    description: locale === 'es'
+      ? 'Hotel boutique y venue para bodas en San Miguel de Allende. Finca colonial restaurada con 9 suites, desayuno incluido y terraza panorámica.'
+      : 'Boutique hotel and wedding venue in San Miguel de Allende. Restored colonial estate with 9 suites, breakfast included and panoramic rooftop terrace.',
+    image: `${BASE_URL}/images/hero/courtyard-main.jpg`,
     telephone: '+524151520657',
-    url: 'https://casaschuck.com',
+    url: BASE_URL,
+    priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Garita 3, Centro',
@@ -71,6 +144,11 @@ export function LocalBusinessJsonLd({ locale }: JsonLdProps) {
       addressRegion: 'Guanajuato',
       postalCode: '37700',
       addressCountry: 'MX',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 20.9144,
+      longitude: -100.7453,
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -109,6 +187,77 @@ export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string
       name: item.name,
       item: item.url,
     })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function FAQJsonLd({ faqs }: { faqs: { question: string; answer: string }[] }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function ArticleJsonLd({
+  title,
+  description,
+  image,
+  publishedAt,
+  url,
+}: {
+  title: string;
+  description: string;
+  image: string;
+  publishedAt: string;
+  url: string;
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    image: `${BASE_URL}${image}`,
+    datePublished: publishedAt,
+    dateModified: publishedAt,
+    url: `${BASE_URL}${url}`,
+    author: {
+      '@type': 'Organization',
+      name: 'Casa Schuck',
+      url: BASE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Casa Schuck',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/images/hero/courtyard-main.jpg`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${BASE_URL}${url}`,
+    },
   };
 
   return (

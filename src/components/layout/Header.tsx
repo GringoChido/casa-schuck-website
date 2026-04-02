@@ -57,7 +57,6 @@ export function Header({ locale, dict }: HeaderProps) {
 
   const navLinks: NavItem[] = [
     { href: `/${locale}/suites`, label: nav.rooms },
-    { href: `/${locale}/weddings`, label: nav.weddings },
     {
       href: '#',
       label: nav.experience,
@@ -68,7 +67,9 @@ export function Header({ locale, dict }: HeaderProps) {
         { href: `/${locale}/groups`, label: nav.corporateGroups },
       ],
     },
-    { href: `/${locale}/packages`, label: 'Packages' },
+    { href: `/${locale}/weddings`, label: nav.weddings },
+    { href: `/${locale}/packages`, label: nav.packages },
+    { href: `/${locale}/blog`, label: nav.blog },
   ];
 
   let ctaHref = `/${locale}#availability`;
@@ -185,7 +186,7 @@ export function Header({ locale, dict }: HeaderProps) {
 
           {/* Right: Language + CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <LanguageSwitcher locale={locale} label={dict.common.language} />
+            <LanguageSwitcher locale={locale} variant={scrolled ? 'dark' : 'light'} />
             <Link href={ctaHref} className={ctaClass}>
               {ctaLabel}
             </Link>
@@ -279,7 +280,7 @@ export function Header({ locale, dict }: HeaderProps) {
                 )
               )}
               <div className="pt-4 border-t border-outline-variant flex items-center justify-between">
-                <LanguageSwitcher locale={locale} label={dict.common.language} />
+                <LanguageSwitcher locale={locale} variant="dark" />
                 <Link
                   href={ctaHref}
                   onClick={() => setMobileOpen(false)}

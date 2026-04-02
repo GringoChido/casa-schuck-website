@@ -75,31 +75,39 @@ export const ServicesDetail = ({ locale, dict }: ServicesDetailProps) => {
   return (
     <section className="bg-surface">
 
-      {/* Hero Banner */}
-      <div className="relative w-full h-[55vh] min-h-[450px]">
+      {/* Full-Bleed Hero */}
+      <div className="relative w-full h-[85vh] min-h-[500px] overflow-hidden flex items-center justify-center">
         <Image
-          src="/images/common/rooftop-sunset.jpg"
-          alt={isEn ? 'Rooftop dining at Casa Schuck' : 'Cena en la azotea de Casa Schuck'}
+          src="/images/breakfast/courtyard.jpg"
+          alt={isEn ? 'Courtyard breakfast at Casa Schuck' : 'Desayuno en el patio de Casa Schuck'}
           fill
           priority
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <p className="text-sm tracking-[0.3em] uppercase text-secondary-fixed-dim font-medium mb-4 hero-fade-up" style={{ animationDelay: '0.1s' }}>
+        <div className="relative z-10 text-center px-6 max-w-3xl">
+          <p className="text-sm tracking-[0.3em] uppercase text-white/80 font-medium mb-4 hero-fade-up" style={{ animationDelay: '0.1s' }}>
             {isEn ? 'Hotel Services' : 'Servicios del Hotel'}
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white text-shadow-editorial mb-6 hero-fade-up" style={{ animationDelay: '0.2s' }}>
-            {isEn ? 'Everything You Need, Nothing You Don\'t' : 'Todo lo que Necesitas, Nada que No'}
+          <h1 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] text-white text-shadow-editorial mb-6 hero-fade-up" style={{ animationDelay: '0.2s' }}>
+            {isEn ? 'Every Detail, Considered' : 'Cada Detalle, Considerado'}
           </h1>
-          <p className="text-white/80 text-lg max-w-2xl leading-relaxed hero-fade-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed hero-fade-up" style={{ animationDelay: '0.3s' }}>
             {isEn
-              ? 'From gourmet breakfast to in-house massage, every detail at Casa Schuck is designed for your comfort.'
-              : 'Desde desayuno gourmet hasta masaje en casa, cada detalle en Casa Schuck está diseñado para tu comodidad.'}
+              ? 'Bespoke services crafted for you — from gourmet breakfast to in-house wellness.'
+              : 'Servicios a medida creados para ti — desde desayuno gourmet hasta bienestar en casa.'}
           </p>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hero-fade-up" style={{ animationDelay: '1.5s' }}>
+          <div className="scroll-bounce flex flex-col items-center gap-1">
+            <div className="w-px h-6 bg-white/30" />
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="opacity-40">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7" />
+            </svg>
+          </div>
         </div>
       </div>
 

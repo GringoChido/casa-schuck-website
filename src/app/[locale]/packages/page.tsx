@@ -1,9 +1,13 @@
+import type { Metadata } from 'next';
 import type { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/dictionaries';
+import { FullBleedHero } from '@/components/sections/FullBleedHero';
 import { AvailabilityBar } from '@/components/sections/AvailabilityBar';
 import { PackageEditorial } from '@/components/sections/PackageEditorial';
 import { NewsletterCTA } from '@/components/sections/NewsletterCTA';
-import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
+import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
+
+const BASE_URL = 'https://casaschuck.com';
 
 const PACKAGE_IMAGES = [
   '/images/common/garden.jpg',
@@ -15,12 +19,35 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}) {
+}): Promise<Metadata> {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
+  const description = locale === 'es'
+    ? 'Paquetes de temporada en Casa Schuck, San Miguel de Allende. Ofertas de Día de Muertos, paquetes de fiestas y escapadas románticas. Reserve directo.'
+    : 'Seasonal packages at Casa Schuck, San Miguel de Allende. Dia de Muertos specials, holiday packages, and romantic getaways. Book direct for best rate.';
   return {
     title: dict.packagesPage.meta.title,
-    description: dict.packagesPage.meta.description,
+    description,
+    keywords: [
+      'san miguel de allende packages',
+      'hotel deals mexico',
+      'dia de muertos package',
+      'holiday package san miguel',
+      'seasonal hotel packages',
+    ],
+    openGraph: {
+      title: dict.packagesPage.meta.title,
+      description,
+      type: 'website',
+      url: `${BASE_URL}/${locale}/packages`,
+      images: [{ url: `${BASE_URL}/images/packages/dia-de-muertos.jpg`, width: 1200, height: 630, alt: 'Casa Schuck seasonal packages' }],
+    },
+    alternates: {
+      languages: {
+        en: `${BASE_URL}/en/packages`,
+        es: `${BASE_URL}/es/packages`,
+      },
+    },
   };
 }
 
@@ -36,37 +63,22 @@ export default async function PackagesPage({
 
   return (
     <>
-      {/* Header Section */}
-      <header className="pt-32 pb-16 max-w-7xl mx-auto px-8 md:px-12">
-        <ScrollReveal>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-            <div className="max-w-3xl">
-              <StaggerItem index={0}>
-                <span className="block font-label text-secondary uppercase tracking-[0.2em] mb-4">
-                  {h.eyebrow}
-                </span>
-              </StaggerItem>
-              <StaggerItem index={1}>
-                <h1 className="text-6xl md:text-8xl font-headline -ml-1 leading-tight tracking-tighter">
-                  {h.headline}
-                </h1>
-              </StaggerItem>
-            </div>
-            <div className="max-w-sm pb-4">
-              <StaggerItem index={2}>
-                <p className="text-lg text-on-surface-variant leading-relaxed">
-                  {h.description}
-                </p>
-              </StaggerItem>
-            </div>
-          </div>
-        </ScrollReveal>
-      </header>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: `${BASE_URL}/${locale}` },
+        { name: locale === 'es' ? 'Paquetes' : 'Packages', url: `${BASE_URL}/${locale}/packages` },
+      ]} />
+
+      {/* Full-Bleed Hero */}
+      <FullBleedHero
+        imageSrc="/images/packages/dia-de-muertos.jpg"
+        imageAlt="Seasonal packages at Casa Schuck"
+        headline={h.headline}
+        subheadline={h.description}
+      />
 
       {/* Booking Widget */}
-      <div className="mb-32">
+      <div className="mb-20">
         <AvailabilityBar locale={locale as Locale} dict={dict} variant="light" />
-        <div className="mt-12 h-[1px] bg-outline-variant/30 max-w-7xl mx-auto" />
       </div>
 
       {/* Package 1: Default layout */}

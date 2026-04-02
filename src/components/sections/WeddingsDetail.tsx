@@ -93,8 +93,8 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
   return (
     <section className="bg-surface">
 
-      {/* ═══ Section 1: Hero Banner ═══ */}
-      <div className="relative w-full h-[50vh] min-h-[400px]">
+      {/* ═══ Section 1: Full-Bleed Hero ═══ */}
+      <div className="relative w-full h-[85vh] min-h-[500px] overflow-hidden flex items-center justify-center">
         <Image
           src="/images/wedding/callejoneada-hero.webp"
           alt="Wedding callejoneada with mojigangas and mariachi in San Miguel de Allende"
@@ -103,29 +103,35 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-        <div className="absolute bottom-8 left-8 right-8 z-10">
-          <p className="text-sm tracking-[0.3em] uppercase text-white/80 font-medium mb-3 hero-fade-up" style={{ animationDelay: '0.1s' }}>
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        <div className="relative z-10 text-center px-6 max-w-3xl">
+          <p className="text-sm tracking-[0.3em] uppercase text-white/80 font-medium mb-4 hero-fade-up" style={{ animationDelay: '0.1s' }}>
             {w.eyebrow}
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white text-shadow-editorial mb-3 hero-fade-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] text-white text-shadow-editorial mb-6 hero-fade-up" style={{ animationDelay: '0.2s' }}>
             {w.headline}
           </h1>
-          <p className="text-lg md:text-xl text-outline-variant/80 mb-6 max-w-xl hero-fade-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed hero-fade-up" style={{ animationDelay: '0.3s' }}>
             {w.subHeadline}
           </p>
-          <a
-            href="#specialist"
-            className="inline-block border-2 border-white/80 text-white font-medium
-                       px-8 py-3 text-sm tracking-wider uppercase transition-all duration-300
-                       hover:bg-white/10 min-h-[44px] hero-fade-up"
-            style={{ animationDelay: '0.4s' }}
-          >
-            {w.specialistCta}
-          </a>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hero-fade-up" style={{ animationDelay: '1.5s' }}>
+          <div className="scroll-bounce flex flex-col items-center gap-1">
+            <div className="w-px h-6 bg-white/30" />
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="opacity-40">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7" />
+            </svg>
+          </div>
         </div>
       </div>
+
+      {/* Emotional Intro */}
+      <ScrollReveal className="py-20 max-w-3xl mx-auto px-6 text-center">
+        <p className="font-serif text-xl md:text-2xl text-on-surface/80 italic leading-relaxed">
+          {w.description}
+        </p>
+      </ScrollReveal>
 
       {/* ═══ Section 2: The Strategy — Three Pillars ═══ */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

@@ -9,7 +9,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { MobileBookingBar } from '@/components/ui/MobileBookingBar';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { WeddingCTA } from '@/components/ui/WeddingCTA';
-import { HotelJsonLd, LocalBusinessJsonLd } from '@/components/seo/JsonLd';
+import { HotelJsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from '@/components/seo/JsonLd';
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin', 'latin-ext'],
@@ -62,6 +62,7 @@ export default async function LocaleLayout({
       </head>
       <body className="bg-surface text-on-surface font-body antialiased pb-20 lg:pb-0">
         <ScrollProgress />
+        <WebSiteJsonLd />
         <HotelJsonLd locale={locale as Locale} />
         <LocalBusinessJsonLd locale={locale as Locale} />
         <Header locale={locale as Locale} dict={dict} />

@@ -21,7 +21,7 @@ export function PillarBlock({
   return (
     <ScrollReveal className={isEven ? 'editorial-grid' : 'editorial-grid-reverse'}>
       {/* Image */}
-      <div className={`relative aspect-[4/3] overflow-hidden ${isEven ? '' : 'md:order-2'}`}>
+      <div className={`relative aspect-[4/3] overflow-hidden rounded-xl ${isEven ? '' : 'md:order-2'}`}>
         <Image
           src={pillar.image}
           alt={pillar.alt}

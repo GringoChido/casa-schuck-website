@@ -24,29 +24,37 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
   return (
     <section className="bg-surface">
 
-      {/* Hero Banner */}
-      <div className="relative w-full h-[55vh] min-h-[450px]">
+      {/* Full-Bleed Hero */}
+      <div className="relative w-full h-[85vh] min-h-[500px] overflow-hidden flex items-center justify-center">
         <Image
-          src="/images/breakfast/courtyard.jpg"
-          alt="Courtyard dining at Casa Schuck"
+          src="/images/san-miguel/street.webp"
+          alt="Colorful streets of San Miguel de Allende"
           fill
           priority
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-sm tracking-[0.3em] uppercase text-secondary-fixed-dim font-medium mb-4 hero-fade-up" style={{ animationDelay: '0.1s' }}>
+        <div className="relative z-10 text-center px-6 max-w-3xl">
+          <p className="text-sm tracking-[0.3em] uppercase text-white/80 font-medium mb-4 hero-fade-up" style={{ animationDelay: '0.1s' }}>
             {s.eyebrow}
-          </h1>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white text-shadow-editorial mb-6 hero-fade-up" style={{ animationDelay: '0.2s' }}>
+          </p>
+          <h1 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] text-white text-shadow-editorial mb-6 hero-fade-up" style={{ animationDelay: '0.2s' }}>
             {s.headline}
-          </h2>
-          <p className="text-white/80 text-lg max-w-2xl leading-relaxed hero-fade-up" style={{ animationDelay: '0.3s' }}>
+          </h1>
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed hero-fade-up" style={{ animationDelay: '0.3s' }}>
             {s.description}
           </p>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hero-fade-up" style={{ animationDelay: '1.5s' }}>
+          <div className="scroll-bounce flex flex-col items-center gap-1">
+            <div className="w-px h-6 bg-white/30" />
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="opacity-40">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7" />
+            </svg>
+          </div>
         </div>
       </div>
 
@@ -55,7 +63,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal id="breakfast" className="editorial-grid">
             {/* Image */}
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/images/breakfast/spread.jpg"
                 alt="Breakfast spread at Casa Schuck"
@@ -87,11 +95,11 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                <div className="bg-surface-container-low/50 rounded-lg p-4">
+                <div className="bg-surface-container-low/50 rounded-xl p-4">
                   <h4 className="font-serif text-sm text-secondary mb-1">{b.mexicanTitle}</h4>
                   <p className="text-xs text-on-surface/60 leading-relaxed">{b.mexicanItems}</p>
                 </div>
-                <div className="bg-surface-container-low/50 rounded-lg p-4">
+                <div className="bg-surface-container-low/50 rounded-xl p-4">
                   <h4 className="font-serif text-sm text-secondary mb-1">{b.classicTitle}</h4>
                   <p className="text-xs text-on-surface/60 leading-relaxed">{b.classicItems}</p>
                 </div>
@@ -107,7 +115,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
       <div className="pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="editorial-grid-reverse">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden md:order-2">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden md:order-2">
               <Image
                 src="/images/experiences/massage.jpg"
                 alt="In-house massage at Casa Schuck"
@@ -130,7 +138,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
                 {pricingItems.map((item: { duration: string; price: string }, i: number) => (
                   <div
                     key={i}
-                    className="bg-surface-container-low rounded-lg p-4 text-center min-h-[44px] flex flex-col items-center justify-center"
+                    className="bg-surface-container-low rounded-xl p-4 text-center min-h-[44px] flex flex-col items-center justify-center"
                   >
                     <span className="text-xs text-on-surface/50 uppercase tracking-wide block mb-1">
                       {item.duration}
@@ -152,7 +160,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
       <div className="pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="editorial-grid">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/images/experiences/mezcal.webp"
                 alt="The Honor Bar at Casa Schuck"
@@ -171,7 +179,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
                 {s.honorBarDescription}
               </p>
 
-              <div className="bg-surface-container-low/50 rounded-lg p-5 border border-outline-variant/20">
+              <div className="bg-surface-container-low/50 rounded-xl p-5 border border-outline-variant/20">
                 <div className="w-10 h-px bg-secondary mb-3" />
                 <h4 className="font-serif text-lg text-secondary mb-2">{s.wineRackTitle}</h4>
                 <p className="text-sm text-on-surface/60 leading-relaxed">{s.wineRackDescription}</p>
@@ -192,7 +200,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
           </ScrollReveal>
 
           <ScrollReveal className="editorial-grid-reverse mb-20">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden md:order-2">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden md:order-2">
               <Image
                 src="/images/common/parroquia.jpg"
                 alt="Parroquia and city views in San Miguel de Allende"
@@ -213,7 +221,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
           </ScrollReveal>
 
           <ScrollReveal className="editorial-grid">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/images/experiences/hot-springs.webp"
                 alt="Hot springs near San Miguel de Allende"
@@ -238,7 +246,7 @@ export function ExperiencesDetail({ locale, dict }: ExperiencesDetailProps) {
       {/* VIP Dining Card */}
       <div className="py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <ScrollReveal className="bg-white rounded-lg p-8 border border-outline-variant/20 shadow-sm text-center mb-16">
+          <ScrollReveal className="bg-white rounded-xl p-8 border border-outline-variant/20 shadow-sm text-center mb-16">
             <div className="w-10 h-px bg-secondary mx-auto mb-4" />
             <h3 className="font-serif text-xl text-secondary mb-3">{s.diningTitle}</h3>
             <p className="text-sm text-on-surface/60 leading-relaxed max-w-lg mx-auto">

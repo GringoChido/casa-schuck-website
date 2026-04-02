@@ -87,8 +87,8 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
   return (
     <section className="bg-surface">
 
-      {/* ═══ Section 1: Hero Banner ═══ */}
-      <div className="relative w-full h-[50vh] min-h-[400px]">
+      {/* ═══ Section 1: Full-Bleed Hero ═══ */}
+      <div className="relative w-full h-[85vh] min-h-[500px] overflow-hidden flex items-center justify-center">
         <Image
           src="/images/retreats/header.webp"
           alt="Retreat sanctuary at Casa Schuck in San Miguel de Allende"
@@ -97,32 +97,31 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-        <div className="absolute bottom-8 left-8 right-8 z-10">
-          <p className="text-sm tracking-[0.3em] uppercase text-white/80 font-medium mb-3 hero-fade-up" style={{ animationDelay: '0.1s' }}>
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        <div className="relative z-10 text-center px-6 max-w-3xl">
+          <p className="text-sm tracking-[0.3em] uppercase text-white/80 font-medium mb-4 hero-fade-up" style={{ animationDelay: '0.1s' }}>
             {r.eyebrow}
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white text-shadow-editorial mb-6 hero-fade-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] text-white text-shadow-editorial mb-6 hero-fade-up" style={{ animationDelay: '0.2s' }}>
             {r.headline}
           </h1>
-          <a
-            href="#specialist"
-            className="inline-block border-2 border-white/80 text-white font-medium
-                       px-8 py-3 text-sm tracking-wider uppercase transition-all duration-300
-                       hover:bg-white/10 min-h-[44px] hero-fade-up"
-            style={{ animationDelay: '0.4s' }}
-          >
-            {r.specialistCta}
-          </a>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hero-fade-up" style={{ animationDelay: '1.5s' }}>
+          <div className="scroll-bounce flex flex-col items-center gap-1">
+            <div className="w-px h-6 bg-white/30" />
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" className="opacity-40">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7" />
+            </svg>
+          </div>
         </div>
       </div>
 
-      {/* ═══ Section 2: Intro — The Anchor Hook ═══ */}
+      {/* ═══ Section 2: Sensory Intro ═══ */}
       <div className="py-20 sm:py-24">
-        <ScrollReveal className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <ScrollReveal className="max-w-3xl mx-auto px-6 text-center">
           <div className="w-16 h-px bg-secondary mx-auto mb-8" />
-          <p className="text-on-surface/70 text-lg sm:text-xl leading-relaxed">
+          <p className="font-serif text-xl md:text-2xl text-on-surface/80 italic leading-relaxed">
             {r.introBody}
           </p>
         </ScrollReveal>

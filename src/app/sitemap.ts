@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { getBlogPosts } from '@/data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://casaschuck.com';
@@ -13,10 +14,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/suites', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/packages', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/story', priority: 0.6, changeFrequency: 'yearly' as const },
     { path: '/privacy', priority: 0.2, changeFrequency: 'yearly' as const },
     { path: '/terms', priority: 0.2, changeFrequency: 'yearly' as const },
   ];
+
+  const blogPosts = getBlogPosts('en');
+  for (const post of blogPosts) {
+    pages.push({
+      path: `/blog/${post.slug}`,
+      priority: 0.7,
+      changeFrequency: 'monthly' as const,
+    });
+  }
 
   const entries: MetadataRoute.Sitemap = [];
 

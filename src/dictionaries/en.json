@@ -15,7 +15,9 @@
     "bookNow": "Book Now",
     "experience": "Experiences",
     "spaConcierge": "Spa & Concierge",
-    "corporateGroups": "Corporate Groups"
+    "corporateGroups": "Corporate Groups",
+    "packages": "Packages",
+    "blog": "Blog"
   },
   "hero": {
     "eyebrow": "San Miguel de Allende, Mexico",
@@ -790,6 +792,12 @@
           "body": "Rejuvenate with artisanal treatments and morning meditation in our private gardens.",
           "cta": "Book Ritual",
           "imageAlt": "Quiet spa room with flickering candles and white towels"
+        },
+        {
+          "title": "Culinary Journeys",
+          "body": "From gourmet breakfasts in the courtyard to private chef dinners on the rooftop, every meal is a celebration of Mexican heritage.",
+          "cta": "Explore Dining",
+          "imageAlt": "Beautifully set courtyard breakfast table with Mexican dishes"
         }
       ]
     },
@@ -819,6 +827,72 @@
       "headline": "Seasonal Curations",
       "body": "Local experiences, bundled for better value. Book direct for the best of the season.",
       "cta": "View All Packages"
+    },
+    "fullBleedHero": {
+      "headline": "Casa Schuck",
+      "subheadline": "A Living Poem in the Heart of San Miguel de Allende",
+      "imageAlt": "Casa Schuck courtyard bathed in golden hour light with lush greenery and colonial arches"
+    },
+    "soulOfHouse": {
+      "eyebrow": "Est. 1965",
+      "headline": "An Architectural Poem Written in Stone and Light",
+      "paragraphs": [
+        "Sunlight traces ancient stone walls each morning, casting patterns that have repeated for over a century. Bougainvillea cascades over colonial arches while a courtyard fountain keeps its quiet symphony — the sounds of a home that has sheltered artists, visionaries, and seekers since 1965.",
+        "Casa Schuck is not merely a hotel. It is a living heritage — nine rooms, each with its own name and personality, woven into a 19th-century estate that breathes with the rhythms of San Miguel de Allende.",
+        "Every tile was laid by hand. Every arch tells a story. And every guest who walks through our doors becomes part of a narrative that began long before them — and will continue long after."
+      ],
+      "imageAlt": "Hand-painted ceramic tiles and carved stone details at Casa Schuck"
+    },
+    "immersivePillars": {
+      "items": [
+        {
+          "title": "Authenticity",
+          "body": "Preserving the raw soul of colonial craftsmanship while integrating the seamless ease of modern life. Every original detail — the cantera stone, the hand-forged ironwork, the vaulted ceilings — remains untouched."
+        },
+        {
+          "title": "Intimacy",
+          "body": "With only nine suites, your stay is defined by personal attention and a profound sense of privacy. You are not a room number. You are a guest in our home."
+        },
+        {
+          "title": "Sanctuary",
+          "body": "Lush gardens and shaded courtyards designed for reflection. The altitude sharpens the light. The thick stone walls hold the silence. Here, stillness is not empty — it is full."
+        }
+      ]
+    },
+    "sanMiguel": {
+      "coordinates": "20.9144° N, 100.7452° W",
+      "headline": "San Miguel de Allende — A City That Paints Itself",
+      "paragraphs": [
+        "Named a UNESCO World Heritage Site and consistently voted one of the best cities in the world, San Miguel de Allende is a place where cobblestone streets open into hidden galleries, where the scent of copal drifts from churches over 400 years old, and where the light at golden hour turns everything to amber.",
+        "The art scene is electric — from the studios at Fábrica La Aurora to the street murals that bloom overnight. The food rivals Mexico City: mezcal bars, chef-driven restaurants, and street vendors whose families have been perfecting their craft for generations.",
+        "And then there are the festivals — Día de Muertos with its marigold altars and candlelit processions, the Sanmiguelada, the jazz festival, the fireworks that light up the Parroquia at midnight. Casa Schuck sits at the center of it all, two blocks from the Jardín Principal."
+      ],
+      "imageAlt": "Panoramic view of San Miguel de Allende with the Parroquia de San Miguel Arcángel"
+    },
+    "testimonials": {
+      "eyebrow": "Guest Voices",
+      "headline": "Words from Those Who've Stayed",
+      "quotes": [
+        {
+          "text": "We arrived as guests. We left as family. The courtyard at dawn, coffee in hand, the cathedral bells in the distance — it stays with you.",
+          "author": "Sarah & James L.",
+          "origin": "New York, NY"
+        },
+        {
+          "text": "There is no hotel like this. It is a home with the soul of a gallery and the warmth of a grandmother's kitchen. We return every year.",
+          "author": "Patricia M.",
+          "origin": "Mexico City"
+        },
+        {
+          "text": "The rooftop sunset alone is worth the trip. But it's the details — the hand-painted tiles, the way they remember your name, the silence of the garden — that make it extraordinary.",
+          "author": "David & Karen W.",
+          "origin": "London, UK"
+        }
+      ]
+    },
+    "cinematicCTA": {
+      "headline": "Begin Your Story",
+      "cta": "View Packages"
     }
   },
   "suitesPage": {

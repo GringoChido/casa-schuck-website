@@ -16,7 +16,7 @@ export function NarrativeIntro({ locale, dict }: NarrativeIntroProps) {
       <ScrollReveal>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
           <div className="md:col-span-6 relative">
-            <div className="aspect-[4/5] overflow-hidden">
+            <div className="aspect-[4/3] overflow-hidden rounded-xl">
               <Image
                 src="/images/story/modern.jpg"
                 alt={n.imageAlt}

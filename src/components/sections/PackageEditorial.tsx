@@ -36,7 +36,7 @@ export function PackageEditorial({ locale, pkg, image, reversed = false, index }
         <ScrollReveal>
           <div className="flex flex-col md:flex-row gap-16">
             <div className="w-full md:w-1/2">
-              <div className="aspect-[3/4] bg-surface-container overflow-hidden mb-12 relative">
+              <div className="aspect-[4/3] bg-surface-container overflow-hidden rounded-xl mb-12 relative">
                 <Image
                   src={image}
                   alt={pkg.imageAlt}
@@ -133,7 +133,7 @@ export function PackageEditorial({ locale, pkg, image, reversed = false, index }
                 </a>
               </div>
               <div className="col-span-12 md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0">
-                <div className="relative aspect-video md:aspect-square overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                   <Image
                     src={image}
                     alt={pkg.imageAlt}
@@ -157,7 +157,7 @@ export function PackageEditorial({ locale, pkg, image, reversed = false, index }
       <ScrollReveal>
         <div className="editorial-grid">
           <div className="col-span-12 md:col-span-7 relative">
-            <div className="aspect-[4/5] bg-surface-container overflow-hidden relative">
+            <div className="aspect-[4/3] bg-surface-container overflow-hidden rounded-xl relative">
               <Image
                 src={image}
                 alt={pkg.imageAlt}

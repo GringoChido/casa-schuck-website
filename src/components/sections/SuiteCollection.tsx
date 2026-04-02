@@ -52,12 +52,12 @@ export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
           {rooms.map((room, i) => (
             <StaggerItem key={room.id} index={i + 4}>
               <div className={`group ${i % 2 !== 0 ? 'md:mt-32' : ''}`}>
-                <div className="aspect-[4/5] overflow-hidden mb-8 bg-surface-container relative">
+                <div className="aspect-[4/3] overflow-hidden rounded-xl mb-8 bg-surface-container relative">
                   <Image
                     src={ROOM_IMAGES[room.id] ?? '/images/rooms/el-royal-suite/hero.jpg'}
                     alt={room.name[locale]}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
