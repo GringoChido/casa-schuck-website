@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-11T12:00:00-06:00",
+  "title": "Design System: Casa Schuck",
+  "extensions": {
+    "colorMeta": {
+      "sage": { "role": "tertiary", "displayName": "Sage", "canonical": "#5B7B6A", "tonalRamp": ["#16201B", "#26352D", "#3D5A4C", "#5B7B6A", "#7A9A88", "#9BBBA8", "#B8D4C5", "#D4E8DD"] },
+      "terracotta": { "role": "secondary", "displayName": "Terracotta", "canonical": "#C17A56", "tonalRamp": ["#3A2117", "#5C3424", "#7A4A30", "#9C5F40", "#C17A56", "#D4936B", "#E8C4B0", "#F5DDD0"] },
+      "linen": { "role": "neutral", "displayName": "Linen", "canonical": "#F7F2EC", "tonalRamp": ["#1C1917", "#4A4541", "#8A7D72", "#C4B9AE", "#E0D7CE", "#E8E0D8", "#F0EAE3", "#F7F2EC"] },
+      "espresso": { "role": "primary", "displayName": "Espresso", "canonical": "#1C1917", "tonalRamp": ["#0F0D0C", "#1C1917", "#2C2826", "#4A4541", "#6B645E", "#8A7D72", "#B5ABA1", "#DDD5CC"] },
+      "dusty-rose": { "role": "tertiary", "displayName": "Dusty Rose", "canonical": "#C4A289", "tonalRamp": ["#2E241C", "#54422F", "#7A6048", "#9E8164", "#C4A289", "#D2B7A2", "#E3D0C1", "#F1E6DC"] },
+      "gold": { "role": "secondary", "displayName": "Gold", "canonical": "#BF754B", "tonalRamp": ["#371F11", "#5A3420", "#7E4A2F", "#A05F3D", "#BF754B", "#D29268", "#E5BC9E", "#F3DECB"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines over photography, one per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles at weight 400; scale carries hierarchy." },
+      "body": { "displayName": "Body", "purpose": "Reading copy, capped at 65-75ch." },
+      "label": { "displayName": "Label", "purpose": "Eyebrows, buttons, nav. Montserrat caps, 0.2em tracking." }
+    },
+    "shadows": [
+      { "name": "floating-panel", "value": "0 25px 50px -12px rgba(0,0,0,0.25), 0 12px 24px -8px rgba(0,0,0,0.15)", "purpose": "Floating UI above photography (booking bar, chat panel). Only sanctioned shadow." }
+    ],
+    "motion": [
+      { "name": "ease-luxury", "value": "cubic-bezier(0.25, 0.1, 0.25, 1)", "purpose": "Default easing for all reveals and hovers." },
+      { "name": "duration-hover", "value": "300ms-400ms", "purpose": "Color and underline transitions." },
+      { "name": "duration-reveal", "value": "600ms-1800ms", "purpose": "Scroll fades and hero image reveal." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-cutoff", "value": "768px" },
+      { "name": "desktop", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Dark CTA for booking bars and dark sections.",
+      "html": "<button class=\"ds-btn-primary\">CHECK AVAILABILITY</button>",
+      "css": ".ds-btn-primary { background: #1C1917; color: #fff; height: 44px; padding: 0 24px; font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; border: none; border-radius: 0; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.25,0.1,0.25,1); } .ds-btn-primary:hover { background: #C17A56; } .ds-btn-primary:focus-visible { outline: 2px solid #1C1917; outline-offset: 2px; }"
+    },
+    {
+      "name": "Sage Button",
+      "kind": "button",
+      "refersTo": "button-sage",
+      "description": "Booking-flow CTA on light surfaces.",
+      "html": "<button class=\"ds-btn-sage\">BOOK YOUR STAY</button>",
+      "css": ".ds-btn-sage { background: #5B7B6A; color: #fff; padding: 20px 48px; font-family: Montserrat, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.4s cubic-bezier(0.25,0.1,0.25,1); } .ds-btn-sage:hover { background: #C17A56; } .ds-btn-sage:focus-visible { outline: 2px solid #1C1917; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text CTA",
+      "kind": "custom",
+      "refersTo": "cta-underline",
+      "description": "Quiet-luxury text link; hairline grows from center on hover.",
+      "html": "<a href=\"#\" class=\"ds-cta-underline\">EXPLORE THE SUITES</a>",
+      "css": ".ds-cta-underline { position: relative; color: #1C1917; font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; padding-bottom: 4px; } .ds-cta-underline::after { content: ''; position: absolute; bottom: -2px; left: 50%; right: 50%; height: 1px; background: currentColor; transition: left 0.3s cubic-bezier(0.25,0.1,0.25,1), right 0.3s cubic-bezier(0.25,0.1,0.25,1); } .ds-cta-underline:hover::after { left: 0; right: 0; }"
+    },
+    {
+      "name": "Booking Input",
+      "kind": "input",
+      "refersTo": "booking-input",
+      "description": "Underline-only field used in the availability bar.",
+      "html": "<label class=\"ds-booking-label\">CHECK-IN<input class=\"ds-booking-input\" type=\"text\" placeholder=\"Jun 15, 2026\" /></label>",
+      "css": ".ds-booking-label { display: flex; flex-direction: column; gap: 4px; font-family: Montserrat, sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; color: #4A4541; } .ds-booking-input { background: transparent; border: none; border-bottom: 1px solid #C4B9AE; padding: 12px 0; width: 220px; font-family: Lato, sans-serif; font-size: 14px; color: #1C1917; transition: border-color 0.3s ease; } .ds-booking-input:focus { outline: none; border-bottom-color: #1C1917; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link-underline",
+      "description": "Header navigation with center-grow underline.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-link\">SUITES</a><a href=\"#\" class=\"ds-nav-link\">WEDDINGS</a><a href=\"#\" class=\"ds-nav-link\">EXPERIENCES</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 32px; background: #F7F2EC; padding: 16px 24px; } .ds-nav-link { position: relative; color: #1C1917; font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; } .ds-nav-link::after { content: ''; position: absolute; bottom: -4px; left: 50%; right: 50%; height: 1px; background: #C17A56; transition: left 0.35s cubic-bezier(0.25,0.1,0.25,1), right 0.35s cubic-bezier(0.25,0.1,0.25,1); } .ds-nav-link:hover::after { left: 0; right: 0; }"
+    },
+    {
+      "name": "Editorial Label",
+      "kind": "chip",
+      "refersTo": "editorial-label",
+      "description": "Eyebrow label that opens sections.",
+      "html": "<span class=\"ds-eyebrow\">SAN MIGUEL DE ALLENDE</span>",
+      "css": ".ds-eyebrow { font-family: Montserrat, sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: #8A7D72; }"
+    },
+    {
+      "name": "Image Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Photographic card with slow scale hover, no shadow at rest.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-img\"></div><div class=\"ds-card-body\"><span class=\"ds-card-eyebrow\">SUITE</span><h3 class=\"ds-card-title\">La Luna</h3><p class=\"ds-card-text\">A corner of the house where morning light lingers longest.</p></div></div>",
+      "css": ".ds-card { width: 300px; border-radius: 12px; overflow: hidden; background: #F0EAE3; } .ds-card-img { height: 200px; background: linear-gradient(135deg, #C4A289, #C17A56); transition: transform 0.7s cubic-bezier(0.25,0.1,0.25,1); } .ds-card:hover .ds-card-img { transform: scale(1.04); } .ds-card-body { padding: 24px; } .ds-card-eyebrow { font-family: Montserrat, sans-serif; font-size: 10px; letter-spacing: 0.2em; color: #8A7D72; } .ds-card-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 400; color: #1C1917; margin: 8px 0; } .ds-card-text { font-family: Lato, sans-serif; font-size: 14px; line-height: 1.7; color: #4A4541; margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Golden-Hour Courtyard",
+    "overview": "Every screen should feel like stepping off a cobblestone street into a quiet colonial courtyard at golden hour. The system is editorial and photographic: full-bleed imagery carries the emotion, type set in a calm serif carries the story, and the interface itself stays nearly invisible. Density is low, whitespace is generous, motion is slow. This system explicitly rejects SaaS landing-page conventions, OTA booking-site density and urgency, Inter-everything tech minimalism, purple gradients, and cards-in-cards. It is a magazine feature about a house, with a reservation desk at the end.",
+    "keyCharacteristics": [
+      "Photography-first, full-bleed heroes on every page",
+      "Warm tinted neutrals (linen, espresso) with sage and terracotta as committed accents",
+      "Serif display type at light weight, tracked-out uppercase labels",
+      "Hairline rules (1px) as the primary structural device",
+      "Glass panels reserved for overlays on photography, never on flat surfaces"
+    ],
+    "rules": [
+      { "name": "The Plaster Rule", "body": "No pure white, no pure black, anywhere. Backgrounds are linen-family, text is espresso. #FFF appears only inside glass overlays and on-color button text.", "section": "colors" },
+      { "name": "The Jewel Box Rule", "body": "The jewel tones exist for rare editorial moments tied to their subject. Never structural, never on more than one element per viewport.", "section": "colors" },
+      { "name": "The One Serif Voice Rule", "body": "Cormorant Garamond never appears below 1.25rem and never in UI controls. If it's clickable and small, it's Montserrat; if it's reading copy, it's Lato.", "section": "typography" },
+      { "name": "The Diacritics Rule", "body": "Every loaded weight includes latin-ext. Spanish is a first language here.", "section": "typography" },
+      { "name": "The Glass-on-Photo Rule", "body": "Glassmorphism is permitted only on top of photography. Glass on a flat linen background is prohibited.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do lead every page with photography and let UI recede.",
+      "Do use hairline 1px rules and whitespace as the primary structure.",
+      "Do keep motion slow and exponential: fades, 600-1800ms, ease-out; respect prefers-reduced-motion.",
+      "Do maintain EN/ES dictionary key parity on every copy change.",
+      "Do keep touch targets at 44px minimum; the mobile guest is on a mid-range Android."
+    ],
+    "donts": [
+      "Don't build SaaS landing-page patterns: feature grids, hero metrics, gradient CTAs, identical icon-card grids.",
+      "Don't import OTA booking-site urgency: countdown timers, 'Only 2 rooms left,' dense comparison tables.",
+      "Don't use purple gradients, neon accents, gradient text, or Inter-everything minimalism.",
+      "Don't nest cards in cards, or use border-left/right stripes thicker than 1px as accents.",
+      "Don't use pure #000 or #FFF on surfaces (The Plaster Rule).",
+      "Don't use Ken Burns zooms, word-by-word text reveals, bounce/elastic easing, or custom cursors.",
+      "Don't write corporate hospitality copy ('world-class amenities,' 'nestled in the heart of')."
+    ]
+  }
+}

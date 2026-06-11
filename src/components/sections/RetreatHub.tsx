@@ -55,21 +55,18 @@ export function RetreatHub({ locale, dict }: RetreatHubProps) {
       title: rt.yogaTitle,
       desc: rt.yogaDescription,
       Icon: LotusIcon,
-      accent: 'border-secondary',
       iconColor: 'text-secondary',
     },
     {
       title: rt.spiritualTitle,
       desc: rt.spiritualDescription,
       Icon: FlameIcon,
-      accent: 'border-secondary',
       iconColor: 'text-secondary',
     },
     {
       title: rt.womensTitle,
       desc: rt.womensDescription,
       Icon: StarburstIcon,
-      accent: 'border-secondary',
       iconColor: 'text-secondary',
     },
   ];
@@ -104,7 +101,7 @@ export function RetreatHub({ locale, dict }: RetreatHubProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className={`bg-white border-l-4 ${item.accent} rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow`}
+              className="bg-surface-bright border border-dusty-rose/40 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
             >
               <item.Icon className={`w-10 h-10 ${item.iconColor} mb-5`} />
               <h3 className="font-serif text-xl text-secondary mb-3">
