@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
-import mockData from '@/data/mockCloudbeds.json';
+import { buildBookingUrl } from '@/lib/cloudbeds';
+import { rooms as roomData } from '@/data/rooms';
 
 interface SuiteCollectionProps {
   locale: Locale;
@@ -24,7 +24,7 @@ const ROOM_IMAGES: Record<string, string> = {
 
 export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
   const c = dict.suitesPage.collection;
-  const rooms = mockData.roomTypes.slice(0, 6);
+  const rooms = roomData.slice(0, 6);
 
   return (
     <section className="py-24 px-6 md:px-12 bg-surface max-w-7xl mx-auto">
@@ -73,12 +73,19 @@ export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
                   <p className="font-body text-on-surface-variant text-sm leading-relaxed mb-8 max-w-md">
                     {room.shortDescription[locale]}
                   </p>
-                  <Link
-                    href={`/${locale}#availability`}
+                  <a
+                    href={buildBookingUrl({
+                      roomTypeId: room.roomTypeId,
+                      language: locale,
+                      placement: 'suite_card',
+                      whatsappMessage: dict.rooms.whatsappInquiry.replace('{room}', room.name[locale]),
+                    })}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-fit text-secondary font-body text-sm tracking-widest uppercase border-b border-transparent hover:border-secondary transition-all pb-1"
                   >
                     {c.bookRoom}
-                  </Link>
+                  </a>
                 </div>
               </div>
             </StaggerItem>

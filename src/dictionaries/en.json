@@ -81,7 +81,9 @@
     "adult": "Adult",
     "adults": "Adults",
     "child": "Child",
-    "children": "Children"
+    "children": "Children",
+    "whatsappInquiry": "Hola! I'd like to check availability at Casa Schuck from {checkin} to {checkout}.",
+    "whatsappInquiryGeneric": "Hola! I'd like to check availability at Casa Schuck."
   },
   "rooms": {
     "eyebrow": "Rooms & Suites",
@@ -96,7 +98,8 @@
     "bedType": "Bed Type",
     "floor": "Floor",
     "accessible": "Accessible",
-    "specialNote": "Note"
+    "specialNote": "Note",
+    "whatsappInquiry": "Hola! I'd like to check availability for {room} at Casa Schuck."
   },
   "weddings": {
     "eyebrow": "Weddings & Celebrations",
@@ -431,7 +434,8 @@
     "headline": "Seasonal Curations",
     "description": "Local experiences, bundled for better value. Book direct for the best of the season.",
     "includedLabel": "Included",
-    "bookPackage": "Book This Package"
+    "bookPackage": "Book This Package",
+    "whatsappInquiry": "Hola! I'd like to ask about the {name} package at Casa Schuck."
   },
   "reviews": {
     "eyebrow": "Guest Voices",

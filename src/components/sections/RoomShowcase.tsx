@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import { RoomImageCarousel } from '@/components/ui/RoomImageCarousel';
-import { RoomDetail, type RoomType } from '@/components/ui/RoomDetail';
+import { RoomDetail } from '@/components/ui/RoomDetail';
 import mockData from '@/data/mockCloudbeds.json';
+import { rooms as roomData } from '@/data/rooms';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { StaggerItem, ScrollReveal } from '@/components/ui/ScrollReveal';
@@ -14,7 +15,7 @@ interface RoomShowcaseProps {
 }
 
 export function RoomShowcase({ locale, dict }: RoomShowcaseProps) {
-  const rooms = mockData.roomTypes;
+  const rooms = roomData;
   const amenityLabels = mockData.amenityLabels[locale] || mockData.amenityLabels.en;
   const r = dict.rooms;
   const [activeIndex, setActiveIndex] = useState(0);
@@ -75,7 +76,7 @@ export function RoomShowcase({ locale, dict }: RoomShowcaseProps) {
               roomName={activeRoom.name[locale]}
             />
             <RoomDetail
-              room={activeRoom as unknown as RoomType}
+              room={activeRoom}
               locale={locale}
               dict={r}
               amenityLabels={amenityLabels}
@@ -106,7 +107,7 @@ export function RoomShowcase({ locale, dict }: RoomShowcaseProps) {
             roomName={activeRoom.name[locale]}
           />
           <RoomDetail
-            room={activeRoom as unknown as RoomType}
+            room={activeRoom}
             locale={locale}
             dict={r}
             amenityLabels={amenityLabels}

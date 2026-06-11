@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { buildDeepLink } from '@/lib/cloudbeds';
+import { buildBookingUrl } from '@/lib/cloudbeds';
 import mockData from '@/data/mockCloudbeds.json';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
@@ -49,10 +49,12 @@ export function SeasonalPackages({ locale, dict }: SeasonalPackagesProps) {
             const name = (pkg.name as unknown as LocaleString)[locale];
             const desc = (pkg.description as unknown as LocaleString)[locale];
 
-            const bookUrl = buildDeepLink({
+            const bookUrl = buildBookingUrl({
               checkin: pkg.dates.start,
               checkout: pkg.dates.end,
               language: locale,
+              placement: 'package_card',
+              whatsappMessage: p.whatsappInquiry.replace('{name}', name),
             });
 
             return (

@@ -80,8 +80,10 @@
     "search": "Ver Disponibilidad",
     "adult": "Adulto",
     "adults": "Adultos",
-    "child": "Nino",
-    "children": "Ninos"
+    "child": "Niño",
+    "children": "Niños",
+    "whatsappInquiry": "¡Hola! Me gustaría consultar disponibilidad en Casa Schuck del {checkin} al {checkout}.",
+    "whatsappInquiryGeneric": "¡Hola! Me gustaría consultar disponibilidad en Casa Schuck."
   },
   "rooms": {
     "eyebrow": "Habitaciones y Suites",
@@ -96,7 +98,8 @@
     "bedType": "Tipo de Cama",
     "floor": "Piso",
     "accessible": "Accesible",
-    "specialNote": "Nota"
+    "specialNote": "Nota",
+    "whatsappInquiry": "¡Hola! Me gustaría consultar disponibilidad para {room} en Casa Schuck."
   },
   "weddings": {
     "eyebrow": "Bodas y Celebraciones",
@@ -431,7 +434,8 @@
     "headline": "Curadurías de Temporada",
     "description": "Experiencias locales, empaquetadas para mejor valor. Reserve directo para lo mejor de la temporada.",
     "includedLabel": "Incluido",
-    "bookPackage": "Reservar Este Paquete"
+    "bookPackage": "Reservar Este Paquete",
+    "whatsappInquiry": "¡Hola! Me gustaría preguntar por el paquete {name} en Casa Schuck."
   },
   "reviews": {
     "eyebrow": "Voces de Huespedes",

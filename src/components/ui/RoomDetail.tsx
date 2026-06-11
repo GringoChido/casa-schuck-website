@@ -1,26 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { buildDeepLink } from '@/lib/cloudbeds';
+import { buildBookingUrl } from '@/lib/cloudbeds';
 import type { Locale } from '@/lib/i18n';
-
-export interface RoomType {
-  id: string;
-  name: { en: string; es: string };
-  tagline: { en: string; es: string };
-  description: { en: string; es: string };
-  maxGuests: number;
-  bedType: { en: string; es: string };
-  floor: number;
-  baseRate: number;
-  accessible: boolean;
-  hasAC: boolean;
-  specialNote: { en: string; es: string } | null;
-  amenities: string[];
-}
+import type { Room } from '@/data/rooms';
 
 interface RoomDetailProps {
-  room: RoomType;
+  room: Room;
   locale: Locale;
   dict: Record<string, string>;
   amenityLabels: Record<string, string>;
@@ -108,7 +94,12 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
           <span className="text-sm text-on-surface/50 ml-1">{dict.perNight}</span>
         </div>
         <a
-          href={buildDeepLink({ roomTypeId: room.id })}
+          href={buildBookingUrl({
+            roomTypeId: room.roomTypeId,
+            language: locale,
+            placement: 'suite_card',
+            whatsappMessage: dict.whatsappInquiry?.replace('{room}', name),
+          })}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full sm:w-auto bg-black hover:bg-secondary text-white font-sans font-bold text-[11px]

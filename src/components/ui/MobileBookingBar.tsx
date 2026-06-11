@@ -2,13 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { buildBookingUrl } from '@/lib/cloudbeds';
 import type { Locale } from '@/lib/i18n';
+import type { Dictionary } from '@/lib/dictionaries';
 
 interface MobileBookingBarProps {
   locale: Locale;
+  dict: Dictionary;
 }
 
-export function MobileBookingBar({ locale }: MobileBookingBarProps) {
+export function MobileBookingBar({ locale, dict }: MobileBookingBarProps) {
   const [visible, setVisible] = useState(false);
   const [showSecondary, setShowSecondary] = useState(false);
 
@@ -34,6 +37,11 @@ export function MobileBookingBar({ locale }: MobileBookingBarProps) {
 
   const mapsUrl = 'https://maps.google.com/?q=Casa+Schuck,+Garita+3,+Centro,+37700+San+Miguel+de+Allende,+Gto.,+Mexico';
   const phoneUrl = 'tel:+524151520657';
+  const bookingUrl = buildBookingUrl({
+    language: locale,
+    placement: 'mobile_bar',
+    whatsappMessage: dict.availability.whatsappInquiryGeneric,
+  });
 
   return (
     <AnimatePresence>
@@ -89,7 +97,9 @@ export function MobileBookingBar({ locale }: MobileBookingBarProps) {
           {/* Primary CTA */}
           <div className="px-4 pb-4 pt-2 bg-gradient-to-t from-white via-white to-white/95">
             <a
-              href="#availability"
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full bg-black hover:bg-secondary text-white font-sans font-bold
                          py-4 text-center text-[12px] tracking-[0.15em] uppercase
                          transition-colors duration-300 min-h-[48px]"

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { buildDeepLink, getDefaultDates } from '@/lib/cloudbeds';
+import { buildBookingUrl, getDefaultDates } from '@/lib/cloudbeds';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 
@@ -22,12 +22,16 @@ export function AvailabilityBar({ locale, dict, variant = 'light' }: Availabilit
   const [children, setChildren] = useState(0);
 
   const handleSearch = () => {
-    const url = buildDeepLink({
+    const url = buildBookingUrl({
       checkin,
       checkout,
       adults,
       children,
       language: locale,
+      placement: 'availability_bar',
+      whatsappMessage: a.whatsappInquiry
+        .replace('{checkin}', checkin)
+        .replace('{checkout}', checkout),
     });
     window.open(url, '_blank', 'noopener,noreferrer');
   };

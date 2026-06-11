@@ -26,12 +26,28 @@ Casa Schuck is a boutique hotel / luxury event venue in San Miguel de Allende, M
 - **Aesthetic**: "Quiet luxury" — editorial grids, scroll-triggered fade-ins (800ms), glass morphism, parallax sections. No Ken Burns, no word-by-word reveals, no custom cursors.
 
 ## Environment variables
+See `.env.example` for the full annotated list.
 ```
-NEXT_PUBLIC_CLOUDBEDS_PROPERTY_ID  — Hotel booking API
-NEXT_PUBLIC_INSTAGRAM_HANDLE       — casaschuck
-NEXT_PUBLIC_FACEBOOK_HANDLE        — casaschuck
-NEXT_PUBLIC_WHATSAPP_NUMBER        — 5214151806060
+NEXT_PUBLIC_CLOUDBEDS_PROPERTY_ID    — Cloudbeds booking engine property ID. While unset or
+                                       PROPERTY_ID_PLACEHOLDER, all booking CTAs fall back to a
+                                       WhatsApp inquiry (see buildBookingUrl in src/lib/cloudbeds.ts)
+NEXT_PUBLIC_CLOUDBEDS_ROOM_TYPE_IDS  — JSON map of room slug → Cloudbeds room type ID
+                                       (consumed by src/data/roomTypeIds.ts; empty = no room preselect)
+NEXT_PUBLIC_INSTAGRAM_HANDLE         — casaschuck
+NEXT_PUBLIC_FACEBOOK_HANDLE          — casaschuck
+NEXT_PUBLIC_WHATSAPP_NUMBER          — 5214151806060
+NEXT_PUBLIC_CHATBOT_ID               — chatbot renders on desktop only when set
+RESEND_API_KEY / RESEND_AUDIENCE_ID  — newsletter API (/api/newsletter); no-ops gracefully when unset
 ```
+
+## Booking flow
+- All booking CTAs go through `buildBookingUrl()` in `src/lib/cloudbeds.ts`: Cloudbeds deep link
+  when the engine is live, WhatsApp inquiry with a prefilled bilingual message otherwise.
+- Every engine link carries `utm_source=website`, `utm_medium=<placement>` (hero | availability_bar |
+  mobile_bar | suite_card | package_card), `utm_campaign=direct_booking`.
+- Room data comes from `src/data/rooms.ts` (merges mockCloudbeds.json with the env-driven room type
+  ID map). The `cloudbedsRoomTypeId` values inside mockCloudbeds.json are fake placeholders — never
+  send them to the engine.
 
 ## Commands
 ```bash

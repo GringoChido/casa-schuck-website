@@ -70,7 +70,7 @@ export default async function LocaleLayout({
         <Footer locale={locale as Locale} dict={dict} />
         <Chatbot locale={locale as Locale} dict={dict} />
         <WhatsAppButton />
-        <MobileBookingBar locale={locale as Locale} />
+        <MobileBookingBar locale={locale as Locale} dict={dict} />
         <WeddingCTA locale={locale as Locale} />
       </body>
     </html>
