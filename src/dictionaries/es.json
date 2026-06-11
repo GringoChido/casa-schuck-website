@@ -966,6 +966,7 @@
         "tagline": "Una inmersión conmovedora en la celebración más profunda de México, donde la memoria se encuentra con el vibrante presente.",
         "price": "$1,850 USD",
         "priceLabel": "Desde",
+        "returningNote": "Regresa para Día de Muertos 2026",
         "inclusions": [
           "4 noches en una Suite Colonial Signature",
           "Taller privado de Ofrenda con un artesano local",
@@ -1004,6 +1005,7 @@
         "tagline": "Redescubre la magia de la temporada entre las calles empedradas y las luces festivas de San Miguel. Casa Schuck se transforma en un santuario de calidez y elegancia navideña.",
         "price": "$1,200",
         "priceLabel": "Desde",
+        "returningNote": "Regresa para las fiestas decembrinas 2026",
         "inclusionsTitle": "Incluye",
         "inclusions": [
           "3 Noches de Estancia",
@@ -1038,6 +1040,7 @@
         "tagline": "Cuando las jacarandas pintan el pueblo de púrpura, San Miguel despierta. Esta curaduría se enfoca en el bienestar, la renovación y la belleza silenciosa de la primavera del desierto alto.",
         "price": "$2,400",
         "priceLabel": "/ paquete",
+        "returningNote": "Regresa en la primavera 2027",
         "numberedInclusions": [
           {
             "number": "01",
@@ -1089,7 +1092,11 @@
       "headline": "Quédate por la Temporada",
       "body": "Únete a nuestro círculo privado para recibir notificaciones anticipadas de nuestras curadurías de temporada y eventos de edición limitada.",
       "placeholder": "Correo Electrónico",
-      "buttonText": "Suscribirse"
-    }
+      "buttonText": "Suscribirse",
+      "success": "Ya estás en la lista. Te escribiremos cuando cambie la temporada.",
+      "error": "Algo salió mal. Por favor intenta de nuevo.",
+      "invalidEmail": "Por favor ingresa un correo electrónico válido."
+    },
+    "waitlistCta": "Únete a la lista"
   }
 }

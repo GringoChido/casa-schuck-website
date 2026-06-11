@@ -1,10 +1,16 @@
 import type { Locale } from '@/lib/i18n';
+import { rooms } from '@/data/rooms';
 
 interface JsonLdProps {
   locale: Locale;
 }
 
 const BASE_URL = 'https://casaschuck.com';
+
+// aggregateRating / starRating are deliberately absent from all schemas:
+// fabricated review counts in structured data risk a Google penalty.
+// Re-add alongside SHOW_TESTIMONIALS (src/data/siteFlags.ts) once real,
+// permissioned reviews arrive.
 
 export function HotelJsonLd({ locale }: JsonLdProps) {
   const schema = {
@@ -30,7 +36,7 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 20.9144,
-      longitude: -100.7453,
+      longitude: -100.7452,
     },
     image: [
       `${BASE_URL}/images/hero/courtyard-main.jpg`,
@@ -55,17 +61,30 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
       { '@type': 'LocationFeatureSpecification', name: 'Courtyard Garden', value: true },
       { '@type': 'LocationFeatureSpecification', name: 'Wedding Venue', value: true },
     ],
-    starRating: {
-      '@type': 'Rating',
-      ratingValue: '4.8',
-      bestRating: '5',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '120',
-      bestRating: '5',
-    },
+    containsPlace: rooms.map((room) => ({
+      '@type': 'HotelRoom',
+      '@id': `${BASE_URL}/${locale}/suites#${room.id}`,
+      name: room.name[locale],
+      description: room.shortDescription[locale],
+      image: `${BASE_URL}${room.images[0]}`,
+      bed: {
+        '@type': 'BedDetails',
+        typeOfBed: room.bedType.en,
+        numberOfBeds: 1,
+      },
+      occupancy: {
+        '@type': 'QuantitativeValue',
+        maxValue: room.maxGuests,
+        unitText: 'guests',
+      },
+      offers: {
+        '@type': 'Offer',
+        price: room.baseRate,
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: `${BASE_URL}/${locale}/suites`,
+      },
+    })),
     availableLanguage: [
       { '@type': 'Language', name: 'English', alternateName: 'en' },
       { '@type': 'Language', name: 'Spanish', alternateName: 'es' },
@@ -161,12 +180,6 @@ export function LocalBusinessJsonLd({ locale }: JsonLdProps) {
       'https://www.facebook.com/casaschuck',
     ],
     hasMap: 'https://maps.google.com/?q=Casa+Schuck,+Garita+3,+Centro,+37700+San+Miguel+de+Allende',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '120',
-      bestRating: '5',
-    },
   };
 
   return (

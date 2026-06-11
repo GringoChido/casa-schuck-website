@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
+import { seasonalPackages } from '@/data/packages';
 
 interface PackageCardsProps {
   locale: Locale;
@@ -60,10 +61,16 @@ export function PackageCards({ locale, dict }: PackageCardsProps) {
                     <p className="font-body text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2">
                       {pkg.tagline}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="font-headline text-xl">
-                        {pkg.price}
-                      </span>
+                    <div className="flex items-center justify-between gap-4">
+                      {seasonalPackages[i]?.available ? (
+                        <span className="font-headline text-xl">
+                          {pkg.price}
+                        </span>
+                      ) : (
+                        <span className="font-serif text-sm italic text-on-surface-variant">
+                          {pkg.returningNote}
+                        </span>
+                      )}
                       <span className="font-label text-[11px] tracking-[0.15em] uppercase text-secondary group-hover:translate-x-1 transition-transform duration-300">
                         {cta} &rarr;
                       </span>

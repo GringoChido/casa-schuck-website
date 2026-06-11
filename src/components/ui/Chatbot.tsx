@@ -83,8 +83,8 @@ export function Chatbot({ locale, dict }: ChatbotProps) {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-24 lg:bottom-6 right-6 z-50 w-14 h-14 bg-black hover:bg-secondary
-                       text-white rounded-full shadow-lg flex items-center justify-center
+            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-black hover:bg-secondary
+                       text-white rounded-full shadow-lg hidden lg:flex items-center justify-center
                        transition-colors duration-300"
             aria-label="Open chat"
           >
@@ -103,9 +103,9 @@ export function Chatbot({ locale, dict }: ChatbotProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-24 lg:bottom-6 right-6 z-[10000] w-[380px] max-w-[calc(100vw-2rem)]
-                       h-[500px] max-h-[calc(100vh-8rem)] lg:max-h-[calc(100vh-3rem)] bg-white rounded-2xl
-                       chatbot-panel flex flex-col overflow-hidden border border-outline-variant/20"
+            className="fixed bottom-6 right-6 z-[10000] w-[380px] max-w-[calc(100vw-2rem)]
+                       h-[500px] max-h-[calc(100vh-3rem)] bg-white rounded-2xl chatbot-panel
+                       hidden lg:flex flex-col overflow-hidden border border-outline-variant/20"
           >
             {/* Header */}
             <div className="bg-sunset px-5 py-4 flex items-center justify-between flex-shrink-0">

@@ -9,6 +9,7 @@ import { PackageCards } from '@/components/sections/PackageCards';
 import { EditorialMoments } from '@/components/sections/EditorialMoments';
 import { SanMiguelSection } from '@/components/sections/SanMiguelSection';
 import { TestimonialSection } from '@/components/sections/TestimonialSection';
+import { SHOW_TESTIMONIALS } from '@/data/siteFlags';
 import { CinematicCTA } from '@/components/sections/CinematicCTA';
 
 const BASE_URL = 'https://casaschuck.com';
@@ -129,8 +130,8 @@ export default async function HomePage({
       {/* 7. THE PLACE */}
       <SanMiguelSection dict={dict} />
 
-      {/* 8. THE PROOF */}
-      <TestimonialSection dict={dict} />
+      {/* 8. THE PROOF — gated until real, permissioned guest quotes arrive (src/data/siteFlags.ts) */}
+      {SHOW_TESTIMONIALS && <TestimonialSection dict={dict} />}
 
       {/* 9. THE RETURN */}
       <CinematicCTA locale={locale as Locale} dict={dict} />

@@ -68,7 +68,9 @@ export default async function LocaleLayout({
         <Header locale={locale as Locale} dict={dict} />
         <main>{children}</main>
         <Footer locale={locale as Locale} dict={dict} />
-        <Chatbot locale={locale as Locale} dict={dict} />
+        {/* Desktop-only, and only once a real chatbot service is configured.
+            On mobile the WhatsApp button IS the chat. */}
+        {process.env.NEXT_PUBLIC_CHATBOT_ID && <Chatbot locale={locale as Locale} dict={dict} />}
         <WhatsAppButton />
         <MobileBookingBar locale={locale as Locale} dict={dict} />
         <WeddingCTA locale={locale as Locale} />

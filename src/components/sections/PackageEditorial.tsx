@@ -16,6 +16,7 @@ interface PackageData {
   addOns?: string[];
   cta: string;
   imageAlt: string;
+  returningNote?: string;
 }
 
 interface PackageEditorialProps {
@@ -24,9 +25,12 @@ interface PackageEditorialProps {
   image: string;
   reversed?: boolean;
   index: number;
+  /** False until the client confirms real dates and pricing (src/data/packages.ts). */
+  available?: boolean;
+  waitlistCta: string;
 }
 
-export function PackageEditorial({ locale, pkg, image, reversed = false, index }: PackageEditorialProps) {
+export function PackageEditorial({ locale, pkg, image, reversed = false, index, available = false, waitlistCta }: PackageEditorialProps) {
   const hasNumbered = pkg.numberedInclusions && pkg.numberedInclusions.length > 0;
 
   if (hasNumbered) {
@@ -68,17 +72,31 @@ export function PackageEditorial({ locale, pkg, image, reversed = false, index }
                     </div>
                   ))}
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-3xl font-headline">
-                    {pkg.price} <small className="text-sm font-body italic text-on-surface-variant">{pkg.priceLabel}</small>
-                  </span>
-                  <a
-                    href={`/${locale}#availability`}
-                    className="px-10 py-4 border border-primary text-primary font-label uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-sm"
-                  >
-                    {pkg.cta}
-                  </a>
-                </div>
+                {available ? (
+                  <div className="flex items-center justify-between">
+                    <span className="text-3xl font-headline">
+                      {pkg.price} <small className="text-sm font-body italic text-on-surface-variant">{pkg.priceLabel}</small>
+                    </span>
+                    <a
+                      href={`/${locale}#availability`}
+                      className="px-10 py-4 border border-primary text-primary font-label uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-sm"
+                    >
+                      {pkg.cta}
+                    </a>
+                  </div>
+                ) : (
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:justify-between">
+                    <span className="font-serif text-xl italic text-on-surface-variant">
+                      {pkg.returningNote}
+                    </span>
+                    <a
+                      href="#newsletter"
+                      className="px-10 py-4 border border-primary text-primary font-label uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all text-sm text-center"
+                    >
+                      {waitlistCta}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -115,22 +133,39 @@ export function PackageEditorial({ locale, pkg, image, reversed = false, index }
                       ))}
                     </ul>
                   </div>
-                  <div>
-                    <h4 className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3">
-                      Investment
-                    </h4>
-                    <span className="text-2xl font-headline">
-                      {pkg.price} <small className="text-xs uppercase">{pkg.priceLabel}</small>
-                    </span>
-                  </div>
+                  {available && (
+                    <div>
+                      <h4 className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-3">
+                        Investment
+                      </h4>
+                      <span className="text-2xl font-headline">
+                        {pkg.price} <small className="text-xs uppercase">{pkg.priceLabel}</small>
+                      </span>
+                    </div>
+                  )}
                 </div>
-                <a
-                  href={`/${locale}#availability`}
-                  className="group flex items-center gap-4 text-primary font-label uppercase tracking-widest border-b border-primary/20 pb-2 hover:border-secondary transition-all text-sm"
-                >
-                  {pkg.cta}
-                  <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                </a>
+                {available ? (
+                  <a
+                    href={`/${locale}#availability`}
+                    className="group flex items-center gap-4 text-primary font-label uppercase tracking-widest border-b border-primary/20 pb-2 hover:border-secondary transition-all text-sm"
+                  >
+                    {pkg.cta}
+                    <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  </a>
+                ) : (
+                  <div>
+                    <p className="font-serif text-xl italic text-on-surface-variant mb-6">
+                      {pkg.returningNote}
+                    </p>
+                    <a
+                      href="#newsletter"
+                      className="group flex items-center gap-4 w-fit text-primary font-label uppercase tracking-widest border-b border-primary/20 pb-2 hover:border-secondary transition-all text-sm"
+                    >
+                      {waitlistCta}
+                      <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                  </div>
+                )}
               </div>
               <div className="col-span-12 md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
@@ -167,10 +202,18 @@ export function PackageEditorial({ locale, pkg, image, reversed = false, index }
               />
             </div>
             <div className="absolute -bottom-8 -right-8 md:right-12 bg-surface p-12 hidden md:block max-w-xs shadow-sm">
-              <span className="font-label text-secondary text-xs uppercase tracking-widest block mb-4">
-                {pkg.priceLabel}
-              </span>
-              <span className="text-4xl font-headline">{pkg.price}</span>
+              {available ? (
+                <>
+                  <span className="font-label text-secondary text-xs uppercase tracking-widest block mb-4">
+                    {pkg.priceLabel}
+                  </span>
+                  <span className="text-4xl font-headline">{pkg.price}</span>
+                </>
+              ) : (
+                <span className="font-serif text-xl italic text-on-surface-variant">
+                  {pkg.returningNote}
+                </span>
+              )}
             </div>
           </div>
           <div className="col-span-12 md:col-span-5 flex flex-col justify-center pt-12 md:pt-0 md:pl-12">
@@ -206,12 +249,26 @@ export function PackageEditorial({ locale, pkg, image, reversed = false, index }
                 </div>
               </div>
             )}
-            <a
-              href={`/${locale}#availability`}
-              className="w-full md:w-fit px-12 py-5 bg-primary text-on-primary font-label uppercase tracking-widest hover:bg-on-primary-container transition-colors text-center text-sm"
-            >
-              {pkg.cta}
-            </a>
+            {available ? (
+              <a
+                href={`/${locale}#availability`}
+                className="w-full md:w-fit px-12 py-5 bg-primary text-on-primary font-label uppercase tracking-widest hover:bg-on-primary-container transition-colors text-center text-sm"
+              >
+                {pkg.cta}
+              </a>
+            ) : (
+              <div>
+                <p className="font-serif text-xl italic text-on-surface-variant mb-6 md:hidden">
+                  {pkg.returningNote}
+                </p>
+                <a
+                  href="#newsletter"
+                  className="block w-full md:w-fit px-12 py-5 bg-primary text-on-primary font-label uppercase tracking-widest hover:bg-on-primary-container transition-colors text-center text-sm"
+                >
+                  {waitlistCta}
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </ScrollReveal>

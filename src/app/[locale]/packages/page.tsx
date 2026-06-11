@@ -5,6 +5,7 @@ import { FullBleedHero } from '@/components/sections/FullBleedHero';
 import { AvailabilityBar } from '@/components/sections/AvailabilityBar';
 import { PackageEditorial } from '@/components/sections/PackageEditorial';
 import { NewsletterCTA } from '@/components/sections/NewsletterCTA';
+import { seasonalPackages } from '@/data/packages';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 const BASE_URL = 'https://casaschuck.com';
@@ -60,6 +61,7 @@ export default async function PackagesPage({
   const dict = await getDictionary(locale as Locale);
   const h = dict.packagesPage.header;
   const packages = dict.packagesPage.packages;
+  const waitlistCta = dict.packagesPage.waitlistCta;
 
   return (
     <>
@@ -87,6 +89,8 @@ export default async function PackagesPage({
         pkg={packages[0]}
         image={PACKAGE_IMAGES[0]}
         index={0}
+        available={seasonalPackages[0].available}
+        waitlistCta={waitlistCta}
       />
 
       {/* Package 2: Reversed layout */}
@@ -96,6 +100,8 @@ export default async function PackagesPage({
         image={PACKAGE_IMAGES[1]}
         reversed
         index={1}
+        available={seasonalPackages[1].available}
+        waitlistCta={waitlistCta}
       />
 
       {/* Package 3: Numbered inclusions layout */}
@@ -104,6 +110,8 @@ export default async function PackagesPage({
         pkg={packages[2]}
         image={PACKAGE_IMAGES[2]}
         index={2}
+        available={seasonalPackages[2].available}
+        waitlistCta={waitlistCta}
       />
 
       {/* Newsletter */}
