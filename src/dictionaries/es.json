@@ -64,14 +64,14 @@
   "breakfastCallout": {
     "eyebrow": "Cada Manana, Una Celebracion",
     "headline": "El Desayuno Siempre Esta Incluido",
-    "description": "Comience cada dia con un festin que honra tanto la herencia mexicana como el confort internacional. Desde autenticos Chilaquiles y Huevos Rancheros hasta clasicos perfectamente preparados — cada plato es elaborado con esmero en nuestra cocina del patio colonial.",
+    "description": "Comience cada dia con un delicioso desayuno que celebra tanto la tradicion mexicana como los favoritos internacionales. Cada platillo se prepara fresco cada manana en nuestra cocina colonial.",
     "time": "8:30 AM – 10:00 AM diariamente",
     "earlyCoffee": "Cafe temprano disponible desde las 7:00 AM",
     "mexicanTitle": "Autentico Mexicano",
-    "mexicanItems": "Chilaquiles Verdes y Rojos, Huevos Rancheros, Fruta Fresca con Chile-Limon, Cafe de Olla",
+    "mexicanItems": "Chilaquiles Verdes, Chilaquiles Rojos, Huevos Rancheros, Huevos Gladys, Tortas Chuck, Huevos a la Cazuela, Fruta Fresca, Jugos Frescos, Cafe y Te",
     "classicTitle": "Clasicos Favoritos",
-    "classicItems": "Huevos Benedictinos, Pan Frances, Reposteria Recien Horneada, Cafe Organico y Jugos Frescos",
-    "note": "Servido diariamente en el Patio. Opciones para dietas especiales con gusto."
+    "classicItems": "Pan Frances, Hot Cakes, Omelets, Huevos al Gusto, Avena, Cafe Organico, Jugos Frescos, Fruta de Temporada",
+    "note": "Servido diariamente en el patio o en el comedor formal. Opciones para dietas especiales con gusto."
   },
   "availability": {
     "checkIn": "Llegada",
@@ -257,7 +257,7 @@
     "massagePricing": "60 min: $80 USD | 90 min: $110 USD | 120 min: $140 USD",
     "massageNote": "Coordinado por concierge. Se recomienda reservar con 24 horas de anticipacion.",
     "honorBarTitle": "El Bar de Honor",
-    "honorBarDescription": "Sirvase mezcal artesanal, vinos locales y licores artesanales en sistema de honor. Una seleccion curada que celebra lo mejor de las tradiciones destileras de Mexico.",
+    "honorBarDescription": "Nuestro Honor Bar esta surtido con una amplia seleccion de cervezas, refrescos, bebidas y mas para que los huespedes disfruten en cualquier momento de su estancia.",
     "wineRackTitle": "Vinoteca Curada",
     "wineRackDescription": "Una seleccion rotativa de vinos mexicanos elegidos a mano por nuestro equipo. Preguntenos por recomendaciones de maridaje.",
     "toursTitle": "Tours Curados por la Ciudad",

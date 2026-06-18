@@ -64,14 +64,14 @@
   "breakfastCallout": {
     "eyebrow": "Every Morning, A Celebration",
     "headline": "Breakfast Is Always Included",
-    "description": "Begin each day with a feast that honors both Mexican heritage and international comfort. From authentic Chilaquiles and Huevos Rancheros to perfectly prepared classics — every plate is crafted with care in our colonial courtyard kitchen.",
+    "description": "Begin each day with a delicious breakfast that celebrates both Mexican tradition and international favorites. Every dish is prepared fresh each morning in our colonial kitchen.",
     "time": "8:30 AM – 10:00 AM daily",
     "earlyCoffee": "Early coffee available from 7:00 AM",
     "mexicanTitle": "Authentic Mexican",
-    "mexicanItems": "Chilaquiles Verdes & Rojos, Huevos Rancheros, Fresh Fruit with Chili-Lime, Cafe de Olla",
+    "mexicanItems": "Chilaquiles Verdes, Chilaquiles Rojos, Huevos Rancheros, Eggs Gladys, Tortas Chuck, Huevos a la Cazuela, Fresh Fruit, Fresh Juices, Coffee and Tea",
     "classicTitle": "Classic Favorites",
-    "classicItems": "Eggs Benedict, French Toast, Fresh-Baked Pastries, Organic Coffee & Fresh Juices",
-    "note": "Served daily in the Courtyard. Dietary accommodations happily arranged."
+    "classicItems": "French Toast, Pancakes, Omelets, Eggs Prepared Any Style, Oatmeal, Organic Coffee, Fresh Juices, Seasonal Fruit",
+    "note": "Served daily in the courtyard or formal dining room. Dietary accommodations are happily arranged."
   },
   "availability": {
     "checkIn": "Check-in",
@@ -257,7 +257,7 @@
     "massagePricing": "60 min: $80 USD | 90 min: $110 USD | 120 min: $140 USD",
     "massageNote": "Arranged through concierge. 24-hour advance booking recommended.",
     "honorBarTitle": "The Honor Bar",
-    "honorBarDescription": "Help yourself to craft mezcal, local wines, and artisan spirits on the honor system. A curated selection that celebrates the best of Mexico's distilling traditions.",
+    "honorBarDescription": "Our Honor Bar is stocked with a wide selection of beers, soft drinks, refreshments, and other beverages for guests to enjoy at any time during their stay.",
     "wineRackTitle": "Curated Wine Rack",
     "wineRackDescription": "A rotating selection of Mexican wines hand-picked by our team. Ask us for pairing recommendations.",
     "toursTitle": "Curated City Tours",
