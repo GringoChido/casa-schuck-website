@@ -24,7 +24,7 @@ const ROOM_IMAGES: Record<string, string> = {
 
 export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
   const c = dict.suitesPage.collection;
-  const rooms = roomData.slice(0, 6);
+  const rooms = roomData;
 
   return (
     <section className="py-24 px-6 md:px-12 bg-surface max-w-7xl mx-auto">
