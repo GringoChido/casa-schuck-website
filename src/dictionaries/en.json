@@ -741,24 +741,31 @@
     "moments": {
       "headline": "Unforgettable Moments",
       "subtitle": "Experiences tailored with intention",
+      "retreatsCta": "Explore Retreats",
       "items": [
         {
           "title": "Weddings",
-          "body": "Exchange vows amidst stone arches and the scent of blooming jasmine. A curated celebration for up to 70 guests.",
+          "body": "Exchange vows in a colonial courtyard, gather on the rooftop beneath the Parroquia. We provide the venue for boutique weddings up to 70 guests — every celebration quoted individually.",
           "cta": "Inquire for Your Date",
-          "imageAlt": "Elegant white wedding table setting in a lush garden courtyard"
+          "imageAlt": "courtyard wedding ceremony"
         },
         {
-          "title": "Wellness Rituals",
-          "body": "Rejuvenate with artisanal treatments and morning meditation in our private gardens.",
-          "cta": "Book Ritual",
-          "imageAlt": "Quiet spa room with flickering candles and white towels"
+          "title": "Yoga Retreats",
+          "body": "Sunrise flows on the rooftop, sunset stillness in the courtyard. Visiting teachers host their groups within the whole house.",
+          "cta": "Plan Your Retreat",
+          "imageAlt": "rooftop yoga"
         },
         {
-          "title": "Culinary Journeys",
-          "body": "From gourmet breakfasts in the courtyard to private chef dinners on the rooftop, every meal is a celebration of Mexican heritage.",
-          "cta": "Explore Dining",
-          "imageAlt": "Beautifully set courtyard breakfast table with Mexican dishes"
+          "title": "Wellness Retreats",
+          "body": "Sound baths, ceremony, and deep rest behind thick cantera walls. The house becomes a private sanctuary for your circle.",
+          "cta": "Plan Your Retreat",
+          "imageAlt": "wellness ceremony space"
+        },
+        {
+          "title": "Culinary Retreats",
+          "body": "Visiting chefs design immersive culinary journeys in our colonial kitchen and courtyard — hosted by outside culinary teams.",
+          "cta": "Plan Your Retreat",
+          "imageAlt": "courtyard dining table"
         }
       ]
     },

@@ -741,24 +741,31 @@
     "moments": {
       "headline": "Momentos Inolvidables",
       "subtitle": "Experiencias diseñadas con intención",
+      "retreatsCta": "Explorar Retiros",
       "items": [
         {
           "title": "Bodas",
-          "body": "Intercambia votos entre arcos de piedra y el aroma de jazmín en flor. Una celebración curada para hasta 70 invitados.",
+          "body": "Intercambie votos en un patio colonial, reunase en la azotea bajo la Parroquia. Ofrecemos el recinto para bodas boutique de hasta 70 invitados — cada celebracion se cotiza de forma individual.",
           "cta": "Consulta Tu Fecha",
-          "imageAlt": "Elegante mesa de boda blanca en un exuberante patio jardín"
+          "imageAlt": "ceremonia de boda en el patio"
         },
         {
-          "title": "Rituales de Bienestar",
-          "body": "Rejuvenécete con tratamientos artesanales y meditación matutina en nuestros jardines privados.",
-          "cta": "Reservar Ritual",
-          "imageAlt": "Tranquilo cuarto de spa con velas y toallas blancas"
+          "title": "Retiros de Yoga",
+          "body": "Practica al amanecer en la azotea, quietud al atardecer en el patio. Maestros invitados reciben a sus grupos en toda la casa.",
+          "cta": "Planea Tu Retiro",
+          "imageAlt": "yoga en la azotea"
         },
         {
-          "title": "Travesías Culinarias",
-          "body": "Desde desayunos gourmet en el patio hasta cenas privadas con chef en la azotea, cada comida es una celebración del patrimonio mexicano.",
-          "cta": "Explorar Gastronomía",
-          "imageAlt": "Mesa de desayuno bellamente puesta en el patio con platillos mexicanos"
+          "title": "Retiros de Bienestar",
+          "body": "Banos de sonido, ceremonia y descanso profundo tras gruesos muros de cantera. La casa se convierte en un santuario privado para su circulo.",
+          "cta": "Planea Tu Retiro",
+          "imageAlt": "espacio de ceremonia de bienestar"
+        },
+        {
+          "title": "Retiros Culinarios",
+          "body": "Chefs invitados disenan experiencias culinarias en nuestra cocina colonial y patio — organizados por equipos culinarios externos.",
+          "cta": "Planea Tu Retiro",
+          "imageAlt": "mesa de comedor en el patio"
         }
       ]
     },

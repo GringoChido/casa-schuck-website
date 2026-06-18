@@ -12,10 +12,11 @@ interface EditorialMomentsProps {
 const MOMENT_IMAGES = [
   '/images/wedding/ceremony-courtyard.jpg',
   '/images/retreats/yoga.jpg',
+  '/images/retreats/sacred-space.avif',
   '/images/breakfast/courtyard.jpg',
 ];
 
-const MOMENT_LINKS = ['/weddings', '/retreats', '/experiences'];
+const MOMENT_LINKS = ['/weddings', '/retreats', '/retreats', '/retreats'];
 
 export function EditorialMoments({ locale, dict }: EditorialMomentsProps) {
   const m = dict.homePage.moments;
@@ -33,7 +34,7 @@ export function EditorialMoments({ locale, dict }: EditorialMomentsProps) {
             <h2 className="font-headline text-4xl md:text-5xl">{m.headline}</h2>
           </StaggerItem>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {m.items.map((item, i) => (
             <StaggerItem key={item.title} index={i + 2}>
               <Link
@@ -62,6 +63,14 @@ export function EditorialMoments({ locale, dict }: EditorialMomentsProps) {
               </Link>
             </StaggerItem>
           ))}
+        </div>
+        <div className="text-center mt-20">
+          <Link
+            href={`/${locale}/retreats`}
+            className="inline-block bg-tertiary text-on-tertiary font-label text-xs tracking-[0.2em] uppercase px-12 py-5 min-h-[44px] transition-colors duration-300 hover:bg-secondary"
+          >
+            {m.retreatsCta} &rarr;
+          </Link>
         </div>
       </ScrollReveal>
     </section>
