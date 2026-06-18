@@ -13,17 +13,11 @@ interface ServicesDetailProps {
 const gastronomyItems = {
   en: [
     { name: 'Gourmet Breakfast', desc: 'Daily included breakfast with Mexican and international options', price: 'Included' },
-    { name: 'Rooftop Dining', desc: 'Private dinner on the rooftop terrace with panoramic city views', price: 'From $85 USD/person' },
-    { name: 'Courtyard Dining', desc: 'Intimate dinner in the colonial courtyard with candlelight', price: 'From $75 USD/person' },
-    { name: 'Private Chef Experience', desc: 'Multi-course tasting menu prepared in-house by a local chef', price: 'From $120 USD/person' },
-    { name: 'The Honor Bar', desc: 'Self-service curated selection of mezcal, wine, beer, and spirits', price: 'Per consumption' },
+    { name: 'The Honor Bar', desc: 'Self-service selection of beers, soft drinks, refreshments, and other beverages, available any time', price: 'Per consumption' },
   ],
   es: [
     { name: 'Desayuno Gourmet', desc: 'Desayuno diario incluido con opciones mexicanas e internacionales', price: 'Incluido' },
-    { name: 'Cena en la Azotea', desc: 'Cena privada en la terraza con vistas panorámicas de la ciudad', price: 'Desde $85 USD/persona' },
-    { name: 'Cena en el Patio', desc: 'Cena íntima en el patio colonial con velas', price: 'Desde $75 USD/persona' },
-    { name: 'Chef Privado', desc: 'Menú degustación de varios tiempos preparado por un chef local', price: 'Desde $120 USD/persona' },
-    { name: 'El Honor Bar', desc: 'Selección curada de mezcal, vino, cerveza y destilados de autoservicio', price: 'Por consumo' },
+    { name: 'El Honor Bar', desc: 'Selección de autoservicio de cervezas, refrescos, bebidas y más, disponible en cualquier momento', price: 'Por consumo' },
   ],
 };
 
@@ -152,6 +146,11 @@ export const ServicesDetail = ({ locale, dict }: ServicesDetailProps) => {
               </div>
             </div>
           </ScrollReveal>
+          <p className="text-xs text-on-surface/50 italic text-center max-w-2xl mx-auto">
+            {isEn
+              ? 'Group dining and private events are quoted individually — reach us by WhatsApp, email, or phone.'
+              : 'Las cenas de grupo y eventos privados se cotizan de forma individual — contáctenos por WhatsApp, correo o teléfono.'}
+          </p>
         </div>
       </div>
 
