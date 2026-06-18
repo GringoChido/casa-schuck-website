@@ -115,7 +115,7 @@
       },
       {
         "title": "The Center of Your Celebration.",
-        "body": "The logistical hub for your inner circle. We coordinate the movement between the Parroquia and the courtyard so your 60 guests experience zero friction.",
+        "body": "The logistical hub for your inner circle. We coordinate the movement between the Parroquia and the courtyard so your 70 guests experience zero friction.",
         "image": "/images/wedding/callejoneada-street.jpg",
         "alt": "Wedding callejoneada through the colorful streets of San Miguel de Allende"
       },
@@ -136,7 +136,7 @@
       { "title": "The Neighborhood Anchor", "description": "Guest concierge, nearby villa blocks, and local recommendations for your entire group." }
     ],
     "features": [
-      "Intimate ceremonies for up to 60 guests",
+      "Intimate ceremonies for up to 70 guests",
       "Exclusive full-house buyout available",
       "Colonial courtyard and rooftop terrace venues",
       "In-house catering coordination",
@@ -144,54 +144,11 @@
       "Bridal suite preparation in El Royal Suite",
       "Ten rooms for your wedding party"
     ],
-    "packages": [
-      {
-        "name": "Intimate Ceremony",
-        "price": "$8,500 USD",
-        "guests": "Up to 30 guests",
-        "description": "A heartfelt celebration in our colonial courtyard, designed for couples who want elegance without excess.",
-        "includes": [
-          "Courtyard ceremony setup",
-          "Welcome cocktails for guests",
-          "Bridal suite preparation",
-          "Day-of coordinator",
-          "Basic floral arrangements",
-          "2-night stay for the couple"
-        ]
-      },
-      {
-        "name": "Colonial Celebration",
-        "price": "$18,500 USD",
-        "guests": "Up to 60 guests",
-        "description": "The full Casa Schuck experience — your private estate for a weekend of joy, from the courtyard ceremony to the rooftop reception.",
-        "includes": [
-          "Full property buyout",
-          "Courtyard ceremony + rooftop reception",
-          "Callejoneada through the cobblestone streets",
-          "Full catering for all events",
-          "Professional photography",
-          "Floral installations throughout the property",
-          "Bridal suite + 5 guest rooms for 3 nights"
-        ]
-      },
-      {
-        "name": "Grand Estate",
-        "price": "$28,000+ USD",
-        "guests": "Custom",
-        "description": "A multi-day destination wedding with every detail designed around your vision. Complete takeover of Casa Schuck for the ultimate celebration.",
-        "includes": [
-          "Complete property takeover",
-          "Multi-day programming and event design",
-          "All 10 rooms for 4 nights",
-          "Rehearsal dinner coordination",
-          "Full catering for all meals and events",
-          "Premium floral design and installations",
-          "Professional photography and videography",
-          "Airport transfers for all guests",
-          "Dedicated wedding planner from start to finish"
-        ]
-      }
-    ],
+    "approach": {
+      "eyebrow": "How It Works",
+      "headline": "The House Is the Venue",
+      "body": "Casa Schuck is the setting — a colonial courtyard, a rooftop beneath the Parroquia, gardens for celebrations of up to 70 guests. We provide the venue; your planner brings the celebration, handling coordination, catering, and design. Because every wedding is its own, we don't sell packages — each is quoted individually. Tell us your vision by WhatsApp, email, or phone."
+    },
     "testimonials": [
       {
         "names": "Sarah & Miguel",
@@ -233,7 +190,7 @@
     ],
     "capacity": {
       "headline": "Venue Capacity",
-      "courtyard": { "name": "Courtyard", "seated": 60, "cocktail": 80 },
+      "courtyard": { "name": "Courtyard", "seated": 60, "cocktail": 70 },
       "rooftop": { "name": "Rooftop Terrace", "seated": 40, "cocktail": 60 },
       "garden": { "name": "Garden", "seated": 30, "cocktail": 50 },
       "fullProperty": { "name": "Full Property", "seated": 60, "cocktailNote": "Multiple areas combined" },
@@ -787,7 +744,7 @@
       "items": [
         {
           "title": "Weddings",
-          "body": "Exchange vows amidst stone arches and the scent of blooming jasmine. A curated celebration for up to 120 guests.",
+          "body": "Exchange vows amidst stone arches and the scent of blooming jasmine. A curated celebration for up to 70 guests.",
           "cta": "Inquire for Your Date",
           "imageAlt": "Elegant white wedding table setting in a lush garden courtyard"
         },

@@ -14,8 +14,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
   const description = locale === 'es'
-    ? 'Celebra tu boda de ensueño en Casa Schuck, San Miguel de Allende. Ceremonias en patio colonial, recepciones en terraza con vista a la Parroquia. Hasta 60 invitados.'
-    : 'Host your dream wedding at Casa Schuck, San Miguel de Allende. Colonial courtyard ceremonies, rooftop receptions with Parroquia views. Up to 60 guests.';
+    ? 'Celebra tu boda de ensueño en Casa Schuck, San Miguel de Allende. Ceremonias en patio colonial, recepciones en terraza con vista a la Parroquia. Hasta 70 invitados.'
+    : 'Host your dream wedding at Casa Schuck, San Miguel de Allende. Colonial courtyard ceremonies, rooftop receptions with Parroquia views. Up to 70 guests.';
   return {
     title: `${dict.weddings.headline} — Casa Schuck`,
     description,
@@ -61,8 +61,8 @@ export default async function WeddingsPage({
         acceptedAnswer: {
           '@type': 'Answer',
           text: locale === 'es'
-            ? 'Los paquetes de boda comienzan en $8,500 USD para ceremonias íntimas de hasta 30 invitados, con paquetes de hacienda completa desde $18,500 USD.'
-            : 'Wedding packages start at $8,500 USD for intimate ceremonies up to 30 guests, with full estate packages available from $18,500 USD.',
+            ? 'Casa Schuck es un recinto para bodas — ofrecemos el escenario para bodas boutique de hasta 70 invitados, mientras que su planificador se encarga de la coordinación, el banquete y el diseño. Como cada boda es única, no vendemos paquetes; cada una se cotiza de forma individual. Contáctenos por WhatsApp, correo o teléfono para comenzar.'
+            : 'Casa Schuck is a venue-only wedding destination — we provide the setting for boutique weddings of up to 70 guests, while your wedding planner handles coordination, catering, and design. Because every wedding is unique, we don\'t sell packages; each is quoted individually. Contact us by WhatsApp, email, or phone to begin.',
         },
       },
       {
@@ -81,8 +81,8 @@ export default async function WeddingsPage({
         acceptedAnswer: {
           '@type': 'Answer',
           text: locale === 'es'
-            ? 'Acomodamos bodas íntimas de hasta 60 invitados, con 10 habitaciones en el hotel para su grupo de bodas.'
-            : 'We accommodate intimate weddings of up to 60 guests, with 9 on-site rooms for your wedding party.',
+            ? 'Acomodamos bodas íntimas de hasta 70 invitados, con 10 habitaciones en el hotel para su grupo de bodas.'
+            : 'We accommodate intimate weddings of up to 70 guests, with 10 on-site rooms for your wedding party.',
         },
       },
     ],

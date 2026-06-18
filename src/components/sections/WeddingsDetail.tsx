@@ -146,51 +146,28 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
         </div>
       </div>
 
-      {/* ═══ Section 3: Wedding Packages ═══ */}
-      {w.packages && (
+      {/* ═══ Section 3: The Approach — Venue-Only ═══ */}
+      {w.approach && (
         <div className="bg-surface-container-low py-24">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <ScrollReveal className="text-center mb-16">
-              <p className="editorial-label text-secondary mb-4">Wedding Packages</p>
-              <h2 className="font-serif text-3xl sm:text-4xl text-primary">
-                Three Ways to Celebrate
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <ScrollReveal>
+              <p className="editorial-label text-secondary mb-6">{w.approach.eyebrow}</p>
+              <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-6">
+                {w.approach.headline}
               </h2>
+              <div className="w-16 h-px bg-secondary mx-auto mb-8" />
+              <p className="text-on-surface/70 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
+                {w.approach.body}
+              </p>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-tertiary text-on-tertiary font-label text-xs tracking-[0.2em] uppercase px-12 py-5 min-h-[44px] transition-colors duration-300 hover:bg-secondary"
+              >
+                {w.cta}
+              </a>
             </ScrollReveal>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {w.packages.map((pkg, i) => (
-                <StaggerItem
-                  key={pkg.name}
-                  index={i}
-                  staggerDelay={0.15}
-                  className={`bg-surface p-8 border ${i === 1 ? 'border-secondary ring-1 ring-secondary/20' : 'border-outline-variant/20'} flex flex-col`}
-                >
-                  {i === 1 && (
-                    <span className="editorial-label text-secondary mb-4 block">Most Popular</span>
-                  )}
-                  <h3 className="font-serif text-2xl text-primary mb-2">{pkg.name}</h3>
-                  <p className="text-2xl font-serif text-secondary mb-1">{pkg.price}</p>
-                  <p className="text-sm text-on-surface/50 mb-4">{pkg.guests}</p>
-                  <p className="text-on-surface/70 text-sm leading-relaxed mb-6">{pkg.description}</p>
-                  <ul className="space-y-2 mb-8 flex-1">
-                    {pkg.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-on-surface/70">
-                        <span className="w-1 h-1 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-center bg-primary text-on-primary px-6 py-3 font-label text-xs tracking-widest uppercase transition-all hover:bg-secondary"
-                  >
-                    {w.consultCta}
-                  </a>
-                </StaggerItem>
-              ))}
-            </div>
           </div>
         </div>
       )}
