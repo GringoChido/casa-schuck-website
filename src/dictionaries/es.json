@@ -115,7 +115,7 @@
       },
       {
         "title": "El Centro de Tu Celebración.",
-        "body": "El centro logístico para tu círculo íntimo. Coordinamos el movimiento entre la Parroquia y el patio para que tus 60 invitados experimenten cero fricción.",
+        "body": "El centro logístico para tu círculo íntimo. Coordinamos el movimiento entre la Parroquia y el patio para que tus 70 invitados experimenten cero fricción.",
         "image": "/images/wedding/callejoneada-street.jpg",
         "alt": "Callejoneada de boda por las calles coloridas de San Miguel de Allende"
       },
@@ -136,7 +136,7 @@
       { "title": "El Ancla del Vecindario", "description": "Concierge para invitados, bloques de villas cercanas y recomendaciones locales para todo tu grupo." }
     ],
     "features": [
-      "Ceremonias intimas para hasta 60 invitados",
+      "Ceremonias intimas para hasta 70 invitados",
       "Renta exclusiva de casa completa disponible",
       "Patio colonial y terraza en azotea como sedes",
       "Coordinacion de catering en casa",
@@ -144,54 +144,11 @@
       "Preparacion de la novia en El Royal Suite",
       "Diez habitaciones para su cortejo nupcial"
     ],
-    "packages": [
-      {
-        "name": "Ceremonia Íntima",
-        "price": "$8,500 USD",
-        "guests": "Hasta 30 invitados",
-        "description": "Una celebración entrañable en nuestro patio colonial, diseñada para parejas que buscan elegancia sin excesos.",
-        "includes": [
-          "Montaje de ceremonia en el patio",
-          "Cóctel de bienvenida para invitados",
-          "Preparación de la suite nupcial",
-          "Coordinador del día del evento",
-          "Arreglos florales básicos",
-          "2 noches de estancia para la pareja"
-        ]
-      },
-      {
-        "name": "Celebración Colonial",
-        "price": "$18,500 USD",
-        "guests": "Hasta 60 invitados",
-        "description": "La experiencia completa de Casa Schuck — tu propiedad privada para un fin de semana de alegría, desde la ceremonia en el patio hasta la recepción en la azotea.",
-        "includes": [
-          "Renta completa de la propiedad",
-          "Ceremonia en el patio + recepción en la azotea",
-          "Callejoneada por las calles empedradas",
-          "Catering completo para todos los eventos",
-          "Fotografía profesional",
-          "Instalaciones florales en toda la propiedad",
-          "Suite nupcial + 5 habitaciones por 3 noches"
-        ]
-      },
-      {
-        "name": "Gran Propiedad",
-        "price": "$28,000+ USD",
-        "guests": "Personalizado",
-        "description": "Una boda destino de varios días con cada detalle diseñado alrededor de tu visión. Toma completa de Casa Schuck para la celebración definitiva.",
-        "includes": [
-          "Toma completa de la propiedad",
-          "Programación y diseño de eventos de varios días",
-          "Las 10 habitaciones por 4 noches",
-          "Coordinación de cena de ensayo",
-          "Catering completo para todas las comidas y eventos",
-          "Diseño floral premium e instalaciones",
-          "Fotografía y videografía profesional",
-          "Traslados al aeropuerto para todos los invitados",
-          "Wedding planner dedicado de principio a fin"
-        ]
-      }
-    ],
+    "approach": {
+      "eyebrow": "Como Funciona",
+      "headline": "La Casa Es El Lugar",
+      "body": "Casa Schuck es el escenario — un patio colonial, una azotea bajo la Parroquia, jardines para celebraciones de hasta 70 invitados. Nosotros ofrecemos el recinto; su planificador trae la celebracion, encargandose de la coordinacion, el banquete y el diseno. Como cada boda es unica, no vendemos paquetes — cada una se cotiza de forma individual. Cuentenos su vision por WhatsApp, correo o telefono."
+    },
     "testimonials": [
       {
         "names": "Sarah & Miguel",
@@ -233,7 +190,7 @@
     ],
     "capacity": {
       "headline": "Capacidad del Venue",
-      "courtyard": { "name": "Patio", "seated": 60, "cocktail": 80 },
+      "courtyard": { "name": "Patio", "seated": 60, "cocktail": 70 },
       "rooftop": { "name": "Terraza en Azotea", "seated": 40, "cocktail": 60 },
       "garden": { "name": "Jardín", "seated": 30, "cocktail": 50 },
       "fullProperty": { "name": "Propiedad Completa", "seated": 60, "cocktailNote": "Múltiples áreas combinadas" },
@@ -787,7 +744,7 @@
       "items": [
         {
           "title": "Bodas",
-          "body": "Intercambia votos entre arcos de piedra y el aroma de jazmín en flor. Una celebración curada para hasta 120 invitados.",
+          "body": "Intercambia votos entre arcos de piedra y el aroma de jazmín en flor. Una celebración curada para hasta 70 invitados.",
           "cta": "Consulta Tu Fecha",
           "imageAlt": "Elegante mesa de boda blanca en un exuberante patio jardín"
         },
