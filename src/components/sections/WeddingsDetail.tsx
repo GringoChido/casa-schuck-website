@@ -5,6 +5,7 @@ import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { PillarBlock, type Pillar } from '@/components/ui/PillarBlock';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
+import { WholeHouse } from '@/components/sections/WholeHouse';
 
 /* ═══════════════════════════════════════════
    Minimalist SVG Icons — Logistics Dashboard
@@ -84,7 +85,7 @@ interface WeddingsDetailProps {
   dict: Dictionary;
 }
 
-export function WeddingsDetail({ dict }: WeddingsDetailProps) {
+export function WeddingsDetail({ locale, dict }: WeddingsDetailProps) {
   const w = dict.weddings;
   const whatsappUrl = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5214151806060'}`;
 
@@ -259,6 +260,9 @@ export function WeddingsDetail({ dict }: WeddingsDetailProps) {
           </div>
         </div>
       </div>
+
+      {/* ═══ Take the Whole House — Buyout Module ═══ */}
+      <WholeHouse locale={locale} dict={dict} />
 
       {/* ═══ Section 4: The Closer — Specialist Block ═══ */}
       <div id="specialist" className="bg-sunset text-white py-20 sm:py-28">

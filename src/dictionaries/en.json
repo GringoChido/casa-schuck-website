@@ -101,6 +101,12 @@
     "specialNote": "Note",
     "whatsappInquiry": "Hola! I'd like to check availability for {room} at Casa Schuck."
   },
+  "wholeHouse": {
+    "eyebrow": "The Whole House",
+    "headline": "Take the Whole House",
+    "body": "Ten rooms, the courtyard, the rooftop beneath the Parroquia, the gardens — the entire 19th-century house, exclusively yours. The privacy a larger hotel simply cannot offer: close the door and the place is yours, for a wedding weekend, a retreat, or a gathering of your closest people. Every buyout is designed and quoted with you directly.",
+    "cta": "Inquire About a Buyout"
+  },
   "weddings": {
     "eyebrow": "Weddings & Celebrations",
     "headline": "Say Yes in San Miguel",

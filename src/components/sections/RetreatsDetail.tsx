@@ -5,6 +5,7 @@ import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { PillarBlock, type Pillar } from '@/components/ui/PillarBlock';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
+import { WholeHouse } from '@/components/sections/WholeHouse';
 
 /* ═══ SVG Icons — Retreat Logistics ═══ */
 
@@ -78,7 +79,7 @@ interface RetreatsDetailProps {
   dict: Dictionary;
 }
 
-export function RetreatsDetail({ dict }: RetreatsDetailProps) {
+export function RetreatsDetail({ locale, dict }: RetreatsDetailProps) {
   const r = dict.retreatsPage;
   const whatsappUrl = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5214151806060'}`;
 
@@ -262,6 +263,9 @@ export function RetreatsDetail({ dict }: RetreatsDetailProps) {
           </div>
         </div>
       </div>
+
+      {/* ═══ Take the Whole House — Buyout Module ═══ */}
+      <WholeHouse locale={locale} dict={dict} />
 
       {/* ═══ Section 5: Specialist CTA ═══ */}
       <div id="specialist" className="bg-sunset text-white py-20 sm:py-28">
