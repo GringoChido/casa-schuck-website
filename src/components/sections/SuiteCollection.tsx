@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
+import { RoomImageCarousel } from '@/components/ui/RoomImageCarousel';
 import { buildBookingUrl } from '@/lib/cloudbeds';
 import { rooms as roomData } from '@/data/rooms';
 
@@ -9,19 +9,6 @@ interface SuiteCollectionProps {
   locale: Locale;
   dict: Dictionary;
 }
-
-const ROOM_IMAGES: Record<string, string> = {
-  'el-royal-suite': '/images/rooms/el-royal-suite/hero.jpg',
-  'la-biblioteca-suite': '/images/rooms/la-biblioteca-suite/hero.jpg',
-  'la-jacaranda': '/images/rooms/la-jacaranda/hero.jpg',
-  'la-luna': '/images/rooms/la-luna/hero.jpg',
-  'el-cielo': '/images/rooms/el-cielo/hero.jpg',
-  'el-sol': '/images/rooms/el-sol/hero.jpg',
-  'el-amarillo': '/images/rooms/el-amarillo/hero.jpg',
-  'la-escondida': '/images/rooms/la-escondida/hero.jpg',
-  'la-vista': '/images/rooms/la-vista/hero.jpg',
-  'la-rosa': '/images/rooms/la-rosa/hero.jpg',
-};
 
 export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
   const c = dict.suitesPage.collection;
@@ -53,13 +40,11 @@ export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
           {rooms.map((room, i) => (
             <StaggerItem key={room.id} index={i + 4}>
               <div className={`group ${i % 2 !== 0 ? 'md:mt-32' : ''}`}>
-                <div className="aspect-[4/3] overflow-hidden rounded-xl mb-8 bg-surface-container relative">
-                  <Image
-                    src={ROOM_IMAGES[room.id] ?? '/images/rooms/el-royal-suite/hero.jpg'}
-                    alt={room.name[locale]}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                <div className="mb-8">
+                  <RoomImageCarousel
+                    images={room.images}
+                    roomName={room.name[locale]}
+                    aspectClassName="aspect-[4/3]"
                   />
                 </div>
                 <div className="flex flex-col">

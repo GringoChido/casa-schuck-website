@@ -7,9 +7,10 @@ import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
 interface RoomImageCarouselProps {
   images: string[];
   roomName: string;
+  aspectClassName?: string;
 }
 
-export function RoomImageCarousel({ images, roomName }: RoomImageCarouselProps) {
+export function RoomImageCarousel({ images, roomName, aspectClassName = 'aspect-[16/10]' }: RoomImageCarouselProps) {
   const [current, setCurrent] = useState(0);
   const constraintsRef = useRef(null);
 
@@ -38,7 +39,7 @@ export function RoomImageCarousel({ images, roomName }: RoomImageCarouselProps) 
   return (
     <div
       ref={constraintsRef}
-      className="relative w-full aspect-[16/10] rounded-lg overflow-hidden bg-stone-light touch-pan-y"
+      className={`relative w-full ${aspectClassName} rounded-xl overflow-hidden bg-stone-light touch-pan-y`}
     >
       {/* Swipe layer + Images */}
       <motion.div
