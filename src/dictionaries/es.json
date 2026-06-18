@@ -101,6 +101,12 @@
     "specialNote": "Nota",
     "whatsappInquiry": "¡Hola! Me gustaría consultar disponibilidad para {room} en Casa Schuck."
   },
+  "wholeHouse": {
+    "eyebrow": "La Casa Entera",
+    "headline": "Reserve La Casa Entera",
+    "body": "Diez habitaciones, el patio, la azotea bajo la Parroquia, los jardines — toda la casa del siglo XIX, exclusivamente suya. La privacidad que un hotel mas grande no puede ofrecer: cierre la puerta y el lugar es suyo, para un fin de semana de boda, un retiro o una reunion de sus personas mas cercanas. Cada renta completa se disena y se cotiza con usted directamente.",
+    "cta": "Consultar Renta Completa"
+  },
   "weddings": {
     "eyebrow": "Bodas y Celebraciones",
     "headline": "Di Sí en San Miguel",
