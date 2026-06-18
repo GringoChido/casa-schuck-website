@@ -20,6 +20,7 @@ const ROOM_IMAGES: Record<string, string> = {
   'el-amarillo': '/images/rooms/el-amarillo/hero.jpg',
   'la-escondida': '/images/rooms/la-escondida/hero.jpg',
   'la-vista': '/images/rooms/la-vista/hero.jpg',
+  'la-rosa': '/images/rooms/la-rosa/hero.jpg',
 };
 
 export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
