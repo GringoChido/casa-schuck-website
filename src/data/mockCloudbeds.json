@@ -555,6 +555,59 @@
         "/images/rooms/la-vista/6.jpg",
         "/images/rooms/la-vista/7.jpg"
       ]
+    },
+    {
+      "id": "la-rosa",
+      "cloudbedsRoomTypeId": "RT_010",
+      "name": {
+        "en": "La Rosa Room",
+        "es": "La Rosa"
+      },
+      "tagline": {
+        "en": "The Romantic",
+        "es": "La Romántica"
+      },
+      "description": {
+        "en": "Named for the blush of bougainvillea against old stone, La Rosa is the quiet romantic of the house. Soft rose tones, hand-laid Talavera, and a king or twin configuration make it as easy for a couple as for two friends. Mornings arrive gently, filtered through colonial light; evenings settle into the hush of thick cantera walls.",
+        "es": "Nombrada por el rubor de la buganvilia contra la piedra antigua, La Rosa es la romántica silenciosa de la casa. Tonos rosados suaves, Talavera hecha a mano y una configuración king o individual la hacen ideal tanto para una pareja como para dos amigos. Las mañanas llegan despacio, filtradas por la luz colonial; las noches se acomodan en el silencio de los gruesos muros de cantera."
+      },
+      "shortDescription": {
+        "en": "A romantic second-level retreat washed in soft rose tones, with hand-laid colonial tile and quiet morning light.",
+        "es": "Un retiro romántico en el segundo nivel, bañado en suaves tonos rosados, con azulejo colonial hecho a mano y la luz serena de la mañana."
+      },
+      "maxGuests": 2,
+      "bedType": {
+        "en": "King or Twin",
+        "es": "King o Individual"
+      },
+      "floor": 2,
+      "baseRate": 235,
+      "accessible": false,
+      "hasAC": true,
+      "extraBed": false,
+      "specialNote": null,
+      "amenities": [
+        "king_bed",
+        "convertible_twins",
+        "ac",
+        "ceiling_fan",
+        "wifi",
+        "ensuite_bathroom",
+        "safe",
+        "daily_housekeeping",
+        "luxury_toiletries",
+        "hair_dryer",
+        "iron",
+        "bottled_water"
+      ],
+      "images": [
+        "/images/rooms/la-rosa/hero.jpg",
+        "/images/rooms/la-rosa/2.jpg",
+        "/images/rooms/la-rosa/3.jpg",
+        "/images/rooms/la-rosa/4.jpg",
+        "/images/rooms/la-rosa/5.jpg",
+        "/images/rooms/la-rosa/6.jpg"
+      ]
     }
   ],
   "ratePlans": [

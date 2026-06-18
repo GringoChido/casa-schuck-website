@@ -20,6 +20,7 @@ const PLACEHOLDER_ROOM_TYPE_IDS: Record<string, string> = {
   'el-amarillo': '',
   'la-escondida': '',
   'la-vista': '',
+  'la-rosa': '',
 };
 
 function loadRoomTypeIds(): Record<string, string> {
