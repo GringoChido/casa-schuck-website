@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: 'Casa Schuck | Boutique Hotel in San Miguel de Allende',
     template: '%s | Casa Schuck',
   },
-  description: 'A colonial sanctuary reimagined. 9 unique rooms in the heart of San Miguel de Allende. Boutique luxury for weddings, retreats, and unforgettable stays. Book direct for the best rate.',
+  description: 'A colonial sanctuary reimagined. 10 unique rooms in the heart of San Miguel de Allende. Boutique luxury for weddings, retreats, and unforgettable stays. Book direct for the best rate.',
   keywords: [
     'boutique hotel San Miguel de Allende',
     'luxury hotel Mexico',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     alternateLocale: 'es_MX',
     siteName: 'Casa Schuck',
     title: 'Casa Schuck | Boutique Hotel in San Miguel de Allende',
-    description: 'A colonial sanctuary reimagined. 9 unique rooms, rooftop terrace, and curated experiences in the heart of San Miguel de Allende.',
+    description: 'A colonial sanctuary reimagined. 10 unique rooms, rooftop terrace, and curated experiences in the heart of San Miguel de Allende.',
     images: [{ url: '/images/hero/courtyard-main.jpg', width: 1200, height: 630, alt: 'Casa Schuck courtyard in San Miguel de Allende' }],
   },
   twitter: {

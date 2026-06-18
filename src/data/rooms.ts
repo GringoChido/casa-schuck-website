@@ -27,7 +27,7 @@ export interface Room {
 }
 
 /**
- * The nine rooms, with Cloudbeds room type IDs resolved from the env-driven
+ * The ten rooms, with Cloudbeds room type IDs resolved from the env-driven
  * map. The `cloudbedsRoomTypeId` values inside mockCloudbeds.json are fake
  * placeholders (RT_001…) and are deliberately ignored — a wrong ID sent to a
  * live engine is worse than none.

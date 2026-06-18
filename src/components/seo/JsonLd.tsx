@@ -20,8 +20,8 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
     name: 'Casa Schuck',
     alternateName: 'Casa Schuck Boutique Hotel',
     description: locale === 'es'
-      ? 'Hotel boutique en el corazón de San Miguel de Allende. 9 habitaciones únicas en una finca colonial restaurada con desayuno gourmet incluido, terraza en la azotea y vistas a la Parroquia.'
-      : 'Boutique hotel in the heart of San Miguel de Allende. 9 unique rooms in a restored colonial estate with gourmet breakfast included, rooftop terrace and Parroquia views.',
+      ? 'Hotel boutique en el corazón de San Miguel de Allende. 10 habitaciones únicas en una finca colonial restaurada con desayuno gourmet incluido, terraza en la azotea y vistas a la Parroquia.'
+      : 'Boutique hotel in the heart of San Miguel de Allende. 10 unique rooms in a restored colonial estate with gourmet breakfast included, rooftop terrace and Parroquia views.',
     url: BASE_URL,
     telephone: '+524151520657',
     email: 'info@casaschuck.com',
@@ -150,8 +150,8 @@ export function LocalBusinessJsonLd({ locale }: JsonLdProps) {
     '@id': `${BASE_URL}/#business`,
     name: 'Casa Schuck Boutique Hotel',
     description: locale === 'es'
-      ? 'Hotel boutique y venue para bodas en San Miguel de Allende. Finca colonial restaurada con 9 suites, desayuno incluido y terraza panorámica.'
-      : 'Boutique hotel and wedding venue in San Miguel de Allende. Restored colonial estate with 9 suites, breakfast included and panoramic rooftop terrace.',
+      ? 'Hotel boutique y venue para bodas en San Miguel de Allende. Finca colonial restaurada con 10 suites, desayuno incluido y terraza panorámica.'
+      : 'Boutique hotel and wedding venue in San Miguel de Allende. Restored colonial estate with 10 suites, breakfast included and panoramic rooftop terrace.',
     image: `${BASE_URL}/images/hero/courtyard-main.jpg`,
     telephone: '+524151520657',
     url: BASE_URL,

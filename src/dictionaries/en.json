@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Casa Schuck | Boutique Hotel in San Miguel de Allende",
-    "description": "A colonial sanctuary reimagined. Nine uniquely appointed rooms in the heart of San Miguel de Allende. Book direct for the best rate — breakfast included."
+    "description": "A colonial sanctuary reimagined. Ten uniquely appointed rooms in the heart of San Miguel de Allende. Book direct for the best rate — breakfast included."
   },
   "nav": {
     "rooms": "Rooms",
@@ -55,7 +55,7 @@
       {
         "year": "Today",
         "title": "A Living Heritage",
-        "body": "Today, Casa Schuck continues to evolve while honoring every chapter that came before. Nine rooms, each with its own personality. Original art on the walls. A courtyard that still gathers the creative, the curious, and those who simply need a place to exhale."
+        "body": "Today, Casa Schuck continues to evolve while honoring every chapter that came before. Ten rooms, each with its own personality. Original art on the walls. A courtyard that still gathers the creative, the curious, and those who simply need a place to exhale."
       }
     ],
     "pullQuote": "We didn't build a hotel. We opened our home.",
@@ -87,7 +87,7 @@
   },
   "rooms": {
     "eyebrow": "Rooms & Suites",
-    "headline": "Nine Rooms. Nine Stories.",
+    "headline": "Ten Rooms. Ten Stories.",
     "description": "Each room at Casa Schuck has its own name, its own character, its own way of welcoming you. Colonial architecture, original art, and quiet modern comforts — woven together with intention.",
     "fromLabel": "From",
     "perNight": "/ night",
@@ -142,7 +142,7 @@
       "In-house catering coordination",
       "Curated floral arrangements by local artisans",
       "Bridal suite preparation in El Royal Suite",
-      "Nine rooms for your wedding party"
+      "Ten rooms for your wedding party"
     ],
     "packages": [
       {
@@ -182,7 +182,7 @@
         "includes": [
           "Complete property takeover",
           "Multi-day programming and event design",
-          "All 9 rooms for 4 nights",
+          "All 10 rooms for 4 nights",
           "Rehearsal dinner coordination",
           "Full catering for all meals and events",
           "Premium floral design and installations",
@@ -410,11 +410,11 @@
     "headline": "Your Private Sanctum",
     "description": "Transformative retreats for intimate groups. Yoga, circles, and journeys in the heart of San Miguel.",
     "yogaTitle": "Rise with the Rooftop",
-    "yogaDescription": "Sunrise flows above the spires. Sunset rituals in the courtyard. Total restoration, nine rooms at a time.",
+    "yogaDescription": "Sunrise flows above the spires. Sunset rituals in the courtyard. Total restoration, ten rooms at a time.",
     "spiritualTitle": "Sacred Space",
     "spiritualDescription": "Breathwork, ceremony, and stillness. Led by local masters in our private colonial sanctum.",
     "womensTitle": "Hold Space",
-    "womensDescription": "Nine rooms. Zero noise. Absolute connection. Creative workshops and intimate circles behind colonial walls.",
+    "womensDescription": "Ten rooms. Zero noise. Absolute connection. Creative workshops and intimate circles behind colonial walls.",
     "inquireCta": "Inquire About Retreats"
   },
   "events": {
@@ -426,7 +426,7 @@
     "corporateTitle": "Corporate Retreats",
     "corporateDescription": "Strategy sessions meet colonial charm. Fast WiFi, breakout spaces, and team-building excursions — productivity wrapped in beauty.",
     "buyoutTitle": "Whole-House Buyouts",
-    "buyoutDescription": "Nine rooms, the entire property, exclusively yours. Ideal for milestone celebrations, family reunions, or multi-day experiences you design from scratch.",
+    "buyoutDescription": "Ten rooms, the entire property, exclusively yours. Ideal for milestone celebrations, family reunions, or multi-day experiences you design from scratch.",
     "inquireCta": "Plan Your Event"
   },
   "packages": {
@@ -491,7 +491,7 @@
       },
       {
         "title": "Corporate & Groups",
-        "description": "Strategy sessions meet colonial charm. Nine rooms, exclusively yours.",
+        "description": "Strategy sessions meet colonial charm. Ten rooms, exclusively yours.",
         "linkText": "Plan Your Event",
         "href": "/groups",
         "image": "/images/events/corporate.jpg"
@@ -501,7 +501,7 @@
   "retreatsPage": {
     "eyebrow": "Retreats & Wellness",
     "headline": "The Anchor of Your Inner Circle.",
-    "introBody": "Casa Schuck is uniquely engineered for high-impact gatherings. While our nine luxury suites offer an exclusive sanctuary for your core team, our deep local roots allow us to seamlessly anchor groups of up to 60. We provide the infrastructure, the \"Access To\" logistics, and the central colonial stage for your collective experience. Whether a wedding party or a creative summit, you have the space to convene and the privacy to connect.",
+    "introBody": "Casa Schuck is uniquely engineered for high-impact gatherings. While our ten luxury suites offer an exclusive sanctuary for your core team, our deep local roots allow us to seamlessly anchor groups of up to 60. We provide the infrastructure, the \"Access To\" logistics, and the central colonial stage for your collective experience. Whether a wedding party or a creative summit, you have the space to convene and the privacy to connect.",
     "pillars": [
       {
         "title": "YOGA",
@@ -520,7 +520,7 @@
       {
         "title": "RETREATS",
         "subHeadline": "The Private Takeover",
-        "body": "Nine rooms. Zero noise. Absolute connection. Casa Schuck is the premier destination for Women's Journeys, Men's Circles, and Creative Intensives. Our architecture is specifically designed for the movement between collective focus and personal reflection. Behind these colonial walls, you aren't just a guest; you are the host of your own world. Whether it is a writing retreat, a leadership summit, or a spiritual reset, a full-house buyout transforms the estate into your private laboratory for growth.",
+        "body": "Ten rooms. Zero noise. Absolute connection. Casa Schuck is the premier destination for Women's Journeys, Men's Circles, and Creative Intensives. Our architecture is specifically designed for the movement between collective focus and personal reflection. Behind these colonial walls, you aren't just a guest; you are the host of your own world. Whether it is a writing retreat, a leadership summit, or a spiritual reset, a full-house buyout transforms the estate into your private laboratory for growth.",
         "image": "/images/retreats/hold-space.jpg",
         "alt": "Private retreat space at Casa Schuck for group intensives"
       }
@@ -633,7 +633,7 @@
       { "title": "Custom Catering", "description": "Plant-based, Ayurvedic, or traditional Mexican menus crafted to support your program." },
       { "title": "Airport Transfers", "description": "Coordinated ground transportation for your entire group, door to door." },
       { "title": "Curated Excursions", "description": "Hot springs, ancient ruins, artisan workshops — add-on experiences beyond the property." },
-      { "title": "Whole-House Booking", "description": "Nine rooms, the entire property, exclusively yours. Total privacy for total immersion." }
+      { "title": "Whole-House Booking", "description": "Ten rooms, the entire property, exclusively yours. Total privacy for total immersion." }
     ],
     "specialistEyebrow": "Retreat Planning",
     "specialistHeadline": "Your Vision. Our Sanctuary.",
@@ -653,7 +653,7 @@
       },
       {
         "title": "Whole-House Buyouts",
-        "body": "Nine rooms, the entire property, exclusively yours. Ideal for milestone celebrations, family reunions, or multi-day experiences you design from scratch. Every corner becomes your canvas.",
+        "body": "Ten rooms, the entire property, exclusively yours. Ideal for milestone celebrations, family reunions, or multi-day experiences you design from scratch. Every corner becomes your canvas.",
         "image": "/images/events/buyout.jpg",
         "alt": "Colonial courtyard set up for a private event"
       },
@@ -711,7 +711,7 @@
       { "title": "A/V & Connectivity", "description": "High-speed WiFi throughout the property, projector access, and flexible room configurations." },
       { "title": "Ground Transport", "description": "Airport transfers, guest shuttles, and local transport coordinated for your entire group." },
       { "title": "Breakout Spaces", "description": "Courtyard, rooftop terrace, garden, and library — multiple zones for parallel sessions." },
-      { "title": "Capacity & Rooms", "description": "Nine unique rooms accommodating up to 60 guests. Flexible configurations for any group size." }
+      { "title": "Capacity & Rooms", "description": "Ten unique rooms accommodating up to 60 guests. Flexible configurations for any group size." }
     ],
     "specialistEyebrow": "Event Planning",
     "specialistHeadline": "Let's Build Something.",
@@ -725,7 +725,7 @@
     "groups": "Corporate retreats and whole-house buyouts for up to 60.",
     "services": "In-house massage, curated tours, and VIP dining.",
     "story": "150 years of art, vision, and hospitality.",
-    "rooms": "Nine rooms, each with its own name and character."
+    "rooms": "Ten rooms, each with its own name and character."
   },
   "common": {
     "learnMore": "Learn More",
@@ -753,7 +753,7 @@
     },
     "philosophy": {
       "eyebrow": "Our Philosophy",
-      "headline": "Nine Rooms. Nine Stories.",
+      "headline": "Ten Rooms. Ten Stories.",
       "subtitle": "The Art of Stillness",
       "pillars": [
         {
@@ -764,7 +764,7 @@
         {
           "number": "02",
           "title": "Intimacy",
-          "body": "With only nine suites, your stay is defined by personal attention and a profound sense of privacy."
+          "body": "With only ten suites, your stay is defined by personal attention and a profound sense of privacy."
         },
         {
           "number": "03",
@@ -842,7 +842,7 @@
       "headline": "An Architectural Poem Written in Stone and Light",
       "paragraphs": [
         "Sunlight traces ancient stone walls each morning, casting patterns that have repeated for over a century. Bougainvillea cascades over colonial arches while a courtyard fountain keeps its quiet symphony — the sounds of a home that has sheltered artists, visionaries, and seekers since 1965.",
-        "Casa Schuck is not merely a hotel. It is a living heritage — nine rooms, each with its own name and personality, woven into a 19th-century estate that breathes with the rhythms of San Miguel de Allende.",
+        "Casa Schuck is not merely a hotel. It is a living heritage — ten rooms, each with its own name and personality, woven into a 19th-century estate that breathes with the rhythms of San Miguel de Allende.",
         "Every tile was laid by hand. Every arch tells a story. And every guest who walks through our doors becomes part of a narrative that began long before them — and will continue long after."
       ],
       "imageAlt": "Hand-painted ceramic tiles and carved stone details at Casa Schuck"
@@ -855,7 +855,7 @@
         },
         {
           "title": "Intimacy",
-          "body": "With only nine suites, your stay is defined by personal attention and a profound sense of privacy. You are not a room number. You are a guest in our home."
+          "body": "With only ten suites, your stay is defined by personal attention and a profound sense of privacy. You are not a room number. You are a guest in our home."
         },
         {
           "title": "Sanctuary",
@@ -902,7 +902,7 @@
   "suitesPage": {
     "meta": {
       "title": "Suites | Casa Schuck Boutique Hotel",
-      "description": "Nine uniquely appointed rooms, each with its own name, character, and story. Colonial architecture meets modern luxury in San Miguel de Allende."
+      "description": "Ten uniquely appointed rooms, each with its own name, character, and story. Colonial architecture meets modern luxury in San Miguel de Allende."
     },
     "hero": {
       "eyebrow": "The Art of Living",
@@ -911,7 +911,7 @@
     },
     "collection": {
       "eyebrow": "Rooms & Suites",
-      "headline": "Nine Rooms. Nine Stories.",
+      "headline": "Ten Rooms. Ten Stories.",
       "description": "Each room at Casa Schuck has its own name, its own character, its own way of welcoming you. Colonial architecture, original art, and quiet modern comforts — woven together with intention.",
       "bookRoom": "Book This Room",
       "maxGuests": "Max Guests",

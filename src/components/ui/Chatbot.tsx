@@ -19,13 +19,13 @@ interface Message {
 const botResponses: Record<string, string[]> = {
   en: [
     "Thank you for your interest! Our team would be happy to help. For the fastest response, reach us on WhatsApp at +52 415 180 6060.",
-    "Great question! Each of our 9 rooms has its own unique character. El Royal Suite is our most luxurious, while La Biblioteca Suite is perfect for book lovers. Would you like to know more about a specific room?",
+    "Great question! Each of our 10 rooms has its own unique character. El Royal Suite is our most luxurious, while La Biblioteca Suite is perfect for book lovers. Would you like to know more about a specific room?",
     "Breakfast is included with every stay! We serve from 8:30-10:00 AM daily in the courtyard, with early coffee available from 7:00 AM.",
     "I'd love to help with that! For detailed availability and booking, I recommend reaching out via WhatsApp (+52 415 180 6060) or email (CasaSchuck@gmail.com) for the most personalized service.",
   ],
   es: [
     "Gracias por su interes! Nuestro equipo estara encantado de ayudarle. Para la respuesta mas rapida, contactenos por WhatsApp al +52 415 180 6060.",
-    "Excelente pregunta! Cada una de nuestras 9 habitaciones tiene su propio caracter unico. El Royal Suite es la mas lujosa, mientras que La Biblioteca Suite es perfecta para amantes de los libros. Le gustaria saber mas sobre alguna habitacion especifica?",
+    "Excelente pregunta! Cada una de nuestras 10 habitaciones tiene su propio caracter unico. El Royal Suite es la mas lujosa, mientras que La Biblioteca Suite es perfecta para amantes de los libros. Le gustaria saber mas sobre alguna habitacion especifica?",
     "El desayuno esta incluido con cada estancia! Servimos de 8:30-10:00 AM diariamente en el patio, con cafe temprano disponible desde las 7:00 AM.",
     "Me encantaria ayudarle con eso! Para disponibilidad y reservaciones detalladas, le recomiendo contactarnos por WhatsApp (+52 415 180 6060) o correo (CasaSchuck@gmail.com) para un servicio mas personalizado.",
   ],

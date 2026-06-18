@@ -14,8 +14,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
   const description = locale === 'es'
-    ? 'Retiros de bienestar, yoga y corporativos en Casa Schuck, San Miguel de Allende. Hacienda colonial privada con 9 habitaciones, terraza y jardín.'
-    : 'Wellness, yoga, and corporate retreats at Casa Schuck, San Miguel de Allende. Private colonial estate with 9 rooms, rooftop terrace, and garden.';
+    ? 'Retiros de bienestar, yoga y corporativos en Casa Schuck, San Miguel de Allende. Hacienda colonial privada con 10 habitaciones, terraza y jardín.'
+    : 'Wellness, yoga, and corporate retreats at Casa Schuck, San Miguel de Allende. Private colonial estate with 10 rooms, rooftop terrace, and garden.';
   return {
     title: `${dict.retreatsPage.headline} — Casa Schuck`,
     description,

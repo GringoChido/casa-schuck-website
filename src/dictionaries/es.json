@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Casa Schuck | Hotel Boutique en San Miguel de Allende",
-    "description": "Un santuario colonial reimaginado. Nueve habitaciones con personalidad propia en el corazon de San Miguel de Allende. Reserve directo al mejor precio — desayuno incluido."
+    "description": "Un santuario colonial reimaginado. Diez habitaciones con personalidad propia en el corazon de San Miguel de Allende. Reserve directo al mejor precio — desayuno incluido."
   },
   "nav": {
     "rooms": "Habitaciones",
@@ -55,7 +55,7 @@
       {
         "year": "Hoy",
         "title": "Un Patrimonio Vivo",
-        "body": "Hoy, Casa Schuck continua evolucionando mientras honra cada capitulo que vino antes. Nueve habitaciones, cada una con su propia personalidad. Arte original en las paredes. Un patio que aun reune a los creativos, los curiosos y aquellos que simplemente necesitan un lugar para exhalar."
+        "body": "Hoy, Casa Schuck continua evolucionando mientras honra cada capitulo que vino antes. Diez habitaciones, cada una con su propia personalidad. Arte original en las paredes. Un patio que aun reune a los creativos, los curiosos y aquellos que simplemente necesitan un lugar para exhalar."
       }
     ],
     "pullQuote": "No construimos un hotel. Abrimos nuestro hogar.",
@@ -87,7 +87,7 @@
   },
   "rooms": {
     "eyebrow": "Habitaciones y Suites",
-    "headline": "Nueve Habitaciones. Nueve Historias.",
+    "headline": "Diez Habitaciones. Diez Historias.",
     "description": "Cada habitacion en Casa Schuck tiene su propio nombre, su propio caracter, su propia forma de darle la bienvenida. Arquitectura colonial, arte original y comodidades modernas — entretejidos con intencion.",
     "fromLabel": "Desde",
     "perNight": "/ noche",
@@ -142,7 +142,7 @@
       "Coordinacion de catering en casa",
       "Arreglos florales curados por artesanos locales",
       "Preparacion de la novia en El Royal Suite",
-      "Nueve habitaciones para su cortejo nupcial"
+      "Diez habitaciones para su cortejo nupcial"
     ],
     "packages": [
       {
@@ -182,7 +182,7 @@
         "includes": [
           "Toma completa de la propiedad",
           "Programación y diseño de eventos de varios días",
-          "Las 9 habitaciones por 4 noches",
+          "Las 10 habitaciones por 4 noches",
           "Coordinación de cena de ensayo",
           "Catering completo para todas las comidas y eventos",
           "Diseño floral premium e instalaciones",
@@ -410,11 +410,11 @@
     "headline": "Tu Santuario Privado",
     "description": "Retiros transformadores para grupos íntimos. Yoga, círculos y viajes en el corazón de San Miguel.",
     "yogaTitle": "Elévate con la Azotea",
-    "yogaDescription": "Flujos al amanecer sobre las torres. Rituales al atardecer en el patio. Restauración total, nueve habitaciones a la vez.",
+    "yogaDescription": "Flujos al amanecer sobre las torres. Rituales al atardecer en el patio. Restauración total, diez habitaciones a la vez.",
     "spiritualTitle": "Espacio Sagrado",
     "spiritualDescription": "Trabajo de respiración, ceremonia y quietud. Guiado por maestros locales en nuestro santuario colonial privado.",
     "womensTitle": "Sostener el Espacio",
-    "womensDescription": "Nueve habitaciones. Cero ruido. Conexión absoluta. Talleres creativos y círculos íntimos tras muros coloniales.",
+    "womensDescription": "Diez habitaciones. Cero ruido. Conexión absoluta. Talleres creativos y círculos íntimos tras muros coloniales.",
     "inquireCta": "Consultar Sobre Retiros"
   },
   "events": {
@@ -426,7 +426,7 @@
     "corporateTitle": "Retiros Corporativos",
     "corporateDescription": "Sesiones de estrategia encuentran el encanto colonial. WiFi rapido, espacios para grupos y excursiones de integracion — productividad envuelta en belleza.",
     "buyoutTitle": "Renta de Casa Completa",
-    "buyoutDescription": "Nueve habitaciones, toda la propiedad, exclusivamente suya. Ideal para celebraciones importantes, reuniones familiares o experiencias de varios dias disenadas desde cero.",
+    "buyoutDescription": "Diez habitaciones, toda la propiedad, exclusivamente suya. Ideal para celebraciones importantes, reuniones familiares o experiencias de varios dias disenadas desde cero.",
     "inquireCta": "Planear Su Evento"
   },
   "packages": {
@@ -491,7 +491,7 @@
       },
       {
         "title": "Corporativo y Grupos",
-        "description": "Sesiones de estrategia con encanto colonial. Nueve habitaciones, exclusivamente tuyas.",
+        "description": "Sesiones de estrategia con encanto colonial. Diez habitaciones, exclusivamente tuyas.",
         "linkText": "Planea Tu Evento",
         "href": "/groups",
         "image": "/images/events/corporate.jpg"
@@ -501,7 +501,7 @@
   "retreatsPage": {
     "eyebrow": "Retiros y Bienestar",
     "headline": "El Ancla de Tu Círculo Interior.",
-    "introBody": "Casa Schuck está diseñada para reuniones de alto impacto. Mientras nuestras nueve suites de lujo ofrecen un santuario exclusivo para tu equipo central, nuestras profundas raíces locales nos permiten anclar grupos de hasta 60 personas. Proporcionamos la infraestructura, la logística de \"Acceso A\", y el escenario colonial central para tu experiencia colectiva. Ya sea una fiesta de bodas o una cumbre creativa, tienes el espacio para reunirte y la privacidad para conectar.",
+    "introBody": "Casa Schuck está diseñada para reuniones de alto impacto. Mientras nuestras diez suites de lujo ofrecen un santuario exclusivo para tu equipo central, nuestras profundas raíces locales nos permiten anclar grupos de hasta 60 personas. Proporcionamos la infraestructura, la logística de \"Acceso A\", y el escenario colonial central para tu experiencia colectiva. Ya sea una fiesta de bodas o una cumbre creativa, tienes el espacio para reunirte y la privacidad para conectar.",
     "pillars": [
       {
         "title": "YOGA",
@@ -520,7 +520,7 @@
       {
         "title": "RETIROS",
         "subHeadline": "La Toma Privada",
-        "body": "Nueve habitaciones. Cero ruido. Conexión absoluta. Casa Schuck es el destino premier para Jornadas de Mujeres, Círculos de Hombres e Intensivos Creativos. Nuestra arquitectura está diseñada específicamente para el movimiento entre el enfoque colectivo y la reflexión personal. Tras estos muros coloniales, no eres solo un huésped; eres el anfitrión de tu propio mundo. Ya sea un retiro de escritura, una cumbre de liderazgo o un reinicio espiritual, una renta de casa completa transforma la propiedad en tu laboratorio privado de crecimiento.",
+        "body": "Diez habitaciones. Cero ruido. Conexión absoluta. Casa Schuck es el destino premier para Jornadas de Mujeres, Círculos de Hombres e Intensivos Creativos. Nuestra arquitectura está diseñada específicamente para el movimiento entre el enfoque colectivo y la reflexión personal. Tras estos muros coloniales, no eres solo un huésped; eres el anfitrión de tu propio mundo. Ya sea un retiro de escritura, una cumbre de liderazgo o un reinicio espiritual, una renta de casa completa transforma la propiedad en tu laboratorio privado de crecimiento.",
         "image": "/images/retreats/hold-space.jpg",
         "alt": "Espacio privado de retiro en Casa Schuck para intensivos grupales"
       }
@@ -633,7 +633,7 @@
       { "title": "Catering Personalizado", "description": "Menús veganos, ayurvédicos o mexicanos tradicionales diseñados para apoyar tu programa." },
       { "title": "Traslados al Aeropuerto", "description": "Transporte terrestre coordinado para todo tu grupo, puerta a puerta." },
       { "title": "Excursiones Curadas", "description": "Aguas termales, ruinas ancestrales, talleres artesanales — experiencias adicionales fuera de la propiedad." },
-      { "title": "Renta de Casa Completa", "description": "Nueve habitaciones, toda la propiedad, exclusivamente tuya. Privacidad total para inmersión total." }
+      { "title": "Renta de Casa Completa", "description": "Diez habitaciones, toda la propiedad, exclusivamente tuya. Privacidad total para inmersión total." }
     ],
     "specialistEyebrow": "Planificación de Retiros",
     "specialistHeadline": "Tu Visión. Nuestro Santuario.",
@@ -653,7 +653,7 @@
       },
       {
         "title": "Renta de Casa Completa",
-        "body": "Nueve habitaciones, toda la propiedad, exclusivamente suya. Ideal para celebraciones importantes, reuniones familiares o experiencias de varios días diseñadas desde cero. Cada rincón se convierte en tu lienzo.",
+        "body": "Diez habitaciones, toda la propiedad, exclusivamente suya. Ideal para celebraciones importantes, reuniones familiares o experiencias de varios días diseñadas desde cero. Cada rincón se convierte en tu lienzo.",
         "image": "/images/events/buyout.jpg",
         "alt": "Patio colonial preparado para un evento privado"
       },
@@ -711,7 +711,7 @@
       { "title": "A/V y Conectividad", "description": "WiFi de alta velocidad en toda la propiedad, acceso a proyector y configuraciones flexibles de espacios." },
       { "title": "Transporte Terrestre", "description": "Traslados al aeropuerto, shuttles para invitados y transporte local coordinado para todo tu grupo." },
       { "title": "Espacios de Trabajo", "description": "Patio, terraza en azotea, jardín y biblioteca — múltiples zonas para sesiones paralelas." },
-      { "title": "Capacidad y Habitaciones", "description": "Nueve habitaciones únicas con capacidad para hasta 60 invitados. Configuraciones flexibles para cualquier tamaño de grupo." }
+      { "title": "Capacidad y Habitaciones", "description": "Diez habitaciones únicas con capacidad para hasta 60 invitados. Configuraciones flexibles para cualquier tamaño de grupo." }
     ],
     "specialistEyebrow": "Planificación de Eventos",
     "specialistHeadline": "Construyamos Algo.",
@@ -725,7 +725,7 @@
     "groups": "Retiros corporativos y rentas de casa completa para hasta 60 personas.",
     "services": "Masaje en casa, tours curados y reservaciones VIP.",
     "story": "150 años de arte, visión y hospitalidad.",
-    "rooms": "Nueve habitaciones, cada una con su propio nombre y carácter."
+    "rooms": "Diez habitaciones, cada una con su propio nombre y carácter."
   },
   "common": {
     "learnMore": "Saber Mas",
@@ -753,7 +753,7 @@
     },
     "philosophy": {
       "eyebrow": "Nuestra Filosofía",
-      "headline": "Nueve Habitaciones. Nueve Historias.",
+      "headline": "Diez Habitaciones. Diez Historias.",
       "subtitle": "El Arte de la Quietud",
       "pillars": [
         {
@@ -764,7 +764,7 @@
         {
           "number": "02",
           "title": "Intimidad",
-          "body": "Con solo nueve suites, tu estadía se define por la atención personal y un profundo sentido de privacidad."
+          "body": "Con solo diez suites, tu estadía se define por la atención personal y un profundo sentido de privacidad."
         },
         {
           "number": "03",
@@ -842,7 +842,7 @@
       "headline": "Un Poema Arquitectónico Escrito en Piedra y Luz",
       "paragraphs": [
         "La luz del sol traza los antiguos muros de piedra cada mañana, dibujando patrones que se han repetido por más de un siglo. La buganvilia cae en cascada sobre los arcos coloniales mientras una fuente de patio mantiene su sinfonía silenciosa — los sonidos de un hogar que ha cobijado a artistas, visionarios y buscadores desde 1965.",
-        "Casa Schuck no es simplemente un hotel. Es un patrimonio viviente — nueve habitaciones, cada una con su propio nombre y personalidad, entretejidas en una finca del siglo XIX que respira al ritmo de San Miguel de Allende.",
+        "Casa Schuck no es simplemente un hotel. Es un patrimonio viviente — diez habitaciones, cada una con su propio nombre y personalidad, entretejidas en una finca del siglo XIX que respira al ritmo de San Miguel de Allende.",
         "Cada azulejo fue colocado a mano. Cada arco cuenta una historia. Y cada huésped que cruza nuestras puertas se convierte en parte de una narrativa que comenzó mucho antes que ellos — y continuará mucho después."
       ],
       "imageAlt": "Azulejos de cerámica pintados a mano y detalles de piedra tallada en Casa Schuck"
@@ -855,7 +855,7 @@
         },
         {
           "title": "Intimidad",
-          "body": "Con solo nueve suites, tu estadía se define por la atención personal y un profundo sentido de privacidad. No eres un número de habitación. Eres un huésped en nuestro hogar."
+          "body": "Con solo diez suites, tu estadía se define por la atención personal y un profundo sentido de privacidad. No eres un número de habitación. Eres un huésped en nuestro hogar."
         },
         {
           "title": "Santuario",
@@ -902,7 +902,7 @@
   "suitesPage": {
     "meta": {
       "title": "Suites | Casa Schuck Hotel Boutique",
-      "description": "Nueve habitaciones únicas, cada una con su propio nombre, carácter e historia. Arquitectura colonial y lujo moderno en San Miguel de Allende."
+      "description": "Diez habitaciones únicas, cada una con su propio nombre, carácter e historia. Arquitectura colonial y lujo moderno en San Miguel de Allende."
     },
     "hero": {
       "eyebrow": "El Arte de Vivir",
@@ -911,7 +911,7 @@
     },
     "collection": {
       "eyebrow": "Habitaciones y Suites",
-      "headline": "Nueve Habitaciones. Nueve Historias.",
+      "headline": "Diez Habitaciones. Diez Historias.",
       "description": "Cada habitación en Casa Schuck tiene su propio nombre, su propio carácter, su propia forma de darte la bienvenida. Arquitectura colonial, arte original y comodidades modernas — tejidas con intención.",
       "bookRoom": "Reservar Esta Habitación",
       "maxGuests": "Huéspedes Máx",
