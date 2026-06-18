@@ -22,8 +22,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
   const description = locale === 'es'
-    ? 'Hotel boutique en San Miguel de Allende. 9 suites coloniales, desayuno gourmet incluido, terraza con vista a la Parroquia. Reserve directo al mejor precio.'
-    : 'Boutique hotel in San Miguel de Allende. 9 colonial suites, gourmet breakfast included, rooftop with Parroquia views. Book direct for the best rate.';
+    ? 'Hotel boutique en San Miguel de Allende. 10 suites coloniales, desayuno gourmet incluido, terraza con vista a la Parroquia. Reserve directo al mejor precio.'
+    : 'Boutique hotel in San Miguel de Allende. 10 colonial suites, gourmet breakfast included, rooftop with Parroquia views. Book direct for the best rate.';
   return {
     title: dict.meta.title,
     description,
@@ -80,8 +80,8 @@ export default async function HomePage({
         acceptedAnswer: {
           '@type': 'Answer',
           text: locale === 'es'
-            ? 'Casa Schuck es una hacienda colonial restaurada de 1965 con solo 9 habitaciones, ofreciendo la intimidad de una casa privada con el lujo de un hotel boutique. El desayuno está incluido y ofrecemos vistas de la Parroquia desde la terraza.'
-            : 'Casa Schuck is a restored 1965 colonial estate with only 9 rooms, offering the intimacy of a private home with boutique hotel luxury. Breakfast is included, and we offer rooftop views of the Parroquia.',
+            ? 'Casa Schuck es una hacienda colonial restaurada de 1965 con solo 10 habitaciones, ofreciendo la intimidad de una casa privada con el lujo de un hotel boutique. El desayuno está incluido y ofrecemos vistas de la Parroquia desde la terraza.'
+            : 'Casa Schuck is a restored 1965 colonial estate with only 10 rooms, offering the intimacy of a private home with boutique hotel luxury. Breakfast is included, and we offer rooftop views of the Parroquia.',
         },
       },
       {

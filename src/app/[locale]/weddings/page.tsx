@@ -81,7 +81,7 @@ export default async function WeddingsPage({
         acceptedAnswer: {
           '@type': 'Answer',
           text: locale === 'es'
-            ? 'Acomodamos bodas íntimas de hasta 60 invitados, con 9 habitaciones en el hotel para su grupo de bodas.'
+            ? 'Acomodamos bodas íntimas de hasta 60 invitados, con 10 habitaciones en el hotel para su grupo de bodas.'
             : 'We accommodate intimate weddings of up to 60 guests, with 9 on-site rooms for your wedding party.',
         },
       },

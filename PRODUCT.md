@@ -16,7 +16,7 @@ Context of use: evening couch browsing on phone or laptop, dreaming and comparin
 
 ## Product Purpose
 
-Marketing site for Casa Schuck, a 9-room boutique luxury hotel in a colonial house in San Miguel de Allende. It exists to win direct bookings (vs. OTA commission), to sell the house as a wedding/retreat venue, and to rank for San Miguel travel intent. Success: a visitor feels the house before they see the price, and every path ends in a Cloudbeds booking or a WhatsApp conversation.
+Marketing site for Casa Schuck, a 10-room boutique luxury hotel in a colonial house in San Miguel de Allende. It exists to win direct bookings (vs. OTA commission), to sell the house as a wedding/retreat venue, and to rank for San Miguel travel intent. Success: a visitor feels the house before they see the price, and every path ends in a Cloudbeds booking or a WhatsApp conversation.
 
 ## Brand Personality
 

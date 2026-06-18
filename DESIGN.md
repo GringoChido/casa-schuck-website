@@ -1,6 +1,6 @@
 ---
 name: Casa Schuck
-description: Quiet-luxury editorial site for a 9-room boutique hotel in San Miguel de Allende
+description: Quiet-luxury editorial site for a 10-room boutique hotel in San Miguel de Allende
 colors:
   sage: "#5B7B6A"
   terracotta: "#C17A56"

@@ -18,8 +18,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
   const description = locale === 'es'
-    ? '9 suites únicas en Casa Schuck, San Miguel de Allende. Habitaciones coloniales desde $235 USD/noche con desayuno gourmet incluido. Reserve directo.'
-    : '9 unique suites at Casa Schuck, San Miguel de Allende. Colonial rooms from $235 USD/night with gourmet breakfast included. Book direct for best rate.';
+    ? '10 suites únicas en Casa Schuck, San Miguel de Allende. Habitaciones coloniales desde $235 USD/noche con desayuno gourmet incluido. Reserve directo.'
+    : '10 unique suites at Casa Schuck, San Miguel de Allende. Colonial rooms from $235 USD/night with gourmet breakfast included. Book direct for best rate.';
   return {
     title: dict.suitesPage.meta.title,
     description,
@@ -65,8 +65,8 @@ export default async function SuitesPage({
         acceptedAnswer: {
           '@type': 'Answer',
           text: locale === 'es'
-            ? 'Casa Schuck tiene 9 suites únicas, cada una con nombre y diseño propio, desde $235 hasta $345 USD por noche.'
-            : 'Casa Schuck has 9 uniquely appointed suites, each named and designed with its own character, from $235 to $345 USD per night.',
+            ? 'Casa Schuck tiene 10 suites únicas, cada una con nombre y diseño propio, desde $235 hasta $345 USD por noche.'
+            : 'Casa Schuck has 10 uniquely appointed suites, each named and designed with its own character, from $235 to $345 USD per night.',
         },
       },
       {
