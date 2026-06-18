@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import type { Dictionary } from '@/lib/dictionaries';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
@@ -48,7 +49,11 @@ export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="font-headline text-3xl mb-4">{room.name[locale]}</h3>
+                  <Link href={`/${locale}/suites/${room.id}`} className="block w-fit group/name">
+                    <h3 className="font-headline text-3xl mb-4 transition-colors duration-300 group-hover/name:text-secondary">
+                      {room.name[locale]}
+                    </h3>
+                  </Link>
                   <div className="font-label text-[10px] tracking-widest uppercase text-on-surface-variant flex items-center gap-4 mb-6 flex-wrap">
                     <span>{c.maxGuests}: {room.maxGuests}</span>
                     <span className="w-1 h-1 bg-outline-variant rounded-full" />
@@ -59,19 +64,27 @@ export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
                   <p className="font-body text-on-surface-variant text-sm leading-relaxed mb-8 max-w-md">
                     {room.shortDescription[locale]}
                   </p>
-                  <a
-                    href={buildBookingUrl({
-                      roomTypeId: room.roomTypeId,
-                      language: locale,
-                      placement: 'suite_card',
-                      whatsappMessage: dict.rooms.whatsappInquiry.replace('{room}', room.name[locale]),
-                    })}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-fit text-secondary font-body text-sm tracking-widest uppercase border-b border-transparent hover:border-secondary transition-all pb-1"
-                  >
-                    {c.bookRoom}
-                  </a>
+                  <div className="flex flex-wrap items-center gap-6">
+                    <Link
+                      href={`/${locale}/suites/${room.id}`}
+                      className="w-fit text-secondary font-body text-sm tracking-widest uppercase border-b border-transparent hover:border-secondary transition-all pb-1"
+                    >
+                      {dict.rooms.viewDetails} &rarr;
+                    </Link>
+                    <a
+                      href={buildBookingUrl({
+                        roomTypeId: room.roomTypeId,
+                        language: locale,
+                        placement: 'suite_card',
+                        whatsappMessage: dict.rooms.whatsappInquiry.replace('{room}', room.name[locale]),
+                      })}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-fit text-secondary font-body text-sm tracking-widest uppercase border-b border-transparent hover:border-secondary transition-all pb-1"
+                    >
+                      {c.bookRoom}
+                    </a>
+                  </div>
                 </div>
               </div>
             </StaggerItem>
