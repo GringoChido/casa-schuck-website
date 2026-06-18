@@ -35,7 +35,7 @@ export function FullBleedHero({
 
       {/* Overlay — flat wash + bottom gradient for text legibility */}
       <div className="absolute inset-0" style={{ background: `rgba(0,0,0,${overlayOpacity})` }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
@@ -48,7 +48,7 @@ export function FullBleedHero({
 
         {subheadline && (
           <p
-            className="font-sans text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed hero-fade-up"
+            className="font-sans text-white/95 text-lg md:text-xl max-w-2xl leading-relaxed text-shadow-editorial hero-fade-up"
             style={{ animationDelay: '0.6s' }}
           >
             {subheadline}
@@ -63,7 +63,10 @@ export function FullBleedHero({
           style={{ animationDelay: '1.5s' }}
         >
           <div className="flex flex-col items-center gap-2">
-            <span className="font-label text-[9px] tracking-[0.3em] uppercase text-white/60">
+            <span
+              className="font-label text-[11px] tracking-[0.3em] uppercase text-white/90"
+              style={{ textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
+            >
               Scroll
             </span>
             <div className="scroll-bounce">
@@ -74,7 +77,7 @@ export function FullBleedHero({
                 fill="none"
                 stroke="white"
                 strokeWidth="1.5"
-                className="opacity-50"
+                className="opacity-80 [filter:drop-shadow(0_1px_4px_rgba(0,0,0,0.4))]"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7" />
               </svg>
