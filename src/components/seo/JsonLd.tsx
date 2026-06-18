@@ -1,5 +1,5 @@
 import type { Locale } from '@/lib/i18n';
-import { rooms } from '@/data/rooms';
+import { rooms, type Room } from '@/data/rooms';
 
 interface JsonLdProps {
   locale: Locale;
@@ -47,7 +47,7 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
     priceRange: '$235 - $345 USD',
     currenciesAccepted: 'USD, MXN',
     paymentAccepted: 'Cash, Credit Card',
-    numberOfRooms: 9,
+    numberOfRooms: 10,
     checkinTime: '15:00',
     checkoutTime: '12:00',
     petsAllowed: false,
@@ -63,7 +63,7 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
     ],
     containsPlace: rooms.map((room) => ({
       '@type': 'HotelRoom',
-      '@id': `${BASE_URL}/${locale}/suites#${room.id}`,
+      '@id': `${BASE_URL}/${locale}/suites/${room.id}#room`,
       name: room.name[locale],
       description: room.shortDescription[locale],
       image: `${BASE_URL}${room.images[0]}`,
@@ -82,7 +82,7 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
         price: room.baseRate,
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
-        url: `${BASE_URL}/${locale}/suites`,
+        url: `${BASE_URL}/${locale}/suites/${room.id}`,
       },
     })),
     availableLanguage: [
@@ -114,6 +114,24 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
   );
+}
+
+export function RoomJsonLd({ room, locale }: { room: Room; locale: Locale }) {
+  const url = `${BASE_URL}/${locale}/suites/${room.id}`;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'HotelRoom',
+    '@id': `${url}#room`,
+    name: room.name[locale],
+    description: room.description[locale],
+    url,
+    image: room.images.map((i) => `${BASE_URL}${i}`),
+    bed: { '@type': 'BedDetails', typeOfBed: room.bedType.en },
+    occupancy: { '@type': 'QuantitativeValue', maxValue: room.maxGuests, unitText: 'guests' },
+    isPartOf: { '@type': 'Hotel', '@id': `${BASE_URL}/#hotel`, name: 'Casa Schuck' },
+    offers: { '@type': 'Offer', price: room.baseRate, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url },
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
 
 export function WebSiteJsonLd() {

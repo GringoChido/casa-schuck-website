@@ -10,9 +10,10 @@ interface RoomDetailProps {
   locale: Locale;
   dict: Record<string, string>;
   amenityLabels: Record<string, string>;
+  showHeading?: boolean;
 }
 
-export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProps) {
+export function RoomDetail({ room, locale, dict, amenityLabels, showHeading = true }: RoomDetailProps) {
   const name = room.name[locale];
   const tagline = room.tagline[locale];
   const description = room.description[locale];
@@ -30,8 +31,12 @@ export function RoomDetail({ room, locale, dict, amenityLabels }: RoomDetailProp
       className="pt-6"
     >
       {/* Name + Tagline */}
-      <h3 className="font-serif text-3xl lg:text-4xl text-secondary mb-2">{name}</h3>
-      <p className="text-secondary italic text-lg mb-4">{tagline}</p>
+      {showHeading && (
+        <>
+          <h3 className="font-serif text-3xl lg:text-4xl text-secondary mb-2">{name}</h3>
+          <p className="text-secondary italic text-lg mb-4">{tagline}</p>
+        </>
+      )}
 
       {/* Description */}
       <p className="text-on-surface/75 leading-relaxed mb-6 max-w-2xl">{description}</p>

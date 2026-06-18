@@ -10,6 +10,7 @@ import { FullBleedHero } from '@/components/sections/FullBleedHero';
 import { AvailabilityBar } from '@/components/sections/AvailabilityBar';
 import { RoomImageCarousel } from '@/components/ui/RoomImageCarousel';
 import { RoomDetail } from '@/components/ui/RoomDetail';
+import { RoomJsonLd, BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 
 const BASE_URL = 'https://casaschuck.com';
 
@@ -76,6 +77,14 @@ export default async function RoomPage({
 
   return (
     <>
+      <RoomJsonLd room={room} locale={locale} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: `${BASE_URL}/${locale}` },
+          { name: 'Suites', url: `${BASE_URL}/${locale}/suites` },
+          { name: room.name[locale], url: `${BASE_URL}/${locale}/suites/${room.id}` },
+        ]}
+      />
       <FullBleedHero
         imageSrc={room.images[0]}
         imageAlt={room.name[locale]}
@@ -88,7 +97,7 @@ export default async function RoomPage({
       <section className="bg-surface py-20 md:py-28 px-6">
         <div className="max-w-5xl mx-auto">
           <RoomImageCarousel images={room.images} roomName={room.name[locale]} />
-          <RoomDetail room={room} locale={locale} dict={dict.rooms} amenityLabels={amenityLabels} />
+          <RoomDetail room={room} locale={locale} dict={dict.rooms} amenityLabels={amenityLabels} showHeading={false} />
 
           <div className="mt-16 pt-10 border-t border-outline-variant/40">
             <Link
