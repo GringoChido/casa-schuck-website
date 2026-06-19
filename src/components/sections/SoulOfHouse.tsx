@@ -46,9 +46,10 @@ export function SoulOfHouse({ locale, dict }: SoulOfHouseProps) {
               </div>
               <Link
                 href={`/${locale}/suites`}
-                className="inline-block mt-10 font-label text-[11px] tracking-[0.2em] uppercase text-secondary hover:text-terracotta transition-colors duration-300"
+                className="group inline-flex items-center gap-2 mt-10 bg-tertiary text-on-tertiary font-label text-[11px] tracking-[0.2em] uppercase px-10 py-4 rounded-lg min-h-[44px] hover:bg-secondary transition-colors duration-300"
               >
-                {ctaText} &rarr;
+                {ctaText}
+                <span className="transition-transform duration-300 ease-out group-hover:translate-x-1">&rarr;</span>
               </Link>
             </div>
           </div>
