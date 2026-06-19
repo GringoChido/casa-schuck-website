@@ -15,7 +15,7 @@ export function SanMiguelSection({ dict }: SanMiguelSectionProps) {
         {/* Full-bleed panoramic */}
         <div className="relative w-full h-[60vh] min-h-[400px]">
           <Image
-            src="/images/san-miguel/san-miguel-guide.jpg"
+            src="/images/san-miguel/city-panorama.jpg"
             alt={s.imageAlt}
             fill
             className="object-cover"
