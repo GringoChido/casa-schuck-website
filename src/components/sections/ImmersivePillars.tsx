@@ -7,9 +7,9 @@ interface ImmersivePillarsProps {
 }
 
 const PILLAR_IMAGES = [
-  '/images/areas/living-room.jpg',
-  '/images/rooms/la-escondida/hero.jpg',
-  '/images/common/garden.jpg',
+  '/images/areas/detail-ironwork.jpg', // Authenticity — hand-forged colonial ironwork
+  '/images/areas/breakfast-table.jpg', // Intimacy — a table set with care, a guest in our home
+  '/images/areas/garden-courtyard.jpg', // Sanctuary — lush shaded courtyard at golden hour
 ];
 
 export function ImmersivePillars({ dict }: ImmersivePillarsProps) {
