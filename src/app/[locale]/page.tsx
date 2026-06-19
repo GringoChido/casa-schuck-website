@@ -110,6 +110,7 @@ export default async function HomePage({
         imageAlt={h.imageAlt}
         headline={h.headline}
         subheadline={h.subheadline}
+        videoSrc="/videos/hero-loop.mp4"
       />
 
       {/* 2. THE INVITATION */}
