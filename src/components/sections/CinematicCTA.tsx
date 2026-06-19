@@ -15,8 +15,8 @@ export function CinematicCTA({ locale, dict }: CinematicCTAProps) {
   return (
     <section className="relative w-full h-[70vh] min-h-[450px] flex items-center justify-center">
       <Image
-        src="/images/areas/rooftop-sunset.jpg"
-        alt="Casa Schuck rooftop at sunset"
+        src="/images/areas/begin-your-story.jpg"
+        alt="San Miguel de Allende at golden hour"
         fill
         className="object-cover"
         sizes="100vw"
