@@ -92,7 +92,7 @@ export function Footer({ locale, dict }: FooterProps) {
               </h4>
               <nav className="space-y-2">
                 {[
-                  { href: '#rooms', label: nav.rooms },
+                  { href: '/suites', label: nav.rooms },
                   { href: '/story', label: nav.story },
                   { href: '/experiences#breakfast', label: nav.dining },
                   { href: '/services', label: nav.services },
