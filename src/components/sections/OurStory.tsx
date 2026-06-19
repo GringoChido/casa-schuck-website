@@ -69,7 +69,7 @@ export function OurStory({ locale, dict }: OurStoryProps) {
         {/* CTA */}
         <ScrollReveal className="text-center mt-20">
           <a
-            href={`/${locale}#rooms`}
+            href={`/${locale}/suites`}
             className="inline-block bg-black text-white hover:bg-secondary font-sans font-bold
                        px-10 py-4 text-[11px] tracking-[0.15em] uppercase transition-all duration-300
                        hover:-translate-y-0.5 active:translate-y-0"

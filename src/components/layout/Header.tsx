@@ -172,11 +172,15 @@ export function Header({ locale, dict }: HeaderProps) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`nav-link-underline text-[11px] font-bold tracking-[0.15em] uppercase transition-colors ${
-                    scrolled
-                      ? 'text-black/70 hover:text-black'
-                      : 'text-white/90 hover:text-white'
-                  }`}
+                  className={
+                    item.href === `/${locale}/suites`
+                      ? `text-[12px] font-bold tracking-[0.15em] uppercase border-b-2 pb-0.5 transition-colors ${
+                          scrolled ? 'text-black border-black' : 'text-white border-white'
+                        }`
+                      : `nav-link-underline text-[11px] font-bold tracking-[0.15em] uppercase transition-colors ${
+                          scrolled ? 'text-black/70 hover:text-black' : 'text-white/90 hover:text-white'
+                        }`
+                  }
                 >
                   {item.label}
                 </Link>
@@ -273,9 +277,17 @@ export function Header({ locale, dict }: HeaderProps) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block text-black/70 hover:text-secondary transition-colors tracking-[0.15em] uppercase text-[11px] font-bold py-3"
+                    className={`block transition-colors tracking-[0.15em] uppercase text-[11px] font-bold py-3 ${
+                      item.href === `/${locale}/suites`
+                        ? 'text-black'
+                        : 'text-black/70 hover:text-secondary'
+                    }`}
                   >
-                    {item.label}
+                    {item.href === `/${locale}/suites` ? (
+                      <span className="border-b-2 border-tertiary pb-0.5">{item.label}</span>
+                    ) : (
+                      item.label
+                    )}
                   </Link>
                 )
               )}
