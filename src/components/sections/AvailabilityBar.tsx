@@ -57,7 +57,7 @@ export function AvailabilityBar({ locale, dict, variant = 'light' }: Availabilit
   const isEn = locale === 'en';
 
   return (
-    <section id="availability" className={`relative z-20 px-4 sm:px-6 lg:px-12 ${isDark ? '-mt-14' : ''}`}>
+    <section id="availability" className={`relative z-20 px-4 sm:px-6 lg:px-12 ${isDark ? 'mt-8' : ''}`}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -67,18 +67,18 @@ export function AvailabilityBar({ locale, dict, variant = 'light' }: Availabilit
       >
         {isDark && (
           <div className="text-center mb-6">
-            <p className="font-serif text-lg italic text-on-surface-variant mb-3">
+            <p className="font-serif text-2xl italic text-on-surface mb-4">
               {isEn ? 'Find your perfect stay' : 'Encuentra tu estancia perfecta'}
             </p>
             <div className="flex items-center justify-center gap-6 flex-wrap">
-              <span className="inline-flex items-center gap-2 font-label text-[10px] tracking-[0.15em] uppercase text-sage">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sage">
+              <span className="inline-flex items-center gap-2 font-label text-[12px] font-semibold tracking-[0.15em] uppercase text-sage">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sage">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 {isEn ? 'Book Direct — Best Rate Guaranteed' : 'Reserva Directo — Mejor Tarifa Garantizada'}
               </span>
-              <span className="inline-flex items-center gap-2 font-label text-[10px] tracking-[0.15em] uppercase text-sage">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sage">
+              <span className="inline-flex items-center gap-2 font-label text-[12px] font-semibold tracking-[0.15em] uppercase text-sage">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sage">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 {isEn ? 'Breakfast Included' : 'Desayuno Incluido'}
