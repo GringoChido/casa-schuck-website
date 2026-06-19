@@ -441,6 +441,23 @@ html {
   right: 0;
 }
 
+/* === Hero video loop ===
+   Desktop-only: mobile/mid-range Android gets the lighter poster Image (PRODUCT.md).
+   Reduced-motion query comes last so it wins over the desktop rule. */
+.hero-video {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hero-video {
+    display: block;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+}
+
 /* === Booking input (Stitch style) === */
 .booking-input {
   background: transparent;

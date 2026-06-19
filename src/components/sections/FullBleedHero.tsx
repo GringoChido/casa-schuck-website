@@ -9,6 +9,7 @@ interface FullBleedHeroProps {
   height?: string;
   showScrollIndicator?: boolean;
   priority?: boolean;
+  videoSrc?: string;
 }
 
 export function FullBleedHero({
@@ -20,6 +21,7 @@ export function FullBleedHero({
   height = 'h-[85vh] md:h-[85vh]',
   showScrollIndicator = true,
   priority = true,
+  videoSrc,
 }: FullBleedHeroProps) {
   return (
     <section className={`relative w-full ${height} min-h-[500px] overflow-hidden`}>
@@ -32,6 +34,23 @@ export function FullBleedHero({
         className="object-cover hero-image-reveal"
         sizes="100vw"
       />
+
+      {/* Optional golden-hour video loop — sits over the poster Image, below the scrim.
+          Desktop-only and disabled for reduced-motion via .hero-video (see globals.css);
+          the Image above remains the instant poster + mobile/reduced-motion fallback. */}
+      {videoSrc && (
+        <video
+          className="hero-video absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={imageSrc}
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      )}
 
       {/* Overlay — flat wash + bottom gradient for text legibility */}
       <div className="absolute inset-0" style={{ background: `rgba(0,0,0,${overlayOpacity})` }} />
