@@ -4,6 +4,7 @@ import type { Dictionary } from '@/lib/dictionaries';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
 import { RoomImageCarousel } from '@/components/ui/RoomImageCarousel';
 import { buildBookingUrl } from '@/lib/cloudbeds';
+import { getRoomLevelLabel } from '@/lib/roomLevels';
 import { rooms as roomData } from '@/data/rooms';
 
 interface SuiteCollectionProps {
@@ -57,7 +58,7 @@ export function SuiteCollection({ locale, dict }: SuiteCollectionProps) {
                   <div className="font-label text-[10px] tracking-widest uppercase text-on-surface-variant flex items-center gap-4 mb-6 flex-wrap">
                     <span>{c.maxGuests}: {room.maxGuests}</span>
                     <span className="w-1 h-1 bg-outline-variant rounded-full" />
-                    <span>{c.floor}: {room.floor}</span>
+                    <span>{getRoomLevelLabel(room.floor, locale)}</span>
                     <span className="w-1 h-1 bg-outline-variant rounded-full" />
                     <span>{c.bedType}: {room.bedType[locale]}</span>
                   </div>

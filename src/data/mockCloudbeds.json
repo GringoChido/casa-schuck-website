@@ -103,7 +103,7 @@
         "en": "King or Twin + extra day bed",
         "es": "King o Individual + cama de día adicional"
       },
-      "floor": 2,
+      "floor": 1,
       "baseRate": 305,
       "accessible": false,
       "hasAC": true,
@@ -397,7 +397,7 @@
         "en": "King or Twin",
         "es": "King o Individual"
       },
-      "floor": 1,
+      "floor": 0,
       "baseRate": 245,
       "accessible": true,
       "hasAC": true,
@@ -448,19 +448,19 @@
         "es": "Un Retiro Oculto en el Jardín"
       },
       "description": {
-        "en": "True to its name — 'The Hidden One' — La Escondida is a garden-level retreat tucked away from the main courtyard. Original art by Edward Osman, green colonial tiles, and a king bed make this an intimate retreat for two. The garden surroundings create a private, verdant atmosphere that feels worlds away.",
-        "es": "Fiel a su nombre — 'La Escondida' — es un retiro a nivel de jardín apartado del patio principal. Arte original de Edward Osman, azulejos coloniales verdes y una cama king hacen de este un retiro íntimo para dos. El entorno de jardín crea una atmósfera privada y verde que se siente a mundos de distancia."
+        "en": "True to its name — 'The Hidden One' — La Escondida is a secluded retreat tucked away from the main courtyard. Original art by Edward Osman, green colonial tiles, and a king bed make this an intimate retreat for two. Garden views and verdant surroundings create a private atmosphere that feels worlds away.",
+        "es": "Fiel a su nombre — 'La Escondida' — es un retiro apartado del patio principal. Arte original de Edward Osman, azulejos coloniales verdes y una cama king hacen de este un retiro íntimo para dos. Las vistas al jardín y el entorno verde crean una atmósfera privada que se siente a mundos de distancia."
       },
       "shortDescription": {
-        "en": "Garden-level hideaway with Edward Osman art and green colonial tiles.",
-        "es": "Refugio a nivel de jardín con arte de Edward Osman y azulejos coloniales verdes."
+        "en": "Garden-view hideaway with Edward Osman art and green colonial tiles.",
+        "es": "Refugio con vistas al jardín, arte de Edward Osman y azulejos coloniales verdes."
       },
       "maxGuests": 2,
       "bedType": {
         "en": "King",
         "es": "King"
       },
-      "floor": 2,
+      "floor": 1,
       "baseRate": 265,
       "accessible": false,
       "hasAC": true,
@@ -521,7 +521,7 @@
         "en": "King or Twin",
         "es": "King o Individual"
       },
-      "floor": 1,
+      "floor": 0,
       "baseRate": 235,
       "accessible": true,
       "hasAC": false,
