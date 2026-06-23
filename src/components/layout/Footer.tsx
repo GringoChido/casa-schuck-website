@@ -63,9 +63,6 @@ export function Footer({ locale, dict }: FooterProps) {
                 <a href={`tel:${f.phone}`} className="block hover:text-white transition-colors duration-300">
                   {f.phone}
                 </a>
-                <a href={`tel:${f.phone2}`} className="block hover:text-white transition-colors duration-300">
-                  {f.phone2}
-                </a>
                 <a
                   href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5214151806060'}`}
                   target="_blank"
