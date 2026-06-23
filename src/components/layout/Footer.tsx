@@ -153,14 +153,6 @@ export function Footer({ locale, dict }: FooterProps) {
                 <Link href={`/${locale}/terms`} className="block font-serif text-xs text-white/30 hover:text-white/60 transition-colors duration-300 font-light">
                   {f.terms}
                 </Link>
-                <a
-                  href={process.env.NEXT_PUBLIC_DASHBOARD_URL || 'http://localhost:5173'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block font-serif text-xs text-white/30 hover:text-white/60 transition-colors duration-300 font-light"
-                >
-                  {locale === 'en' ? 'Staff Login' : 'Acceso Staff'}
-                </a>
               </div>
             </StaggerItem>
           </div>

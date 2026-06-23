@@ -24,7 +24,7 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
       : 'Boutique hotel in the heart of San Miguel de Allende. 10 unique rooms in a restored colonial estate with gourmet breakfast included, rooftop terrace and Parroquia views.',
     url: BASE_URL,
     telephone: '+524151520657',
-    email: 'info@casaschuck.com',
+    email: 'CasaSchuck@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Garita 3, Centro',
@@ -89,8 +89,8 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
       { '@type': 'Language', name: 'Spanish', alternateName: 'es' },
     ],
     sameAs: [
-      'https://www.instagram.com/casaschuck',
-      'https://www.facebook.com/casaschuck',
+      'https://www.instagram.com/casaschuck/',
+      'https://www.facebook.com/CasaSchuckboutiquehotel/',
     ],
     hasMap: 'https://maps.google.com/?q=Casa+Schuck,+Garita+3,+Centro,+37700+San+Miguel+de+Allende',
     containedInPlace: {
@@ -193,8 +193,8 @@ export function LocalBusinessJsonLd({ locale }: JsonLdProps) {
       closes: '23:59',
     },
     sameAs: [
-      'https://www.instagram.com/casaschuck',
-      'https://www.facebook.com/casaschuck',
+      'https://www.instagram.com/casaschuck/',
+      'https://www.facebook.com/CasaSchuckboutiquehotel/',
     ],
     hasMap: 'https://maps.google.com/?q=Casa+Schuck,+Garita+3,+Centro,+37700+San+Miguel+de+Allende',
   };
