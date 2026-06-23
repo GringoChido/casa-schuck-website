@@ -36,9 +36,6 @@ export function SignatureSuite({ locale, dict }: SignatureSuiteProps) {
               <h3 className="font-headline text-4xl md:text-5xl mb-4 leading-tight tracking-[0.02em]">
                 {s.name}
               </h3>
-              <p className="font-label text-xs tracking-[0.15em] text-on-surface-variant mb-8">
-                From $345/night
-              </p>
               <p className="font-body text-on-surface-variant text-lg leading-relaxed mb-10">
                 {s.body}
               </p>

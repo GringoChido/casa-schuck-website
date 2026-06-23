@@ -90,13 +90,8 @@ export function RoomDetail({ room, locale, dict, amenityLabels, showHeading = tr
         </div>
       </div>
 
-      {/* Price + CTA */}
+      {/* CTA */}
       <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
-        <div>
-          <span className="text-sm text-on-surface/50">{dict.fromLabel}</span>
-          <span className="text-3xl font-serif text-secondary ml-2">${room.baseRate}</span>
-          <span className="text-sm text-on-surface/50 ml-1">{dict.perNight}</span>
-        </div>
         <a
           href={buildBookingUrl({
             roomTypeId: room.roomTypeId,
