@@ -15,8 +15,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
   const description = locale === 'es'
-    ? 'Descubre la historia de Casa Schuck, una hacienda colonial restaurada de 1965 convertida en hotel boutique en el corazón de San Miguel de Allende.'
-    : 'Discover the story of Casa Schuck, a restored 1965 colonial estate turned boutique hotel in the heart of San Miguel de Allende, Mexico.';
+    ? 'Descubre la historia de Casa Schuck, una hacienda colonial restaurada de 1978 convertida en hotel boutique en el corazón de San Miguel de Allende.'
+    : 'Discover the story of Casa Schuck, a restored 1978 colonial estate turned boutique hotel in the heart of San Miguel de Allende, Mexico.';
   return {
     title: `${dict.nav.story} — Casa Schuck`,
     description,

@@ -80,8 +80,8 @@ export default async function HomePage({
         acceptedAnswer: {
           '@type': 'Answer',
           text: locale === 'es'
-            ? 'Casa Schuck es una hacienda colonial restaurada de 1965 con solo 10 habitaciones, ofreciendo la intimidad de una casa privada con el lujo de un hotel boutique. El desayuno está incluido y ofrecemos vistas de la Parroquia desde la terraza.'
-            : 'Casa Schuck is a restored 1965 colonial estate with only 10 rooms, offering the intimacy of a private home with boutique hotel luxury. Breakfast is included, and we offer rooftop views of the Parroquia.',
+            ? 'Casa Schuck es una hacienda colonial restaurada de 1978 con solo 10 habitaciones, ofreciendo la intimidad de una casa privada con el lujo de un hotel boutique. El desayuno está incluido y ofrecemos vistas de la Parroquia desde la terraza.'
+            : 'Casa Schuck is a restored 1978 colonial estate with only 10 rooms, offering the intimacy of a private home with boutique hotel luxury. Breakfast is included, and we offer rooftop views of the Parroquia.',
         },
       },
       {
