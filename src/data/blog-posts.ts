@@ -118,7 +118,7 @@ const postsEn: BlogPost[] = [
       {
         question: 'How many guests can Casa Schuck accommodate for a wedding?',
         answer:
-          'Casa Schuck can accommodate intimate weddings of up to 80 guests for a reception on the rooftop terrace, with garden courtyard ceremonies for up to 60 seated guests. The hotel\'s ten rooms provide on-site lodging for up to 20 overnight guests with a full-property buyout.',
+          'Casa Schuck can accommodate intimate weddings of up to 70 guests for a reception on the rooftop terrace, with garden courtyard ceremonies for up to 60 seated guests. The hotel\'s ten rooms provide on-site lodging for up to 20 overnight guests with a full-property buyout.',
       },
     ],
   },
@@ -433,7 +433,7 @@ const postsEs: BlogPost[] = [
       {
         question: '¿Cuántos invitados puede acomodar Casa Schuck para una boda?',
         answer:
-          'Casa Schuck puede acomodar bodas íntimas de hasta 80 invitados para una recepción en la terraza de la azotea, con ceremonias en el patio jardín para hasta 60 invitados sentados. Las diez habitaciones del hotel proporcionan alojamiento para hasta 20 huéspedes con la renta completa de la propiedad.',
+          'Casa Schuck puede acomodar bodas íntimas de hasta 70 invitados para una recepción en la terraza de la azotea, con ceremonias en el patio jardín para hasta 60 invitados sentados. Las diez habitaciones del hotel proporcionan alojamiento para hasta 20 huéspedes con la renta completa de la propiedad.',
       },
     ],
   },
