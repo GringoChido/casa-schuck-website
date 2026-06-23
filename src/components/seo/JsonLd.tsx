@@ -44,7 +44,7 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
       `${BASE_URL}/images/areas/rooftop.jpg`,
       `${BASE_URL}/images/common/garden.jpg`,
     ],
-    priceRange: '$235 - $345 USD',
+    priceRange: '$$',
     currenciesAccepted: 'USD, MXN',
     paymentAccepted: 'Cash, Credit Card',
     numberOfRooms: 10,
@@ -79,7 +79,6 @@ export function HotelJsonLd({ locale }: JsonLdProps) {
       },
       offers: {
         '@type': 'Offer',
-        price: room.baseRate,
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
         url: `${BASE_URL}/${locale}/suites/${room.id}`,
@@ -129,7 +128,7 @@ export function RoomJsonLd({ room, locale }: { room: Room; locale: Locale }) {
     bed: { '@type': 'BedDetails', typeOfBed: room.bedType.en },
     occupancy: { '@type': 'QuantitativeValue', maxValue: room.maxGuests, unitText: 'guests' },
     isPartOf: { '@type': 'Hotel', '@id': `${BASE_URL}/#hotel`, name: 'Casa Schuck' },
-    offers: { '@type': 'Offer', price: room.baseRate, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url },
+    offers: { '@type': 'Offer', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url },
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
