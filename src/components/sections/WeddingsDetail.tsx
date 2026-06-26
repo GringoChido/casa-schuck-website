@@ -6,6 +6,7 @@ import type { Dictionary } from '@/lib/dictionaries';
 import { PillarBlock, type Pillar } from '@/components/ui/PillarBlock';
 import { ScrollReveal, StaggerItem } from '@/components/ui/ScrollReveal';
 import { WholeHouse } from '@/components/sections/WholeHouse';
+import { SHOW_TESTIMONIALS } from '@/data/siteFlags';
 
 /* ═══════════════════════════════════════════
    Minimalist SVG Icons — Logistics Dashboard
@@ -174,7 +175,7 @@ export function WeddingsDetail({ locale, dict }: WeddingsDetailProps) {
       )}
 
       {/* ═══ Section 4: Testimonials ═══ */}
-      {w.testimonials && (
+      {SHOW_TESTIMONIALS && w.testimonials && (
         <div className="py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <ScrollReveal className="text-center mb-16">
