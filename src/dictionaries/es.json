@@ -16,7 +16,6 @@
     "experience": "Experiencias",
     "spaConcierge": "Spa y Concierge",
     "corporateGroups": "Grupos Corporativos",
-    "packages": "Paquetes",
     "blog": "Blog"
   },
   "hero": {
@@ -391,14 +390,6 @@
     "buyoutTitle": "Renta de Casa Completa",
     "buyoutDescription": "Diez habitaciones, toda la propiedad, exclusivamente suya. Ideal para celebraciones importantes, reuniones familiares o experiencias de varios dias disenadas desde cero.",
     "inquireCta": "Planear Su Evento"
-  },
-  "packages": {
-    "eyebrow": "Paquetes de Temporada",
-    "headline": "Curadurías de Temporada",
-    "description": "Experiencias locales, empaquetadas para mejor valor. Reserve directo para lo mejor de la temporada.",
-    "includedLabel": "Incluido",
-    "bookPackage": "Reservar Este Paquete",
-    "whatsappInquiry": "¡Hola! Me gustaría preguntar por el paquete {name} en Casa Schuck."
   },
   "reviews": {
     "eyebrow": "Voces de Huespedes",
