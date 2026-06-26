@@ -16,7 +16,6 @@
     "experience": "Experiences",
     "spaConcierge": "Spa & Concierge",
     "corporateGroups": "Corporate Groups",
-    "packages": "Packages",
     "blog": "Blog"
   },
   "hero": {
@@ -391,14 +390,6 @@
     "buyoutTitle": "Whole-House Buyouts",
     "buyoutDescription": "Ten rooms, the entire property, exclusively yours. Ideal for milestone celebrations, family reunions, or multi-day experiences you design from scratch.",
     "inquireCta": "Plan Your Event"
-  },
-  "packages": {
-    "eyebrow": "Seasonal Packages",
-    "headline": "Seasonal Curations",
-    "description": "Local experiences, bundled for better value. Book direct for the best of the season.",
-    "includedLabel": "Included",
-    "bookPackage": "Book This Package",
-    "whatsappInquiry": "Hola! I'd like to ask about the {name} package at Casa Schuck."
   },
   "reviews": {
     "eyebrow": "Guest Voices",
