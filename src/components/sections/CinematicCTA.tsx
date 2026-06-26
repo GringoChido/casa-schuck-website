@@ -27,7 +27,7 @@ export function CinematicCTA({ locale, dict }: CinematicCTAProps) {
           {c.headline}
         </h2>
         <Link
-          href={`/${locale}/packages`}
+          href={`/${locale}/suites`}
           className="inline-block bg-white/10 backdrop-blur-sm text-white font-label px-10 py-4 text-[12px] tracking-[0.2em] uppercase border border-white/30 hover:bg-white hover:text-espresso transition-all duration-500"
         >
           {c.cta}

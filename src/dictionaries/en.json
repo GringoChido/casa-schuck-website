@@ -795,12 +795,6 @@
         }
       ]
     },
-    "seasonalTeaser": {
-      "eyebrow": "Seasonal Packages",
-      "headline": "Seasonal Curations",
-      "body": "Local experiences, bundled for better value. Book direct for the best of the season.",
-      "cta": "View All Packages"
-    },
     "fullBleedHero": {
       "headline": "Casa Schuck",
       "subheadline": "A Living Poem in the Heart of San Miguel de Allende",
@@ -865,7 +859,7 @@
     },
     "cinematicCTA": {
       "headline": "Begin Your Story",
-      "cta": "View Packages"
+      "cta": "Explore Our Rooms"
     }
   },
   "suitesPage": {
@@ -917,155 +911,5 @@
       "headline": "Find Your Perfect Sanctuary.",
       "buttonText": "Check Availability"
     }
-  },
-  "packagesPage": {
-    "meta": {
-      "title": "Seasonal Packages | Casa Schuck Boutique Hotel",
-      "description": "Immersive seasonal journeys in San Miguel de Allende. Día de Los Muertos, Holiday Escape, and Spring Renewal packages at Casa Schuck."
-    },
-    "header": {
-      "eyebrow": "Limited Availability",
-      "headline": "Seasonal Curations",
-      "description": "Immersive journeys designed to synchronize your stay with the rhythmic heart of San Miguel de Allende."
-    },
-    "packages": [
-      {
-        "eyebrow": "",
-        "name": "Día de Los Muertos Experience",
-        "tagline": "A soul-stirring immersion into Mexico's most profound celebration, where memory meets the vibrant present.",
-        "price": "$1,850 USD",
-        "priceLabel": "Starting at",
-        "returningNote": "Returning for Día de Muertos 2026",
-        "inclusions": [
-          "4 nights in a Signature Colonial Suite",
-          "Private Ofrenda workshop with a local artisan",
-          "Guided twilight tour of Panteón de Guadalupe",
-          "Traditional Catrina face-painting & photography session"
-        ],
-        "itinerary": [
-          { "day": "Day 1", "description": "Arrive San Miguel, check-in, welcome mezcal tasting on rooftop, orientation walk through decorated streets" },
-          { "day": "Day 2", "description": "Private ofrenda workshop with local artisan, afternoon free to explore altars throughout the city, evening Catrina face-painting and photo session" },
-          { "day": "Day 3", "description": "Guided twilight tour of Panteón de Guadalupe, traditional candlelit dinner with live music" },
-          { "day": "Day 4", "description": "Morning meditation in courtyard, late checkout, departure" }
-        ],
-        "whatsIncluded": [
-          "4 nights accommodation in a Signature Colonial Suite",
-          "Daily artisan breakfast",
-          "Welcome mezcal tasting",
-          "Private ofrenda workshop",
-          "Catrina face-painting session with photographer",
-          "Guided Panteón tour",
-          "Candlelit dinner with live music",
-          "Airport transfer (arrival)"
-        ],
-        "addOns": [
-          "Additional guest room nights — from $180/night",
-          "Private chef dinner upgrade — $85/person",
-          "Hot springs excursion — $55/person",
-          "Extended photography session — $250",
-          "Airport transfer (departure) — $45"
-        ],
-        "cta": "Book This Package",
-        "imageAlt": "Traditional Mexican altar with bright marigolds and candles"
-      },
-      {
-        "eyebrow": "Winter Solstice",
-        "name": "Holiday Escape",
-        "tagline": "Rediscover the magic of the season amidst the cobblestone streets and festive lights of San Miguel. Casa Schuck transforms into a sanctuary of warmth and holiday elegance.",
-        "price": "$1,200",
-        "priceLabel": "Starting",
-        "returningNote": "Returning for the 2026 holidays",
-        "inclusionsTitle": "Inclusions",
-        "inclusions": [
-          "3 Nights Stay",
-          "Daily Artisan Breakfast",
-          "Private Posada Dinner"
-        ],
-        "itinerary": [
-          { "day": "Day 1", "description": "Arrive, check-in, welcome hot chocolate by the courtyard firepit, evening stroll through holiday-lit streets" },
-          { "day": "Day 2", "description": "Artisan breakfast, free morning, afternoon Posada dinner preparation with chef, private Posada celebration" },
-          { "day": "Day 3", "description": "Breakfast, late checkout, departure" }
-        ],
-        "whatsIncluded": [
-          "3 nights accommodation",
-          "Daily artisan breakfast",
-          "Welcome hot chocolate and pan dulce",
-          "Private Posada dinner with traditional menu",
-          "Evening stroll guide through decorated streets"
-        ],
-        "addOns": [
-          "Additional night — from $180/night",
-          "Private chef holiday dinner — $75/person",
-          "Hot springs excursion — $55/person",
-          "Holiday flower arrangement workshop — $45/person",
-          "Airport transfer — $45 each way"
-        ],
-        "cta": "Request Availability",
-        "imageAlt": "Cozy boutique hotel courtyard with holiday lights and lanterns"
-      },
-      {
-        "eyebrow": "Equinox Awakening",
-        "name": "Spring Renewal Retreat",
-        "tagline": "When the Jacarandas paint the town purple, San Miguel awakens. This curation focuses on wellness, renewal, and the quiet beauty of the high desert spring.",
-        "price": "$2,400",
-        "priceLabel": "/ package",
-        "returningNote": "Returning for Spring 2027",
-        "numberedInclusions": [
-          {
-            "number": "01",
-            "label": "Accommodation",
-            "detail": "5 Nights in our Garden Terrace Suite"
-          },
-          {
-            "number": "02",
-            "label": "Wellness",
-            "detail": "Daily private yoga & Temazcal ceremony"
-          },
-          {
-            "number": "03",
-            "label": "Gourmet",
-            "detail": "Organic farm-to-table lunch at an orchard"
-          }
-        ],
-        "itinerary": [
-          { "day": "Day 1", "description": "Arrive, garden orientation, welcome dinner on rooftop" },
-          { "day": "Day 2", "description": "Sunrise yoga, morning temazcal ceremony, afternoon free, evening journaling session" },
-          { "day": "Day 3", "description": "Morning yoga, full-day excursion to organic farm and cooking class" },
-          { "day": "Day 4", "description": "Sunrise yoga, hot springs at La Gruta, evening sound healing" },
-          { "day": "Day 5", "description": "Final sunrise practice, integration breakfast, late checkout" }
-        ],
-        "whatsIncluded": [
-          "5 nights accommodation in Garden Terrace Suite",
-          "Daily artisan breakfast",
-          "Daily sunrise yoga sessions",
-          "Traditional temazcal ceremony",
-          "Full-day organic farm excursion with cooking class",
-          "Hot springs visit at La Gruta",
-          "Sound healing session",
-          "Welcome dinner on rooftop",
-          "Integration breakfast on final day"
-        ],
-        "addOns": [
-          "Additional night — from $200/night",
-          "Private massage (60 min) — $80",
-          "Couples massage (60 min) — $150",
-          "Art & gallery tour — $65/person",
-          "Private chef dinner — $85/person",
-          "Airport transfer — $45 each way"
-        ],
-        "cta": "Book This Package",
-        "imageAlt": "Lush spring garden with blooming jacaranda trees and architecture"
-      }
-    ],
-    "newsletter": {
-      "headline": "Stay for the Season",
-      "body": "Join our private circle to receive advance notifications for our seasonal curations and limited-run events.",
-      "placeholder": "Email Address",
-      "buttonText": "Subscribe",
-      "success": "You're on the list. We'll write when the season turns.",
-      "error": "Something went wrong. Please try again.",
-      "invalidEmail": "Please enter a valid email address."
-    },
-    "waitlistCta": "Join the list"
   }
 }

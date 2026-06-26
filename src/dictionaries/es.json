@@ -795,12 +795,6 @@
         }
       ]
     },
-    "seasonalTeaser": {
-      "eyebrow": "Paquetes de Temporada",
-      "headline": "Curadurías de Temporada",
-      "body": "Experiencias locales, agrupadas para mejor valor. Reserva directo para lo mejor de la temporada.",
-      "cta": "Ver Todos los Paquetes"
-    },
     "fullBleedHero": {
       "headline": "Casa Schuck",
       "subheadline": "Un Poema Viviente en el Corazón de San Miguel de Allende",
@@ -865,7 +859,7 @@
     },
     "cinematicCTA": {
       "headline": "Comienza Tu Historia",
-      "cta": "Ver Paquetes"
+      "cta": "Descubre Nuestras Habitaciones"
     }
   },
   "suitesPage": {
@@ -917,155 +911,5 @@
       "headline": "Encuentra Tu Santuario Perfecto.",
       "buttonText": "Ver Disponibilidad"
     }
-  },
-  "packagesPage": {
-    "meta": {
-      "title": "Paquetes de Temporada | Casa Schuck Hotel Boutique",
-      "description": "Viajes inmersivos de temporada en San Miguel de Allende. Paquetes de Día de Muertos, Escapada Navideña y Renovación Primaveral en Casa Schuck."
-    },
-    "header": {
-      "eyebrow": "Disponibilidad Limitada",
-      "headline": "Curadurías de Temporada",
-      "description": "Viajes inmersivos diseñados para sincronizar tu estadía con el corazón rítmico de San Miguel de Allende."
-    },
-    "packages": [
-      {
-        "eyebrow": "",
-        "name": "Experiencia Día de Muertos",
-        "tagline": "Una inmersión conmovedora en la celebración más profunda de México, donde la memoria se encuentra con el vibrante presente.",
-        "price": "$1,850 USD",
-        "priceLabel": "Desde",
-        "returningNote": "Regresa para Día de Muertos 2026",
-        "inclusions": [
-          "4 noches en una Suite Colonial Signature",
-          "Taller privado de Ofrenda con un artesano local",
-          "Tour guiado al atardecer del Panteón de Guadalupe",
-          "Sesión tradicional de maquillaje de Catrina y fotografía"
-        ],
-        "itinerary": [
-          { "day": "Día 1", "description": "Llegada a San Miguel, registro, degustación de mezcal de bienvenida en la azotea, caminata de orientación por las calles decoradas" },
-          { "day": "Día 2", "description": "Taller privado de ofrenda con artesano local, tarde libre para explorar los altares por la ciudad, noche de maquillaje de Catrina y sesión fotográfica" },
-          { "day": "Día 3", "description": "Tour guiado al atardecer del Panteón de Guadalupe, cena tradicional a la luz de las velas con música en vivo" },
-          { "day": "Día 4", "description": "Meditación matutina en el patio, late checkout, partida" }
-        ],
-        "whatsIncluded": [
-          "4 noches de alojamiento en Suite Colonial Signature",
-          "Desayuno artesanal diario",
-          "Degustación de mezcal de bienvenida",
-          "Taller privado de ofrenda",
-          "Sesión de maquillaje de Catrina con fotógrafo",
-          "Tour guiado al Panteón",
-          "Cena a la luz de las velas con música en vivo",
-          "Traslado del aeropuerto (llegada)"
-        ],
-        "addOns": [
-          "Noches adicionales — desde $180/noche",
-          "Upgrade a cena con chef privado — $85/persona",
-          "Excursión a aguas termales — $55/persona",
-          "Sesión fotográfica extendida — $250",
-          "Traslado al aeropuerto (salida) — $45"
-        ],
-        "cta": "Reservar Este Paquete",
-        "imageAlt": "Altar mexicano tradicional con cempasúchil brillante y velas"
-      },
-      {
-        "eyebrow": "Solsticio de Invierno",
-        "name": "Escapada Navideña",
-        "tagline": "Redescubre la magia de la temporada entre las calles empedradas y las luces festivas de San Miguel. Casa Schuck se transforma en un santuario de calidez y elegancia navideña.",
-        "price": "$1,200",
-        "priceLabel": "Desde",
-        "returningNote": "Regresa para las fiestas decembrinas 2026",
-        "inclusionsTitle": "Incluye",
-        "inclusions": [
-          "3 Noches de Estancia",
-          "Desayuno Artesanal Diario",
-          "Cena Privada de Posada"
-        ],
-        "itinerary": [
-          { "day": "Día 1", "description": "Llegada, registro, chocolate caliente de bienvenida junto a la fogata del patio, caminata nocturna por las calles iluminadas" },
-          { "day": "Día 2", "description": "Desayuno artesanal, mañana libre, preparación de la cena de Posada por la tarde con el chef, celebración privada de Posada" },
-          { "day": "Día 3", "description": "Desayuno, late checkout, partida" }
-        ],
-        "whatsIncluded": [
-          "3 noches de alojamiento",
-          "Desayuno artesanal diario",
-          "Chocolate caliente de bienvenida y pan dulce",
-          "Cena privada de Posada con menú tradicional",
-          "Guía para caminata nocturna por calles decoradas"
-        ],
-        "addOns": [
-          "Noche adicional — desde $180/noche",
-          "Cena navideña con chef privado — $75/persona",
-          "Excursión a aguas termales — $55/persona",
-          "Taller de arreglo floral navideño — $45/persona",
-          "Traslado al aeropuerto — $45 por trayecto"
-        ],
-        "cta": "Solicitar Disponibilidad",
-        "imageAlt": "Acogedor patio de hotel boutique con luces navideñas y faroles"
-      },
-      {
-        "eyebrow": "Despertar del Equinoccio",
-        "name": "Retiro de Renovación Primaveral",
-        "tagline": "Cuando las jacarandas pintan el pueblo de púrpura, San Miguel despierta. Esta curaduría se enfoca en el bienestar, la renovación y la belleza silenciosa de la primavera del desierto alto.",
-        "price": "$2,400",
-        "priceLabel": "/ paquete",
-        "returningNote": "Regresa en la primavera 2027",
-        "numberedInclusions": [
-          {
-            "number": "01",
-            "label": "Alojamiento",
-            "detail": "5 Noches en nuestra Suite Terraza Jardín"
-          },
-          {
-            "number": "02",
-            "label": "Bienestar",
-            "detail": "Yoga privado diario y ceremonia de Temazcal"
-          },
-          {
-            "number": "03",
-            "label": "Gourmet",
-            "detail": "Almuerzo orgánico de la granja a la mesa en un huerto"
-          }
-        ],
-        "itinerary": [
-          { "day": "Día 1", "description": "Llegada, orientación por el jardín, cena de bienvenida en la azotea" },
-          { "day": "Día 2", "description": "Yoga al amanecer, ceremonia de temazcal por la mañana, tarde libre, sesión de escritura reflexiva por la noche" },
-          { "day": "Día 3", "description": "Yoga matutino, excursión de día completo a granja orgánica y clase de cocina" },
-          { "day": "Día 4", "description": "Yoga al amanecer, aguas termales en La Gruta, sanación con sonido por la noche" },
-          { "day": "Día 5", "description": "Última práctica al amanecer, desayuno de integración, late checkout" }
-        ],
-        "whatsIncluded": [
-          "5 noches de alojamiento en Suite Terraza Jardín",
-          "Desayuno artesanal diario",
-          "Sesiones diarias de yoga al amanecer",
-          "Ceremonia tradicional de temazcal",
-          "Excursión de día completo a granja orgánica con clase de cocina",
-          "Visita a aguas termales en La Gruta",
-          "Sesión de sanación con sonido",
-          "Cena de bienvenida en la azotea",
-          "Desayuno de integración el último día"
-        ],
-        "addOns": [
-          "Noche adicional — desde $200/noche",
-          "Masaje privado (60 min) — $80",
-          "Masaje en pareja (60 min) — $150",
-          "Tour de arte y galerías — $65/persona",
-          "Cena con chef privado — $85/persona",
-          "Traslado al aeropuerto — $45 por trayecto"
-        ],
-        "cta": "Reservar Este Paquete",
-        "imageAlt": "Exuberante jardín primaveral con jacarandas en flor y arquitectura"
-      }
-    ],
-    "newsletter": {
-      "headline": "Quédate por la Temporada",
-      "body": "Únete a nuestro círculo privado para recibir notificaciones anticipadas de nuestras curadurías de temporada y eventos de edición limitada.",
-      "placeholder": "Correo Electrónico",
-      "buttonText": "Suscribirse",
-      "success": "Ya estás en la lista. Te escribiremos cuando cambie la temporada.",
-      "error": "Algo salió mal. Por favor intenta de nuevo.",
-      "invalidEmail": "Por favor ingresa un correo electrónico válido."
-    },
-    "waitlistCta": "Únete a la lista"
   }
 }
