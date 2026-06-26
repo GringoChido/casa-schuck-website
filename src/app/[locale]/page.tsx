@@ -5,7 +5,6 @@ import { FullBleedHero } from '@/components/sections/FullBleedHero';
 import { AvailabilityBar } from '@/components/sections/AvailabilityBar';
 import { SoulOfHouse } from '@/components/sections/SoulOfHouse';
 import { ImmersivePillars } from '@/components/sections/ImmersivePillars';
-import { PackageCards } from '@/components/sections/PackageCards';
 import { EditorialMoments } from '@/components/sections/EditorialMoments';
 import { SanMiguelSection } from '@/components/sections/SanMiguelSection';
 import { TestimonialSection } from '@/components/sections/TestimonialSection';
@@ -122,10 +121,7 @@ export default async function HomePage({
       {/* 4. THE PHILOSOPHY */}
       <ImmersivePillars dict={dict} />
 
-      {/* 5. THE PACKAGES */}
-      <PackageCards locale={locale as Locale} dict={dict} />
-
-      {/* 6. THE EXPERIENCE */}
+      {/* 5. THE EXPERIENCE */}
       <EditorialMoments locale={locale as Locale} dict={dict} />
 
       {/* 7. THE PLACE */}

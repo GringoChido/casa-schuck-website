@@ -68,7 +68,6 @@ export function Header({ locale, dict }: HeaderProps) {
       ],
     },
     { href: `/${locale}/weddings`, label: nav.weddings },
-    { href: `/${locale}/packages`, label: nav.packages },
     { href: `/${locale}/blog`, label: nav.blog },
   ];
 
